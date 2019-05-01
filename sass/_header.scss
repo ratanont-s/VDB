@@ -1,0 +1,73 @@
+.sticky-wrapper {
+  .header {
+    font-family: $font-kanit;
+    @include transition($transition-base);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 50px;
+      background-color: $dark;
+    }
+    .navbar-logo {
+      max-height: 80px;
+      &-scrolldown {
+        display: none;
+        max-height: 50px;
+      }
+    }
+    .navbar-collapse {
+      justify-content: center;
+    }
+    .nav {
+      &-link {
+        color: white;
+      }
+    }
+    .form-search {
+      display: none;
+      .form-control {
+        display: none;
+      }
+    }
+  }
+  &.is-sticky {
+    .header {
+      background-color: white;
+      box-shadow: $box-shadow-sm;
+      @include transition($transition-base);
+      &::before {
+        top: -100%;
+        @include transition($transition-base);
+      }
+
+      .navbar-logo {
+        &-scrolldown {
+          display: block;
+        }
+      }
+      .navbar-collapse {
+        justify-content: space-between;
+      }
+      .nav {
+        &-item {
+          &-logo {
+            display: none;
+          }
+        }
+        &-link {
+          color: $body-color;
+        }
+      }
+      .form-search {
+        display: block;
+        .form-control {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "VDB",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rathanont/VDB.git",
+  "author": "rathanont <rathanont.s@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.0",
+    "sticky-js": "^1.2.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1"
+  }
+}
