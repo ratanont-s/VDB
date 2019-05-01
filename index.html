@@ -1,172 +1,183 @@
 <!DOCTYPE html>
 <html lang="th">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>VDB</title>
-    <!-- Fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./dist/css/style.css" />
-    <!-- JS -->
-    <script src="./dist/js/jquery.min.js"></script>
-    <script src="./dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./dist/js/jquery.sticky.js"></script>
-    <script src="./dist/js/script.js"></script>
-  </head>
-  <body>
-    <header class="header">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <img
-              src="./dist/images/LOGO-Scrolldown.png"
-              alt="LOGO"
-              class="navbar-logo-scrolldown"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarsExample08"
-            aria-controls="navbarsExample08"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+<!-- Head -->
 
-          <div class="collapse navbar-collapse" id="navbarsExample08">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">เรื่องเล่าพี่หมี</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">โปรโมชั่น</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">ห้องคาราโอเกะ</a>
-              </li>
-              <li class="nav-item nav-item-logo">
-                <a class="nav-link" href="#">
-                  <img
-                    src="./dist/images/LOGO.png"
-                    alt="LOGO"
-                    class="navbar-logo"
-                  />
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">ครอบครัวพี่หมี</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">กิจกรรมพี่หมี</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">รายการอาหาร</a>
-              </li>
-            </ul>
-            <form class="form-inline form-search">
-              <input
-                class="form-control"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-search" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </form>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Villa De Bear</title>
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./dist/css/style.css" />
+  <!-- JS -->
+  <script src="./dist/js/jquery.min.js"></script>
+  <script src="./dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./dist/js/jquery.sticky.js"></script>
+  <script src="./dist/js/script.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./dist/images/LOGO-Scrolldown.png" alt="LOGO" class="navbar-logo-scrolldown" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08"
+          aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample08">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">เรื่องเล่าพี่หมี</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">โปรโมชั่น</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ห้องคาราโอเกะ</a>
+            </li>
+            <li class="nav-item nav-item-logo">
+              <a class="nav-link" href="./index.html">
+                <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ครอบครัวพี่หมี</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">กิจกรรมพี่หมี</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">รายการอาหาร</a>
+            </li>
+          </ul>
+          <form class="form-inline form-search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-search" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
         </div>
-      </nav>
-    </header>
-    <main class="main">
-      <div class="container">
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
-          exercitationem soluta tenetur numquam voluptatum blanditiis esse,
-          architecto similique praesentium, fuga perferendis laborum maxime
-          obcaecati veniam ducimus incidunt quibusdam vitae maiores. Facilis
-          similique quas consectetur excepturi asperiores exercitationem
-          sapiente cumque neque distinctio cum explicabo a omnis harum, iusto
-          quo perferendis recusandae provident accusantium enim deserunt aperiam
-          veritatis. Officia id est error. Ipsa, architecto ullam. Nostrum ipsa
-          quo eveniet ducimus! Officia tempore impedit itaque non sapiente,
-          culpa porro debitis, fugiat unde perferendis necessitatibus assumenda
-          eum quidem dignissimos similique nihil maiores esse magni. Molestias
-          ullam libero unde fugit veniam aspernatur blanditiis et voluptas enim
-          fuga temporibus, quo sunt perspiciatis in recusandae architecto sequi
-          quidem possimus minima corporis, tempore, iste laboriosam deleniti
-          odio? Eaque. Consectetur facilis quam nihil unde obcaecati. Quas rem
-          tempore consectetur accusamus eaque maxime nesciunt dolorem
-          exercitationem repellendus illum. Tenetur quasi quia earum esse omnis
-          eaque velit explicabo nulla dolorem architecto. Praesentium
-          exercitationem dolorem unde quis voluptatibus expedita voluptatum a
-          tempore esse nihil delectus alias ipsam sunt laborum sequi blanditiis
-          consectetur, error ipsa rem officiis nesciunt odit. Impedit repellat
-          exercitationem maiores. Ab perferendis esse, consequatur blanditiis
-          eum praesentium suscipit in voluptas tenetur debitis aspernatur
-          incidunt vero eligendi architecto repellendus optio iste? Ipsum
-          molestiae quas aliquid maiores voluptatum cupiditate officiis illo
-          saepe? Impedit laborum nisi deserunt sapiente optio tempore culpa
-          aspernatur quasi maxime, assumenda placeat nulla maiores corrupti quia
-          labore ipsam voluptas at velit iste unde? Laudantium veniam itaque
-          voluptas ex dicta. Deleniti quos veritatis suscipit aliquam ducimus
-          maxime eligendi eos nihil temporibus quis earum reiciendis voluptas
-          cupiditate commodi vitae repellat sint reprehenderit facere
-          praesentium repudiandae, qui laudantium! Dolores rem assumenda
-          doloribus? Harum quam modi necessitatibus quasi obcaecati impedit iste
-          suscipit labore nemo fugit, ab cupiditate doloremque quibusdam. Vel
-          modi, aliquid mollitia minima ea molestias, at labore numquam quod
-          libero consequatur sit. Delectus, quam. Aspernatur, qui tempora, odio
-          reprehenderit dolorem animi placeat repellat iure harum, magni
-          mollitia odit porro in veniam. Similique tenetur inventore autem illo
-          saepe quis aut esse alias explicabo! Tenetur, unde quasi harum
-          necessitatibus delectus sit vero blanditiis facere quia deleniti?
-          Molestias eos pariatur laboriosam quo incidunt esse facilis illo
-          reiciendis illum. Magnam consequatur fuga exercitationem dolor, unde
-          veniam. Minima inventore exercitationem in natus rem deserunt tempore
-          hic repellat molestias mollitia molestiae amet, illo possimus ratione.
-          Aut, eum quis commodi minus pariatur, dolore dolor, deleniti dolores
-          corporis molestiae autem! Suscipit at quaerat dolorem corrupti fugiat
-          similique odit est autem praesentium magnam minus incidunt dicta
-          officia obcaecati eos tenetur necessitatibus iure consequuntur culpa
-          accusantium, molestiae itaque exercitationem! Earum, laborum porro?
-          Deleniti non libero cupiditate rem repudiandae quos magnam, ea
-          commodi. Veritatis quas saepe labore vel doloribus rerum deserunt aut
-          sunt facere, quos laborum cupiditate, ad exercitationem amet
-          quibusdam? Esse, maxime? Iusto natus vitae optio rem doloribus
-          corporis a voluptatum, odio neque expedita, velit soluta accusantium
-          voluptates at dolores eligendi porro odit explicabo ducimus enim
-          excepturi ab dolorem quam! Quaerat, reprehenderit. Asperiores cum,
-          optio consequuntur at earum, veniam laborum illum fuga cumque impedit
-          nulla aperiam amet, odio veritatis debitis accusamus. Ullam, animi
-          odit? Quis suscipit dolore, modi vero numquam alias quam! Illum dolor
-          minima deserunt. Neque iste fuga temporibus placeat aspernatur
-          eligendi sapiente dolorum molestias. Quos, molestiae cum! Id expedita
-          ipsa maiores cum, minima perspiciatis ab! Voluptatibus ipsam fuga rem
-          distinctio. Quisquam, sequi! Nesciunt laudantium fugiat, animi
-          voluptate sunt eaque dolore, illo ducimus nulla dolores quibusdam nam
-          quidem eos delectus quia labore libero voluptates in blanditiis esse.
-          Provident cupiditate consectetur nisi. Quidem illo ratione iusto, iure
-          ut vero ipsam, vitae sit inventore magnam nihil officiis. Eveniet ut
-          necessitatibus consequuntur debitis neque atque facere ipsa, illum
-          sint nulla id enim doloremque recusandae!
-        </p>
       </div>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        COPYRIGHT © 2019 VILLA DE BEAR, ALL RIGHTS RESERVED.
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Sticky toolbar -->
+    <ul class="sticky-toolbar">
+      <li class="sticky-toolbar-item">
+        <a href="#" data-toggle="tooltip" data-placement="left" title="Line">
+          <i class="fab fa-line fa-lg"></i>
+        </a>
+      </li>
+      <li class="sticky-toolbar-item">
+        <a href="#" data-toggle="tooltip" data-placement="left" title="Location">
+          <i class="fas fa-map-marker-alt fa-lg"></i>
+        </a>
+      </li>
+      <li class="sticky-toolbar-item">
+        <a href="#" data-toggle="tooltip" data-placement="left" title="Telephone number">
+          <i class="fas fa-phone fa-lg"></i>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Banner -->
+    <section class="sec sec-banner">
+      <div class="sec-banner-animation">
+        <img src="./dist/images/Banner.jpg" alt="Banner" class="w-100">
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <div class="container">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
+        exercitationem soluta tenetur numquam voluptatum blanditiis esse,
+        architecto similique praesentium, fuga perferendis laborum maxime
+        obcaecati veniam ducimus incidunt quibusdam vitae maiores. Facilis
+        similique quas consectetur excepturi asperiores exercitationem
+        sapiente cumque neque distinctio cum explicabo a omnis harum, iusto
+        quo perferendis recusandae provident accusantium enim deserunt aperiam
+        veritatis. Officia id est error. Ipsa, architecto ullam. Nostrum ipsa
+        quo eveniet ducimus! Officia tempore impedit itaque non sapiente,
+        culpa porro debitis, fugiat unde perferendis necessitatibus assumenda
+        eum quidem dignissimos similique nihil maiores esse magni. Molestias
+        ullam libero unde fugit veniam aspernatur blanditiis et voluptas enim
+        fuga temporibus, quo sunt perspiciatis in recusandae architecto sequi
+        quidem possimus minima corporis, tempore, iste laboriosam deleniti
+        odio? Eaque. Consectetur facilis quam nihil unde obcaecati. Quas rem
+        tempore consectetur accusamus eaque maxime nesciunt dolorem
+        exercitationem repellendus illum. Tenetur quasi quia earum esse omnis
+        eaque velit explicabo nulla dolorem architecto. Praesentium
+        exercitationem dolorem unde quis voluptatibus expedita voluptatum a
+        tempore esse nihil delectus alias ipsam sunt laborum sequi blanditiis
+        consectetur, error ipsa rem officiis nesciunt odit. Impedit repellat
+        exercitationem maiores. Ab perferendis esse, consequatur blanditiis
+        eum praesentium suscipit in voluptas tenetur debitis aspernatur
+        incidunt vero eligendi architecto repellendus optio iste? Ipsum
+        molestiae quas aliquid maiores voluptatum cupiditate officiis illo
+        saepe? Impedit laborum nisi deserunt sapiente optio tempore culpa
+        aspernatur quasi maxime, assumenda placeat nulla maiores corrupti quia
+        labore ipsam voluptas at velit iste unde? Laudantium veniam itaque
+        voluptas ex dicta. Deleniti quos veritatis suscipit aliquam ducimus
+        maxime eligendi eos nihil temporibus quis earum reiciendis voluptas
+        cupiditate commodi vitae repellat sint reprehenderit facere
+        praesentium repudiandae, qui laudantium! Dolores rem assumenda
+        doloribus? Harum quam modi necessitatibus quasi obcaecati impedit iste
+        suscipit labore nemo fugit, ab cupiditate doloremque quibusdam. Vel
+        modi, aliquid mollitia minima ea molestias, at labore numquam quod
+        libero consequatur sit. Delectus, quam. Aspernatur, qui tempora, odio
+        reprehenderit dolorem animi placeat repellat iure harum, magni
+        mollitia odit porro in veniam. Similique tenetur inventore autem illo
+        saepe quis aut esse alias explicabo! Tenetur, unde quasi harum
+        necessitatibus delectus sit vero blanditiis facere quia deleniti?
+        Molestias eos pariatur laboriosam quo incidunt esse facilis illo
+        reiciendis illum. Magnam consequatur fuga exercitationem dolor, unde
+        veniam. Minima inventore exercitationem in natus rem deserunt tempore
+        hic repellat molestias mollitia molestiae amet, illo possimus ratione.
+        Aut, eum quis commodi minus pariatur, dolore dolor, deleniti dolores
+        corporis molestiae autem! Suscipit at quaerat dolorem corrupti fugiat
+        similique odit est autem praesentium magnam minus incidunt dicta
+        officia obcaecati eos tenetur necessitatibus iure consequuntur culpa
+        accusantium, molestiae itaque exercitationem! Earum, laborum porro?
+        Deleniti non libero cupiditate rem repudiandae quos magnam, ea
+        commodi. Veritatis quas saepe labore vel doloribus rerum deserunt aut
+        sunt facere, quos laborum cupiditate, ad exercitationem amet
+        quibusdam? Esse, maxime? Iusto natus vitae optio rem doloribus
+        corporis a voluptatum, odio neque expedita, velit soluta accusantium
+        voluptates at dolores eligendi porro odit explicabo ducimus enim
+        excepturi ab dolorem quam! Quaerat, reprehenderit. Asperiores cum,
+        optio consequuntur at earum, veniam laborum illum fuga cumque impedit
+        nulla aperiam amet, odio veritatis debitis accusamus. Ullam, animi
+        odit? Quis suscipit dolore, modi vero numquam alias quam! Illum dolor
+        minima deserunt. Neque iste fuga temporibus placeat aspernatur
+        eligendi sapiente dolorum molestias. Quos, molestiae cum! Id expedita
+        ipsa maiores cum, minima perspiciatis ab! Voluptatibus ipsam fuga rem
+        distinctio. Quisquam, sequi! Nesciunt laudantium fugiat, animi
+        voluptate sunt eaque dolore, illo ducimus nulla dolores quibusdam nam
+        quidem eos delectus quia labore libero voluptates in blanditiis esse.
+        Provident cupiditate consectetur nisi. Quidem illo ratione iusto, iure
+        ut vero ipsam, vitae sit inventore magnam nihil officiis. Eveniet ut
+        necessitatibus consequuntur debitis neque atque facere ipsa, illum
+        sint nulla id enim doloremque recusandae!
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      COPYRIGHT © 2019 VILLA DE BEAR, ALL RIGHTS RESERVED.
+    </div>
+  </footer>
+</body>
+
 </html>

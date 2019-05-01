@@ -1,0 +1,27 @@
+.main {
+  .sticky-toolbar {
+    position: fixed;
+    top: 45vh;
+    right: 0;
+    list-style: none;
+    padding-left: unset;
+    padding: .5rem;
+    text-align: center;
+    background-color: white;
+    box-shadow: $box-shadow-sm;
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: .5rem;
+      }
+
+      a {
+        color: $dark;
+
+        @include hover-focus {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}

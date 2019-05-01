@@ -1,7 +1,12 @@
 .sticky-wrapper {
+  height: auto !important;
+
   .header {
+    position: fixed;
+    width: 100%;
     font-family: $font-kanit;
     @include transition($transition-base);
+
     &::before {
       content: "";
       position: absolute;
@@ -9,36 +14,56 @@
       left: 0;
       right: 0;
       width: 100%;
-      height: 50px;
+      height: 70%;
       background-color: $dark;
     }
-    .navbar-logo {
-      max-height: 80px;
-      &-scrolldown {
-        display: none;
-        max-height: 50px;
+
+    .navbar {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      &-logo {
+        max-height: 70px;
+
+        &-scrolldown {
+          display: none;
+          max-height: 50px;
+        }
       }
     }
+
     .navbar-collapse {
       justify-content: center;
     }
+
     .nav {
+      &-item {
+        display: flex;
+        align-items: center;
+      }
+
       &-link {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
         color: white;
       }
     }
+
     .form-search {
       display: none;
+
       .form-control {
         display: none;
       }
     }
   }
+
   &.is-sticky {
     .header {
       background-color: white;
       box-shadow: $box-shadow-sm;
       @include transition($transition-base);
+
       &::before {
         top: -100%;
         @include transition($transition-base);
@@ -49,21 +74,33 @@
           display: block;
         }
       }
+
       .navbar-collapse {
         justify-content: space-between;
       }
+
       .nav {
         &-item {
           &-logo {
             display: none;
           }
+
+          &:last-child {
+            .nav-link {
+              border-right: 1px solid $border-color;
+            }
+          }
         }
+
         &-link {
+          border-left: 1px solid $border-color;
           color: $body-color;
         }
       }
+
       .form-search {
         display: block;
+
         .form-control {
           display: none;
         }
