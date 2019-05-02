@@ -3220,7 +3220,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
   .offcanvas-collapse .navbar-nav .nav-item-home .nav-link { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
   .offcanvas-collapse .navbar-nav .nav-item:last-child .nav-link { border-right: unset !important; }
   .offcanvas-collapse .navbar-nav .nav-link { color: #212529 !important; font-size: 1.5rem; padding-top: .75rem; padding-bottom: .75rem; border-left: unset !important; }
-  .offcanvas-collapse .form-search { display: -webkit-box !important; display: -ms-flexbox !important; display: flex !important; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-flow: row; flex-flow: row; margin-top: 4rem; }
+  .offcanvas-collapse .form-search { display: -webkit-box !important; display: -ms-flexbox !important; display: flex !important; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-flow: row; flex-flow: row; margin-top: 1rem; }
   .offcanvas-collapse .form-search .form-control { display: block !important; }
   .offcanvas-collapse .form-search .btn-search { display: block !important; -ms-flex-negative: 1 !important; flex-shrink: 1 !important; }
   .offcanvas-collapse.open { visibility: visible; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
