@@ -6,6 +6,18 @@ $(function () {
   })
 })
 
+// Tooltip
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
+// Toggle input search
+function toggleInputSearch() {
+  $('.navbar-nav').toggleClass('active');
+  $('.btn-search').toggleClass('active');
+  $('#inputSearch').toggleClass('active');
+}
+
 // Document
 $(document).ready(function () {
   // Header
@@ -14,9 +26,6 @@ $(document).ready(function () {
     zIndex: 1031
   });
 
-  // Tooltip
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-  });
+
 
 });

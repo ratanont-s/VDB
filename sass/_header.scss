@@ -26,6 +26,12 @@
       &-brand {
         padding-top: .5rem;
         padding-bottom: .5rem;
+
+        .navbar-logo {
+          @include media-breakpoint-up(lg) {
+            display: none;
+          }
+        }
       }
 
       &-toggler {
@@ -48,6 +54,11 @@
       .container {
         align-items: stretch;
       }
+
+      &-nav {
+        justify-content: space-around;
+        width: 100%;
+      }
     }
 
     .navbar-collapse {
@@ -59,6 +70,7 @@
       &-item {
         display: flex;
         align-items: stretch;
+        flex: 1 1;
 
         &-home {
           display: none;
@@ -72,6 +84,7 @@
         align-items: center;
         color: white;
         text-align: center;
+        width: 100%;
         height: 100%;
 
         &-icon {
@@ -97,10 +110,17 @@
       background-color: white;
 
       .form-control {
-        display: none;
         border: unset;
         background-color: transparent;
+
+        &-search {
+          background: white url('../images/icons/icon-search.png') no-repeat right 0.75rem center;
+          background-size: auto 1rem;
+          border-radius: inherit;
+        }
       }
+
+
     }
   }
 
@@ -123,6 +143,19 @@
 
       .navbar-collapse {
         justify-content: space-between;
+      }
+
+      .navbar-nav {
+        opacity: 1;
+        @include transition($transition-base);
+
+        &.active {
+
+          @include media-breakpoint-up(lg) {
+            opacity: 0;
+            @include transition($transition-base);
+          }
+        }
       }
 
       .nav {
@@ -166,8 +199,53 @@
       .form-search {
         display: block;
 
-        .form-control {
-          display: none;
+
+
+        @include media-breakpoint-up(lg) {
+          border-color: transparent;
+          display: flex !important;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+          align-self: center;
+
+
+          .btn-search {
+            font-size: 1.25rem;
+
+            .fas {
+              &::before {
+                content: '\f002';
+              }
+            }
+
+            &.active {
+              .fas {
+                &::before {
+                  content: '\f00d';
+                }
+              }
+            }
+
+            &:focus {
+              outline: unset;
+              box-shadow: unset;
+            }
+          }
+
+          .form-control {
+            border: 1px solid $border-color;
+            opacity: 0;
+            width: 0px;
+            @include transition($transition-base);
+
+            &.active {
+              width: 300px;
+              opacity: 1;
+              @include transition($transition-base);
+            }
+          }
         }
       }
     }
@@ -200,6 +278,14 @@
             display: none;
           }
         }
+      }
+
+      .btn-search {
+        display: none !important;
+      }
+
+      .form-control {
+        display: none;
       }
     }
 
