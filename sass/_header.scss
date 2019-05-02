@@ -5,6 +5,7 @@
     position: fixed;
     width: 100%;
     font-family: $font-kanit;
+    z-index: $zindex-fixed;
     @include transition($transition-base);
 
     &::before {
@@ -25,6 +26,14 @@
       &-brand {
         padding-top: .5rem;
         padding-bottom: .5rem;
+      }
+
+      &-toggler {
+        color: white;
+
+        &:focus {
+          outline: unset;
+        }
       }
 
       &-logo {
@@ -83,9 +92,14 @@
 
     .form-search {
       display: none;
+      border: 1px solid $border-color;
+      border-radius: .5rem;
+      background-color: white;
 
       .form-control {
         display: none;
+        border: unset;
+        background-color: transparent;
       }
     }
   }
@@ -154,6 +168,66 @@
 
         .form-control {
           display: none;
+        }
+      }
+    }
+  }
+
+  // Mobile
+  @include media-breakpoint-down(md) {
+    .header {
+      .navbar {
+        .container {
+          align-items: flex-start;
+        }
+
+        &-toggler {
+          margin-top: .5rem;
+          padding: unset;
+          font-size: 2.5rem;
+          @include transition($transition-base);
+        }
+
+        &-logo {
+          max-height: 100px;
+          @include transition($transition-base);
+        }
+      }
+
+      .nav {
+        &-item {
+          &-logo {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &.is-sticky {
+      .header {
+        background-color: unset;
+        box-shadow: unset;
+
+        &::before {
+          top: 0;
+          height: 50%;
+          box-shadow: $box-shadow-sm;
+        }
+
+        .navbar {
+          &-toggler {
+            font-size: 1.5rem;
+            @include transition($transition-base);
+          }
+
+          &-logo {
+            max-height: 70px;
+            @include transition($transition-base);
+
+            &-scrolldown {
+              display: none;
+            }
+          }
         }
       }
     }
