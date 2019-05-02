@@ -22,6 +22,11 @@
       padding-top: 0;
       padding-bottom: 0;
 
+      &-brand {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+      }
+
       &-logo {
         max-height: 70px;
 
@@ -30,22 +35,49 @@
           max-height: 50px;
         }
       }
+
+      .container {
+        align-items: stretch;
+      }
     }
 
     .navbar-collapse {
       justify-content: center;
+      align-items: stretch;
     }
 
     .nav {
       &-item {
         display: flex;
-        align-items: center;
+        align-items: stretch;
+
+        &-home {
+          display: none;
+        }
       }
 
       &-link {
-        padding-top: 1.25rem;
-        padding-bottom: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         color: white;
+        text-align: center;
+        height: 100%;
+
+        &-icon {
+          height: 0rem;
+          @include transition($transition-base);
+
+          img {
+            width: auto;
+            height: 100%;
+          }
+        }
+
+        &-text {
+          @include transition($transition-base);
+        }
       }
     }
 
@@ -85,6 +117,10 @@
             display: none;
           }
 
+          &-home {
+            display: block;
+          }
+
           &:last-child {
             .nav-link {
               border-right: 1px solid $border-color;
@@ -95,6 +131,21 @@
         &-link {
           border-left: 1px solid $border-color;
           color: $body-color;
+
+          @include hover-focus {
+            .nav-link {
+              &-icon {
+                height: 2rem;
+                margin-bottom: 0.25rem;
+                @include transition($transition-base);
+              }
+
+              &-text {
+                font-size: .6rem;
+                @include transition($transition-base);
+              }
+            }
+          }
         }
       }
 
