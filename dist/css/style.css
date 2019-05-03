@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Kanit:100,300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Kanit:300,400,500,700");
 /*! Bootstrap v4.3.1 (https://getbootstrap.com/) Copyright 2011-2019 The Bootstrap Authors Copyright 2011-2019 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */
 :root { --blue: #007bff; --indigo: #6610f2; --purple: #6f42c1; --pink: #e83e8c; --red: #dc3545; --orange: #fd7e14; --yellow: #fff34b; --green: #28a745; --teal: #20c997; --cyan: #17a2b8; --white: #fff; --gray: #6c757d; --gray-dark: #343a40; --primary: #007bff; --secondary: #6c757d; --success: #28a745; --info: #17a2b8; --warning: #fff34b; --danger: #dc3545; --light: #f8f9fa; --dark: #38393B; --breakpoint-xs: 0; --breakpoint-sm: 576px; --breakpoint-md: 768px; --breakpoint-lg: 992px; --breakpoint-xl: 1200px; --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
@@ -3266,7 +3266,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .sticky-wrapper .header .nav-link-icon img { width: auto; height: 100%; }
 
-.sticky-wrapper .header .nav-link-text { font-weight: 100; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.sticky-wrapper .header .nav-link-text { font-weight: 300; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
 @media (prefers-reduced-motion: reduce) { .sticky-wrapper .header .nav-link-text { -webkit-transition: none; transition: none; } }
 
@@ -3369,7 +3369,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .main-title { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; color: white; margin: 4rem 0 1.5rem; }
 
-.main-title span { background-color: #38393B; padding: .5rem 1.75rem; border-radius: 50rem; font-weight: 100; }
+.main-title span { background-color: #38393B; padding: .5rem 1.75rem; border-radius: 50rem; font-weight: 300; }
 
 .main.bg-table { background: white url("../images/bg/table.png") no-repeat center bottom; background-size: 100% auto; }
 
