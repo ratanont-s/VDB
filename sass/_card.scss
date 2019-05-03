@@ -283,8 +283,9 @@
     }
 
     &-drink {
-        // background-image: url('../images/bg/pro-drink.png');
+        background-image: url('../images/bg/pro-drink.png');
         background-position: center bottom 1rem;
+        background-size: 80% auto;
 
         .card-title {
             flex-direction: row;
@@ -309,7 +310,7 @@
 // Karaoke room
 .card-karaoke-room {
     align-items: center;
-    border: $border-width-lg solid $dark;
+    border: unset;
     border-radius: $border-radius;
     background-repeat: no-repeat;
     background-position: center top;
@@ -344,6 +345,22 @@
 
     &.sammy {
         background-image: url('../images/bg/sammy.png');
+    }
+
+    &.christy {
+        background-image: url('../images/bg/christy.png');
+    }
+
+    &.kinny {
+        background-image: url('../images/bg/kinny.png');
+    }
+
+    &.tubie {
+        background-image: url('../images/bg/tubie.png');
+    }
+
+    &.villy {
+        background-image: url('../images/bg/villy.png');
     }
 }
 
@@ -387,6 +404,98 @@
                 border-right: $border-width-lg solid $dark;
             }
 
+            &-left {
+                .room-images {
+                    margin-bottom: .5rem;
+                }
+
+                .slider-nav {
+                    .slick-slide {
+                        margin-right: .5rem;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    border-right: unset !important;
+                    border-bottom: $border-width-lg solid $dark;
+                }
+            }
+
+            &-center {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+
+                .fc {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+
+                    &-toolbar {
+                        justify-content: space-around;
+
+                        &.fc-header-toolbar {
+                            margin-bottom: unset;
+                        }
+                    }
+
+                    &-button {
+                        background-color: unset;
+                        color: $body-color;
+                        border: unset;
+                    }
+
+                    &-head {
+                        border-bottom: 1px solid $border-color;
+                    }
+
+                    &-day-header {
+                        padding-bottom: .5rem;
+                    }
+
+                    &-day-number {
+                        float: none !important;
+                        // padding-top: .5rem;
+                        display: block;
+                    }
+
+                    &-day-top {
+                        text-align: center;
+                    }
+
+                    &-bg {
+                        .fc-today {
+                            background-color: unset;
+                            background: url('../images/bg/today.png') no-repeat center top;
+                            background-size: 80%;
+                        }
+                    }
+
+                    &-widget-content {
+                        padding-top: .5rem;
+                    }
+
+                    th {
+                        border: unset;
+                    }
+
+                    td {
+                        border: unset;
+                    }
+                }
+
+                @include media-breakpoint-down(md) {
+                    border-right: unset !important;
+                    border-bottom: $border-width-lg solid $dark;
+                    padding-left: .5rem;
+                    padding-right: .5rem;
+                }
+            }
+
             &-right {
                 display: flex;
                 flex-direction: column;
@@ -398,9 +507,39 @@
                     flex-direction: column;
                     justify-content: center;
                     flex: 1 1 auto;
+                    padding: .25rem;
 
                     &:not(:last-child) {
                         border-bottom: $border-width-lg solid $dark;
+                    }
+
+                    img {
+                        display: inline-block;
+                        width: 80px;
+                        height: 80px;
+                        object-fit: contain;
+                        margin: .5rem auto;
+
+                        &.date,
+                        &.day,
+                        &.night {
+                            width: 20px;
+                            height: 20px;
+                            object-fit: contain;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+
+                @include media-breakpoint-down(md) {
+                    flex-direction: row;
+
+                    .card-body-right-item {
+                        border-bottom: unset;
+
+                        &:not(:last-child) {
+                            border-right: $border-width-lg solid $dark;
+                        }
                     }
                 }
             }

@@ -18,7 +18,54 @@
     <script src="./dist/js/bootstrap.bundle.min.js"></script>
     <script src="./dist/js/jquery.sticky.js"></script>
     <script src="./dist/js/script.js"></script>
-    <script src="./dist/js/fotorama.js"></script>
+    <!-- Slick -->
+    <link rel="stylesheet" href="./dist/plugins/slick/slick.css">
+    <link rel="stylesheet" href="./dist/plugins/slick/slick-theme.css">
+
+    <script src="./dist/plugins/slick/slick.min.js"></script>
+    <!-- Fullcalendar -->
+    <link rel="stylesheet" href="./dist/plugins/fullcalendar/packages/core/main.css">
+    <link rel="stylesheet" href="./dist/plugins/fullcalendar/packages/daygrid/main.css">
+    <link rel="stylesheet" href="./dist/plugins/fullcalendar/packages/bootstrap/main.css">
+    <script src="./dist/plugins/fullcalendar/packages/core/main.js"></script>
+    <script src="./dist/plugins/fullcalendar/packages/daygrid/main.js"></script>
+    <script src="./dist/plugins/fullcalendar/packages/bootstrap/main.js"></script>
+    <script src="./dist/plugins/fullcalendar/packages/core/locales/th.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ['dayGrid'],
+                header: {
+                    left: 'prev',
+                    center: 'title',
+                    right: 'next'
+                },
+                height: "auto",
+                locale: 'th',
+                firstDay: 1
+            });
+
+            calendar.render();
+        });
+        $(document).ready(function () {
+            $('.room-images.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.room-images.slider-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                centerMode: true,
+                focusOnSelect: true
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -163,26 +210,26 @@
                 </div>
                 <!-- Sammy -->
                 <div class="col-6 col-lg">
-                    <a href="#" class="card card-karaoke-room sammy">
-                        <h5 class="card-title">Sammy</h5>
+                    <a href="#" class="card card-karaoke-room christy">
+                        <h5 class="card-title">Christy</h5>
                     </a>
                 </div>
                 <!-- Sammy -->
                 <div class="col-6 col-lg">
-                    <a href="#" class="card card-karaoke-room sammy">
-                        <h5 class="card-title">Sammy</h5>
+                    <a href="#" class="card card-karaoke-room kinny">
+                        <h5 class="card-title">Kinny</h5>
                     </a>
                 </div>
                 <!-- Sammy -->
                 <div class="col-6 col-lg">
-                    <a href="#" class="card card-karaoke-room sammy">
-                        <h5 class="card-title">Sammy</h5>
+                    <a href="#" class="card card-karaoke-room tubie">
+                        <h5 class="card-title">Tubie</h5>
                     </a>
                 </div>
                 <!-- Sammy -->
                 <div class="col-6 col-lg">
-                    <a href="#" class="card card-karaoke-room sammy">
-                        <h5 class="card-title">Sammy</h5>
+                    <a href="#" class="card card-karaoke-room villy">
+                        <h5 class="card-title">R villy</h5>
                     </a>
                 </div>
             </div>
@@ -194,10 +241,27 @@
                         <div class="card-body card-body-left">
                             <h5 class="card-title mb-0">ห้องคาราโอเกะหมี TUBIE</h5>
                             <p>รองรับสูงสุด 26 ท่าน ราคาเต็ม 2,000 บาท</p>
-                            <div class="fotorama mb-3" data-nav="thumbs">
-                                <img src="./dist/images/room.png">
-                                <img src="./dist/images/room.png">
-                                <img src="./dist/images/room.png">
+                            <div class="room-images slider-for">
+                                <div>
+                                    <img src="./dist/images/room.png" alt="Room">
+                                </div>
+                                <div>
+                                    <img src="./dist/images/room.png" alt="Room">
+                                </div>
+                                <div>
+                                    <img src="./dist/images/room.png" alt="Room">
+                                </div>
+                            </div>
+                            <div class="room-images slider-nav">
+                                <div>
+                                    <img src="./dist/images/room.png" alt="Room">
+                                </div>
+                                <div>
+                                    <img src="./dist/images/room.png" alt="Room">
+                                </div>
+                                <div>
+                                    <img src="./dist/images/room.png" alt="Room">
+                                </div>
                             </div>
                             <p class="card-text">หมี Tubie
                                 หมีหนุ่มสุดซ่าบุคลิกกวนใจที่อาสารับซ่อมอุปกรณ์ทุกสิ่งอย่างภายในร้าน Villa De Bear
@@ -208,23 +272,25 @@
                     </div>
                     <div class="col-12 col-lg-8 col-xl-5">
                         <div class="card-body card-body-center">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius beatae ea veritatis at et
-                                dignissimos laudantium nisi, ut molestiae obcaecati magni consectetur suscipit corporis
-                                facere nobis, excepturi deleniti aliquam delectus!</p>
+                            <div id='calendar'></div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 col-xl">
                         <div class="card-body card-body-right">
                             <div class="card-body-right-item">
-                                <span><img src="./dist/images/icons/calendar.png" alt="calendar"></span>
+                                <img src="./dist/images/icons/calendar.png" alt="Date" class="date">
                                 <h5 class="mb-0">17 ก.พ 2562</h5>
                             </div>
                             <div class="card-body-right-item">
+                                <img src="./dist/images/icons/day.png" alt="Day" class="day" />
                                 <h6 class="mb-0">11.00 - 16.00</h6>
+                                <img src="./dist/images/icons/smille.png" alt="ห้องว่าง โทรเลย!">
                                 <h6 class="mb-0 text-success">ห้องว่าง โทรเลย!</h6>
                             </div>
                             <div class="card-body-right-item">
+                                <img src="./dist/images/icons/night.png" alt="Night" class="night" />
                                 <h6 class="mb-0">17.00 - 24.00</h6>
+                                <img src="./dist/images/icons/sad.png" alt="เสียใจ ห้องไม่ว่าง">
                                 <h6 class="mb-0 text-danger">เสียใจ ห้องไม่ว่าง</h6>
                             </div>
                         </div>
