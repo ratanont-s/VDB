@@ -99,3 +99,195 @@
         }
     }
 }
+
+// TODAY’S SPECIAL
+.card-today-special {
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+    box-shadow: $box-shadow-sm;
+    @include transition($transition-base);
+
+    @include hover-focus {
+        box-shadow: $box-shadow;
+        @include transition($transition-base);
+    }
+
+    .card {
+        &-img {
+            border-radius: inherit;
+        }
+
+        &-body {
+            color: $body-color;
+            height: 100%;
+            padding: 2rem;
+            border-radius: inherit;
+            background: url('../images/bg/card-body.jpg') no-repeat center center;
+            background-size: cover;
+
+            &-inner {
+                background-color: white;
+                height: inherit;
+                padding: 1rem;
+                box-shadow: $box-shadow;
+                border: 1px solid $border-color;
+            }
+        }
+
+        &-title {
+            text-align: center;
+        }
+    }
+}
+
+// Promotion
+.card-promotion {
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: auto calc(100% - 2rem);
+    border-radius: $border-radius-lg;
+    min-height: 17rem;
+    border-width: $border-width-lg;
+    margin-bottom: 1.5rem;
+    box-shadow: $box-shadow-sm;
+    @include transition($transition-base);
+
+    @include hover-focus {
+        border-color: $dark;
+        box-shadow: $box-shadow;
+        @include transition($transition-base);
+    }
+
+    .card {
+        &-title {
+            text-align: center;
+            display: inline-flex;
+            flex-direction: column;
+            align-self: flex-start;
+            color: $body-color;
+
+            span {
+                color: $text-muted;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        background-position: center bottom 1rem;
+        background-size: calc(100% - 2rem) auto;
+    }
+
+    &-happy-birthday {
+        background-image: url('../images/bg/pro-happy-birthday.png');
+
+    }
+
+    &-congregation {
+        background-image: url('../images/bg/pro-congregation.png');
+    }
+
+    &-karaoke {
+        position: relative;
+        align-items: center;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../images/bg/pro-karaoke-floor.png') no-repeat center bottom 1rem;
+            background-size: calc(100% - 2rem) auto;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../images/bg/pro-karaoke.png') no-repeat right 1rem bottom 1.5rem;
+            background-size: auto calc(100% - 2.5rem);
+        }
+
+        .card {
+            &-title {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                &-icon {
+                    margin-right: 1rem;
+
+                    img {
+                        max-height: 4rem;
+                    }
+                }
+
+                &-text {
+                    text-align: left;
+
+                    h4 {
+                        margin-bottom: -15px;
+                        color: $text-muted;
+
+                        @include media-breakpoint-down(md) {
+                            margin-bottom: -10px;
+                        }
+                    }
+
+                    h1 {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            justify-content: center;
+
+            .card-title {
+                margin-left: 2rem;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            &::before {
+                background-position: center bottom 1rem;
+                background-size: calc(100% - 2rem) 1rem;
+            }
+
+            &:after {
+                background-position: center bottom 1.5rem;
+                background-size: calc(100% - 3rem) auto;
+            }
+        }
+    }
+
+    &-drink {
+        // background-image: url('../images/bg/pro-drink.png');
+        background-position: center bottom 1rem;
+
+        .card-title {
+            flex-direction: row;
+            align-self: center;
+
+            span {
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    &-credit-card {
+        background-image: url('../images/bg/pro-credit-card.png');
+        background-position: left 1rem center;
+
+        .card-title {
+            align-self: flex-end;
+        }
+    }
+}
