@@ -7,6 +7,8 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "fotorama": "^4.6.4",
+    "fullcalendar": "^3.10.0",
     "jquery": "^3.4.0",
     "sticky-js": "^1.2.0"
   },

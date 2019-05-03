@@ -353,9 +353,13 @@
     height: calc(100% - 1.5rem);
     margin-bottom: 1.5rem;
     box-shadow: $box-shadow-sm;
+    text-align: center;
+    color: $body-color;
     @include transition($transition-base);
 
     @include hover-focus {
+        color: white;
+        background-color: $dark;
         box-shadow: $box-shadow;
         @include transition($transition-base);
     }
@@ -364,6 +368,42 @@
         &-img-top {
             border-top-left-radius: inherit;
             border-top-right-radius: inherit;
+        }
+    }
+}
+
+// Karaoke detail
+.card-karaoke-detail {
+    border: $border-width-lg solid $dark;
+    margin-bottom: 1.5rem;
+    box-shadow: $box-shadow-sm;
+
+    .card {
+        &-body {
+            height: 100%;
+            padding: .5rem;
+
+            &:not(.card-body-right) {
+                border-right: $border-width-lg solid $dark;
+            }
+
+            &-right {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 0;
+
+                &-item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    flex: 1 1 auto;
+
+                    &:not(:last-child) {
+                        border-bottom: $border-width-lg solid $dark;
+                    }
+                }
+            }
         }
     }
 }
