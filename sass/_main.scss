@@ -79,13 +79,14 @@
       background-color: $dark;
       padding: .5rem 1.75rem;
       border-radius: $rounded-pill;
+      font-weight: 100;
     }
   }
 
   // BG
   &.bg-table {
     background: white url('../images/bg/table.png') no-repeat center bottom;
-    background-size: contain;
+    background-size: 100% auto;
   }
 
   // Event

@@ -1,3 +1,17 @@
+// Link
+.card-link {
+    margin-bottom: 1.5rem;
+    border-radius: 0;
+    border: unset;
+    box-shadow: $box-shadow-sm;
+    @include transition($transition-base);
+
+    @include hover-focus {
+        box-shadow: $box-shadow;
+        @include transition($transition-base);
+    }
+}
+
 // Event
 .card-event {
     margin-bottom: 1.5rem;
@@ -288,6 +302,68 @@
 
         .card-title {
             align-self: flex-end;
+        }
+    }
+}
+
+// Karaoke room
+.card-karaoke-room {
+    align-items: center;
+    border: $border-width-lg solid $dark;
+    border-radius: $border-radius;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    min-height: 200px;
+    box-shadow: $box-shadow-sm;
+    margin-bottom: 1.5rem;
+    @include transition($transition-base);
+
+    .card-title {
+        background-color: white;
+        text-align: center;
+        margin-top: auto;
+        width: fit-content;
+        padding: .25rem 1.25rem;
+        border-radius: $rounded-pill;
+        border: $border-width-lg solid $dark;
+        color: $body-color;
+        box-shadow: $box-shadow-sm;
+        @include transition($transition-base);
+    }
+
+    @include hover-focus {
+        box-shadow: $box-shadow;
+        @include transition($transition-base);
+
+        .card-title {
+            background-color: $yellow;
+            @include transition($transition-base);
+        }
+    }
+
+    &.sammy {
+        background-image: url('../images/bg/sammy.png');
+    }
+}
+
+// Promotion other
+.card-promotion-other {
+    border-radius: 0;
+    height: calc(100% - 1.5rem);
+    margin-bottom: 1.5rem;
+    box-shadow: $box-shadow-sm;
+    @include transition($transition-base);
+
+    @include hover-focus {
+        box-shadow: $box-shadow;
+        @include transition($transition-base);
+    }
+
+    .card {
+        &-img-top {
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
         }
     }
 }
