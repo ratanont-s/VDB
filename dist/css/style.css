@@ -3292,7 +3292,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 @media (prefers-reduced-motion: reduce) { .sticky-wrapper.is-sticky .header .navbar-nav { -webkit-transition: none; transition: none; } }
 
-@media (min-width: 992px) { .sticky-wrapper.is-sticky .header .navbar-nav.active { opacity: 0; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; } }
+@media (min-width: 992px) { .sticky-wrapper.is-sticky .header .navbar-nav.active { visibility: hidden; opacity: 0; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; } }
 
 @media (min-width: 992px) and (prefers-reduced-motion: reduce) { .sticky-wrapper.is-sticky .header .navbar-nav.active { -webkit-transition: none; transition: none; } }
 
@@ -3337,6 +3337,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 @media (max-width: 991.98px) and (prefers-reduced-motion: reduce) { .sticky-wrapper .header .navbar-logo { -webkit-transition: none; transition: none; } }
 
 @media (max-width: 991.98px) { .sticky-wrapper .header .nav-item-logo { display: none; }
+  .sticky-wrapper .header .nav-link { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
   .sticky-wrapper .header .btn-search { display: none !important; }
   .sticky-wrapper .header .form-control { display: none; }
   .sticky-wrapper.is-sticky .header { background-color: unset; -webkit-box-shadow: unset; box-shadow: unset; }

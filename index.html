@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <!-- Head -->
 
 <head>
@@ -25,14 +26,17 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="./index.html">
+          <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" />
           <img src="./dist/images/LOGO-Scrolldown.png" alt="LOGO" class="navbar-logo-scrolldown" />
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
-          aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+          <i class="fas fa-bars"></i>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarMenu">
+        <div class="navbar-collapse offcanvas-collapse">
+          <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+            <i class="fas fa-times text-dark"></i>
+          </button>
           <ul class="navbar-nav">
             <li class="nav-item nav-item-home">
               <a class="nav-link" href="#">
@@ -42,19 +46,21 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <div class="nav-link-icon"><img src="./dist/images/icons/home.png" alt="เรื่องเล่าพี่หมี"></div>
+                <div class="nav-link-icon"><img src="./dist/images/icons/about.png" alt="เรื่องเล่าพี่หมี"></div>
                 <div class="nav-link-text">เรื่องเล่าพี่หมี</div>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <div class="nav-link-icon"><img src="./dist/images/icons/promotion.png" alt="โปรโมชั่น"></div>
+                <div class="nav-link-icon"><img src="./dist/images/icons/promotion.png" alt="โปรโมชั่น">
+                </div>
                 <div class="nav-link-text">โปรโมชั่น</div>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <div class="nav-link-icon"><img src="./dist/images/icons/home.png" alt="ห้องคาราโอเกะ"></div>
+                <div class="nav-link-icon"><img src="./dist/images/icons/karaoke.png" alt="ห้องคาราโอเกะ">
+                </div>
                 <div class="nav-link-text">ห้องคาราโอเกะ</div>
               </a>
             </li>
@@ -71,7 +77,8 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <div class="nav-link-icon"><img src="./dist/images/icons/event.png" alt="กิจกรรมพี่หมี"></div>
+                <div class="nav-link-icon"><img src="./dist/images/icons/event.png" alt="กิจกรรมพี่หมี">
+                </div>
                 <div class="nav-link-text">กิจกรรมพี่หมี</div>
               </a>
             </li>
@@ -83,10 +90,12 @@
             </li>
           </ul>
           <form class="form-inline form-search">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-search" type="submit">
-              <i class="fas fa-search"></i>
+            <button class="btn btn-search" type="button" onclick="toggleInputSearch();">
+              <i class="fas"></i>
             </button>
+            <input class="form-control form-control-search" id="inputSearch" type="search"
+              placeholder="พี่หมีช่วยหาให้มั้ย....." />
+
           </form>
         </div>
       </div>

@@ -152,6 +152,7 @@
         &.active {
 
           @include media-breakpoint-up(lg) {
+            visibility: hidden;
             opacity: 0;
             @include transition($transition-base);
           }
@@ -277,6 +278,10 @@
           &-logo {
             display: none;
           }
+        }
+
+        &-link {
+          align-items: flex-end;
         }
       }
 
