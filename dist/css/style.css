@@ -3377,7 +3377,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .footer { background-color: #38393B; color: #f8f9fa; text-align: center; padding: 0.5rem 0; font-size: small; }
 
-@media (max-width: 991.98px) { .footer { padding-bottom: 45px; } }
+@media (max-width: 991.98px) { .footer { padding-bottom: 45px; font-size: xx-small; } }
 
 .card-event { margin-bottom: 1.5rem; -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); border-radius: 1rem; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
