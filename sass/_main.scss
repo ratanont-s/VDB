@@ -93,4 +93,34 @@
   &-page {
     padding-top: 86px;
   }
+
+  .title-bg {
+    background: url('../images/bg/title.png') no-repeat center center;
+    background-size: 100% 100%;
+    display: inline-block;
+    padding: .75rem 1.75rem;
+    margin-bottom: 1.5rem;
+
+    &-contact {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    &-icon {
+      font-size: 2.5rem;
+      padding-right: 1.75rem;
+      border-right: $border-width-lg solid $dark;
+    }
+
+    &-text {
+      padding-left: 1.75rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .hr {
+    &-lg {
+      border-top-width: 2px;
+    }
+  }
 }
