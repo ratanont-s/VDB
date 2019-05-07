@@ -211,6 +211,9 @@ section {
     }
 
     @include media-breakpoint-up(xl) {
+        background: url('../images/bg/tell-story.png') no-repeat center center fixed;
+        background-size: 100% auto;
+
         .container {
             background: url('../images/bg/book.png') no-repeat center top 2.5rem;
             background-size: 100% calc(100% - 2.5rem);
