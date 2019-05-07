@@ -18,6 +18,24 @@
   <script src="./dist/js/bootstrap.bundle.min.js"></script>
   <script src="./dist/js/jquery.sticky.js"></script>
   <script src="./dist/js/script.js"></script>
+  <!-- Plugin -->
+  <script src="./dist/plugins/slick/slick.min.js"></script>
+  <script src="./dist/plugins/lightbox/ekko-lightbox.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.promotion-slide').slick({
+        appendArrows: $(".promotion-slide-nav"),
+        prevArrow: '<a href="#"><img src="./dist/images/icons/slick-prev.png"></a>',
+        nextArrow: '<a href="#"><img src="./dist/images/icons/slick-next.png"></a>',
+        responsive: [{
+          breakpoint: 991,
+          settings: {
+            arrows: false
+          }
+        }]
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -103,22 +121,25 @@
   </header>
 
   <!-- Main -->
-  <main class="main">
+  <main class="main bg-table">
     <!-- Sticky toolbar -->
     <ul class="sticky-toolbar">
       <li class="sticky-toolbar-item">
         <a href="#" data-toggle="tooltip" data-placement="left" title="Line">
           <i class="fab fa-line fa-lg"></i>
+          <span class="sticky-toolbar-text">สนทนา</span>
         </a>
       </li>
       <li class="sticky-toolbar-item">
         <a href="#" data-toggle="tooltip" data-placement="left" title="Location">
           <i class="fas fa-map-marker-alt fa-lg"></i>
+          <span class="sticky-toolbar-text">แผนที่</span>
         </a>
       </li>
       <li class="sticky-toolbar-item">
         <a href="#" data-toggle="tooltip" data-placement="left" title="Telephone number">
           <i class="fas fa-phone fa-lg"></i>
+          <span class="sticky-toolbar-text">โทร</span>
         </a>
       </li>
     </ul>
@@ -130,78 +151,248 @@
       </div>
     </section>
 
-    <div class="container">
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
-        exercitationem soluta tenetur numquam voluptatum blanditiis esse,
-        architecto similique praesentium, fuga perferendis laborum maxime
-        obcaecati veniam ducimus incidunt quibusdam vitae maiores. Facilis
-        similique quas consectetur excepturi asperiores exercitationem
-        sapiente cumque neque distinctio cum explicabo a omnis harum, iusto
-        quo perferendis recusandae provident accusantium enim deserunt aperiam
-        veritatis. Officia id est error. Ipsa, architecto ullam. Nostrum ipsa
-        quo eveniet ducimus! Officia tempore impedit itaque non sapiente,
-        culpa porro debitis, fugiat unde perferendis necessitatibus assumenda
-        eum quidem dignissimos similique nihil maiores esse magni. Molestias
-        ullam libero unde fugit veniam aspernatur blanditiis et voluptas enim
-        fuga temporibus, quo sunt perspiciatis in recusandae architecto sequi
-        quidem possimus minima corporis, tempore, iste laboriosam deleniti
-        odio? Eaque. Consectetur facilis quam nihil unde obcaecati. Quas rem
-        tempore consectetur accusamus eaque maxime nesciunt dolorem
-        exercitationem repellendus illum. Tenetur quasi quia earum esse omnis
-        eaque velit explicabo nulla dolorem architecto. Praesentium
-        exercitationem dolorem unde quis voluptatibus expedita voluptatum a
-        tempore esse nihil delectus alias ipsam sunt laborum sequi blanditiis
-        consectetur, error ipsa rem officiis nesciunt odit. Impedit repellat
-        exercitationem maiores. Ab perferendis esse, consequatur blanditiis
-        eum praesentium suscipit in voluptas tenetur debitis aspernatur
-        incidunt vero eligendi architecto repellendus optio iste? Ipsum
-        molestiae quas aliquid maiores voluptatum cupiditate officiis illo
-        saepe? Impedit laborum nisi deserunt sapiente optio tempore culpa
-        aspernatur quasi maxime, assumenda placeat nulla maiores corrupti quia
-        labore ipsam voluptas at velit iste unde? Laudantium veniam itaque
-        voluptas ex dicta. Deleniti quos veritatis suscipit aliquam ducimus
-        maxime eligendi eos nihil temporibus quis earum reiciendis voluptas
-        cupiditate commodi vitae repellat sint reprehenderit facere
-        praesentium repudiandae, qui laudantium! Dolores rem assumenda
-        doloribus? Harum quam modi necessitatibus quasi obcaecati impedit iste
-        suscipit labore nemo fugit, ab cupiditate doloremque quibusdam. Vel
-        modi, aliquid mollitia minima ea molestias, at labore numquam quod
-        libero consequatur sit. Delectus, quam. Aspernatur, qui tempora, odio
-        reprehenderit dolorem animi placeat repellat iure harum, magni
-        mollitia odit porro in veniam. Similique tenetur inventore autem illo
-        saepe quis aut esse alias explicabo! Tenetur, unde quasi harum
-        necessitatibus delectus sit vero blanditiis facere quia deleniti?
-        Molestias eos pariatur laboriosam quo incidunt esse facilis illo
-        reiciendis illum. Magnam consequatur fuga exercitationem dolor, unde
-        veniam. Minima inventore exercitationem in natus rem deserunt tempore
-        hic repellat molestias mollitia molestiae amet, illo possimus ratione.
-        Aut, eum quis commodi minus pariatur, dolore dolor, deleniti dolores
-        corporis molestiae autem! Suscipit at quaerat dolorem corrupti fugiat
-        similique odit est autem praesentium magnam minus incidunt dicta
-        officia obcaecati eos tenetur necessitatibus iure consequuntur culpa
-        accusantium, molestiae itaque exercitationem! Earum, laborum porro?
-        Deleniti non libero cupiditate rem repudiandae quos magnam, ea
-        commodi. Veritatis quas saepe labore vel doloribus rerum deserunt aut
-        sunt facere, quos laborum cupiditate, ad exercitationem amet
-        quibusdam? Esse, maxime? Iusto natus vitae optio rem doloribus
-        corporis a voluptatum, odio neque expedita, velit soluta accusantium
-        voluptates at dolores eligendi porro odit explicabo ducimus enim
-        excepturi ab dolorem quam! Quaerat, reprehenderit. Asperiores cum,
-        optio consequuntur at earum, veniam laborum illum fuga cumque impedit
-        nulla aperiam amet, odio veritatis debitis accusamus. Ullam, animi
-        odit? Quis suscipit dolore, modi vero numquam alias quam! Illum dolor
-        minima deserunt. Neque iste fuga temporibus placeat aspernatur
-        eligendi sapiente dolorum molestias. Quos, molestiae cum! Id expedita
-        ipsa maiores cum, minima perspiciatis ab! Voluptatibus ipsam fuga rem
-        distinctio. Quisquam, sequi! Nesciunt laudantium fugiat, animi
-        voluptate sunt eaque dolore, illo ducimus nulla dolores quibusdam nam
-        quidem eos delectus quia labore libero voluptates in blanditiis esse.
-        Provident cupiditate consectetur nisi. Quidem illo ratione iusto, iure
-        ut vero ipsam, vitae sit inventore magnam nihil officiis. Eveniet ut
-        necessitatibus consequuntur debitis neque atque facere ipsa, illum
-        sint nulla id enim doloremque recusandae!
-      </p>
+    <!-- Promotion -->
+    <section id="promotion">
+      <div class="container">
+        <!-- Image title -->
+        <img src="./dist/images/title-promotion.png" alt="Promotion" class="promotion-title">
+
+        <!-- Content -->
+        <div class="promotion-content">
+          <!-- Slide -->
+          <div class="promotion-slide">
+            <div class="promotion-slide-item">
+              <a href="#" class="card card-today-special">
+                <div class="row no-gutters">
+                  <div class="col-lg-7 col-xl-8">
+                    <img src="./dist/images/today-special.jpg" alt="TODAY’S SPECIAL" class="card-img">
+                  </div>
+                  <div class="col-lg-5 col-xl-4">
+                    <div class="card-body">
+                      <div class="card-body-inner">
+                        <h5 class="card-title">TODAY’S SPECIAL</h5>
+                        <h6 class="card-text">
+                          แวะไปนั่งกินอาหารที่ร้าน ร้าน VILLA DE BEAR ทีไร กลิ่มหอม ๆ
+                          ของผงกะหรี่ที่เป็นส่วนผสมในเมนูจานเด็ดอย่าง
+                        </h6>
+                        <h6 class="card-text">
+                          "เนื้อปูผัดผงกะหรี่" ก็จะลอยเตะจมูกมาแต่ไกล แถมมองไปโต๊ะไหน
+                          ก็ล้วนแต่สั่งเนื้อปูผัดผงกะหรี่
+                          วันนี้จึงขอเสนอเมนูยอดนิยม ไปลองสั่งกันดูนะคะ
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="promotion-slide-item">
+              <a href="#" class="card card-today-special">
+                <div class="row no-gutters">
+                  <div class="col-lg-7 col-xl-8">
+                    <img src="./dist/images/today-special.jpg" alt="TODAY’S SPECIAL" class="card-img">
+                  </div>
+                  <div class="col-lg-5 col-xl-4">
+                    <div class="card-body">
+                      <div class="card-body-inner">
+                        <h5 class="card-title">TODAY’S SPECIAL</h5>
+                        <h6 class="card-text">
+                          แวะไปนั่งกินอาหารที่ร้าน ร้าน VILLA DE BEAR ทีไร กลิ่มหอม ๆ
+                          ของผงกะหรี่ที่เป็นส่วนผสมในเมนูจานเด็ดอย่าง
+                        </h6>
+                        <h6 class="card-text">
+                          "เนื้อปูผัดผงกะหรี่" ก็จะลอยเตะจมูกมาแต่ไกล แถมมองไปโต๊ะไหน
+                          ก็ล้วนแต่สั่งเนื้อปูผัดผงกะหรี่
+                          วันนี้จึงขอเสนอเมนูยอดนิยม ไปลองสั่งกันดูนะคะ
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="promotion-slide-nav"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- พี่หมีเล่าเรื่อง -->
+    <section id="tell-story">
+      <div class="container">
+        <!-- Image title -->
+        <img src="./dist/images/title-bear-story.png" alt="พี่หมีเล่าเรื่อง" class="tell-story-title">
+
+        <!-- Content -->
+        <div class="tell-story-content">
+          <div class="row">
+            <div class="col-xl-5">
+              <div class="tell-story-new">
+                <div class="tell-story-new-img">
+                  <img src="./dist/images/new-01.jpg" alt="New">
+                  <span>NEW</span>
+                </div>
+                <h6 class="tell-story-new-title">
+                  เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
+                  เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น <a
+                    href="#">อ่านต่อ...</a>
+                </h6>
+                <div class="tell-story-new-more">
+                  <img src="./dist/images/postit.png" alt="postit">
+                  <a href="#"><span class="d-none d-lg-inline-block">เรื่องเล่า</span>เพิ่มเติม</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl">
+              <div class="tell-story-video">
+                <h4 class="tell-story-video-title"><img src="./dist/images/icons/pin.png" alt="น้องหมีแนะนำวีดีโอ">
+                  น้องหมีแนะนำวีดีโอ</h4>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yMR-xmcmb6A"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl">
+              <div class="tell-story-contact">
+                <h4 class="tell-story-contact-title">ร้านอาหาร Villa De Bear</h4>
+                <h6 class="tell-story-contact-text">
+                  ย่านฝั่งธนบุรี บนถนนราชพฤกษ์ โดดเด่นด้วยรูปแบบโรงงานตุ๊กตาหมีดำ สวยงาม
+                  เป็นเอกลักษณ์
+                </h6>
+                <h6 class="tell-story-contact-text">
+                  เราให้บริการอาหารไทย นานาชาติ อาหารซีฟู้ด และเครื่องดื่มนานาชนิด มีห้องจัดเลี้ยง
+                  ห้องคาราโอเกะพร้อมให้บริการ
+                </h6>
+                <h6 class="tell-story-contact-text">
+                  โทรสอบ 098-496-6245
+                  หรือ 02-443-3724 ต่อ 0
+                </h6>
+                <h6>LINE Official : @villadebear (มี@)</h6>
+                <nav class="nav justify-content-center">
+                  <a class="nav-link px-2" href="#"><img src="./dist/images/icons/fb.png" alt="Facebook"></a>
+                  <a class="nav-link px-2" href="#"><img src="./dist/images/icons/ig.png" alt="Instagram"></a>
+                  <a class="nav-link px-2" href="#"><img src="./dist/images/icons/yt.png" alt="Youtube"></a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- แกลเลอรี่ -->
+    <section id="gallery">
+      <div class="container">
+        <!-- Image title -->
+        <img src="./dist/images/title-gallery.png" alt="แกลเลอรี่" class="gallery-title">
+
+        <!-- Content -->
+        <div class="gallery-content">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <a href="./dist/images/gallery-01.jpg" class="card card-gallery card-gallery-hilight"
+                data-toggle="lightbox" data-gallery="gallery-overview">
+                <img src="./dist/images/gallery-01.jpg" class="card-img">
+                <div class="card-img-overlay">
+                  <h4 class="card-title">Overview</h4>
+                  <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
+                </div>
+              </a>
+              <div class="d-none">
+                <a href="./dist/images/gallery-02.jpg" data-toggle="lightbox" data-gallery="gallery-overview">
+                  <img src="./dist/images/gallery-02.jpg">
+                </a>
+                <a href="./dist/images/gallery-03.jpg" data-toggle="lightbox" data-gallery="gallery-overview">
+                  <img src="./dist/images/gallery-03.jpg">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="row">
+                <div class="col-6">
+                  <a href="./dist/images/gallery-02.jpg" class="card card-gallery" data-toggle="lightbox"
+                    data-gallery="gallery-restaurant">
+                    <img src="./dist/images/gallery-02.jpg" class="card-img">
+                    <div class="card-img-overlay">
+                      <h4 class="card-title">restaurant</h4>
+                      <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
+                    </div>
+                  </a>
+                  <div class="d-none">
+                    <a href="./dist/images/gallery-03.jpg" data-toggle="lightbox" data-gallery="gallery-restaurant">
+                      <img src="./dist/images/gallery-03.jpg">
+                    </a>
+                    <a href="./dist/images/gallery-01.jpg" data-toggle="lightbox" data-gallery="gallery-restaurant">
+                      <img src="./dist/images/gallery-01.jpg">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <a href="./dist/images/gallery-03.jpg" class="card card-gallery" data-toggle="lightbox"
+                    data-gallery="gallery-foods">
+                    <img src="./dist/images/gallery-03.jpg" class="card-img">
+                    <div class="card-img-overlay">
+                      <h4 class="card-title">foods</h4>
+                      <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
+                    </div>
+                  </a>
+
+                  <div class="d-none">
+                    <a href="./dist/images/gallery-01.jpg" data-toggle="lightbox" data-gallery="gallery-foods">
+                      <img src="./dist/images/gallery-01.jpg">
+                    </a>
+                    <a href="./dist/images/gallery-02.jpg" data-toggle="lightbox" data-gallery="gallery-foods">
+                      <img src="./dist/images/gallery-02.jpg">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <a href="./dist/images/gallery-03.jpg" class="card card-gallery" data-toggle="lightbox"
+                    data-gallery="gallery-karaoke-kinny">
+                    <img src="./dist/images/gallery-03.jpg" class="card-img">
+                    <div class="card-img-overlay">
+                      <h4 class="card-title">KARAOKE KINNY</h4>
+                      <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
+                    </div>
+                  </a>
+                  <div class="d-none">
+                    <a href="./dist/images/gallery-01.jpg" data-toggle="lightbox" data-gallery="gallery-karaoke-kinny">
+                      <img src="./dist/images/gallery-01.jpg">
+                    </a>
+                    <a href="./dist/images/gallery-02.jpg" data-toggle="lightbox" data-gallery="gallery-karaoke-kinny">
+                      <img src="./dist/images/gallery-02.jpg">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <a href="./dist/images/gallery-03.jpg" class="card card-gallery" data-toggle="lightbox"
+                    data-gallery="gallery-karaoke-chisty">
+                    <img src="./dist/images/gallery-03.jpg" class="card-img">
+                    <div class="card-img-overlay">
+                      <h4 class="card-title">KARAOKE CHISTY</h4>
+                      <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
+                    </div>
+                  </a>
+                  <div class="d-none">
+                    <a href="./dist/images/gallery-01.jpg" data-toggle="lightbox" data-gallery="gallery-karaoke-chisty">
+                      <img src="./dist/images/gallery-01.jpg">
+                    </a>
+                    <a href="./dist/images/gallery-02.jpg" data-toggle="lightbox" data-gallery="gallery-karaoke-chisty">
+                      <img src="./dist/images/gallery-02.jpg">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer image -->
+    <div class="text-center">
+      <img src="./dist/images/footer/home.png" alt="Footer home" class="w-100">
     </div>
   </main>
 

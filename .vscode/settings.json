@@ -3,5 +3,9 @@
         "format": "compact",
         "extensionName": ".css",
         "savePath": "/dist/css"
-    }]
+    }],
+    "liveSassCompile.settings.includeItems": [
+        "sass/style.scss"
+    ],
+    "liveSassCompile.settings.generateMap": false
 }

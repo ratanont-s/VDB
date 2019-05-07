@@ -3,7 +3,13 @@ $(function () {
 
   $('[data-toggle="offcanvas"]').on('click', function () {
     $('.offcanvas-collapse').toggleClass('open')
-  })
+  });
+
+  // Lightbox
+  $('[data-toggle="lightbox"]').on('click', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
 })
 
 // Tooltip
@@ -18,6 +24,7 @@ function toggleInputSearch() {
   $('#inputSearch').toggleClass('active');
 }
 
+
 // Document
 $(document).ready(function () {
   // Header
@@ -25,7 +32,5 @@ $(document).ready(function () {
     topSpacing: 0,
     zIndex: 1031
   });
-
-
 
 });
