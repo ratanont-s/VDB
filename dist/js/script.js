@@ -5,11 +5,6 @@ $(function () {
     $('.offcanvas-collapse').toggleClass('open')
   });
 
-  // Lightbox
-  $('[data-toggle="lightbox"]').on('click', function (event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-  });
 })
 
 // Tooltip
@@ -23,6 +18,7 @@ function toggleInputSearch() {
   $('.btn-search').toggleClass('active');
   $('#inputSearch').toggleClass('active');
 }
+
 
 
 // Document

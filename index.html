@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Villa De Bear</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
   <!-- Fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
@@ -20,7 +22,7 @@
   <script src="./dist/js/script.js"></script>
   <!-- Plugin -->
   <script src="./dist/plugins/slick/slick.min.js"></script>
-  <script src="./dist/plugins/lightbox/ekko-lightbox.min.js"></script>
+  <script src="./dist/plugins/lightGallery/js/lightgallery-all.min.js"></script>
   <script>
     $(document).ready(function () {
       $('.promotion-slide').slick({
@@ -33,6 +35,20 @@
             arrows: false
           }
         }]
+      });
+
+      // 
+      $("#gallery-overview,#gallery-restaurant,#gallery-foods,#gallery-kinny,#gallery-chisty").lightGallery({
+        selector: '.card-gallery',
+        toogleThumb: false,
+        download: false,
+        share: false,
+        zoom: false,
+        fullScreen: false,
+        autoplay: false,
+        autoplayControls: false,
+        mode: 'lg-tube',
+        width: '1140px'
       });
     });
   </script>
@@ -290,98 +306,82 @@
         <!-- Content -->
         <div class="gallery-content">
           <div class="row align-items-center">
-            <div class="col-lg-4">
-              <a href="./dist/images/gallery-01.jpg" class="card card-gallery card-gallery-hilight"
-                data-toggle="lightbox" data-gallery="gallery-overview">
+            <div class="col-lg-4" id="gallery-overview">
+              <a href="./dist/images/gallery-01.jpg" class="card card-gallery card-gallery-hilight">
                 <img src="./dist/images/gallery-01.jpg" class="card-img">
                 <div class="card-img-overlay">
                   <h4 class="card-title">Overview</h4>
                   <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
                 </div>
               </a>
-              <div class="d-none">
-                <a href="./dist/images/gallery-02.jpg" data-toggle="lightbox" data-gallery="gallery-overview">
-                  <img src="./dist/images/gallery-02.jpg">
-                </a>
-                <a href="./dist/images/gallery-03.jpg" data-toggle="lightbox" data-gallery="gallery-overview">
-                  <img src="./dist/images/gallery-03.jpg">
-                </a>
-              </div>
+              <a href="./dist/images/gallery-01.jpg" class="d-none card-gallery">
+                <img src="./dist/images/gallery-01.jpg" class="img-fluid">
+              </a>
+              <a href="./dist/images/gallery-01.jpg" class="d-none card-gallery">
+                <img src="./dist/images/gallery-01.jpg" class="img-fluid">
+              </a>
             </div>
             <div class="col-lg-8">
               <div class="row">
-                <div class="col-6">
-                  <a href="./dist/images/gallery-02.jpg" class="card card-gallery" data-toggle="lightbox"
-                    data-gallery="gallery-restaurant">
+                <div class="col-6" id="gallery-restaurant">
+                  <a href="./dist/images/gallery-02.jpg" class="card card-gallery">
                     <img src="./dist/images/gallery-02.jpg" class="card-img">
                     <div class="card-img-overlay">
                       <h4 class="card-title">restaurant</h4>
                       <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
                     </div>
                   </a>
-                  <div class="d-none">
-                    <a href="./dist/images/gallery-03.jpg" data-toggle="lightbox" data-gallery="gallery-restaurant">
-                      <img src="./dist/images/gallery-03.jpg">
-                    </a>
-                    <a href="./dist/images/gallery-01.jpg" data-toggle="lightbox" data-gallery="gallery-restaurant">
-                      <img src="./dist/images/gallery-01.jpg">
-                    </a>
-                  </div>
+                  <a href="./dist/images/gallery-02.jpg" class="d-none card-gallery">
+                    <img src="./dist/images/gallery-02.jpg" class="img-fluid">
+                  </a>
+                  <a href="./dist/images/gallery-02.jpg" class="d-none card-gallery">
+                    <img src="./dist/images/gallery-02.jpg" class="img-fluid">
+                  </a>
                 </div>
-                <div class="col-6">
-                  <a href="./dist/images/gallery-03.jpg" class="card card-gallery" data-toggle="lightbox"
-                    data-gallery="gallery-foods">
+                <div class="col-6" id="gallery-foods">
+                  <a href="./dist/images/gallery-03.jpg" class="card card-gallery">
                     <img src="./dist/images/gallery-03.jpg" class="card-img">
                     <div class="card-img-overlay">
                       <h4 class="card-title">foods</h4>
                       <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
                     </div>
                   </a>
-
-                  <div class="d-none">
-                    <a href="./dist/images/gallery-01.jpg" data-toggle="lightbox" data-gallery="gallery-foods">
-                      <img src="./dist/images/gallery-01.jpg">
-                    </a>
-                    <a href="./dist/images/gallery-02.jpg" data-toggle="lightbox" data-gallery="gallery-foods">
-                      <img src="./dist/images/gallery-02.jpg">
-                    </a>
-                  </div>
+                  <a href="./dist/images/gallery-03.jpg" class="d-none card-gallery">
+                    <img src="./dist/images/gallery-03.jpg" class="img-fluid">
+                  </a>
+                  <a href="./dist/images/gallery-03.jpg" class="d-none card-gallery">
+                    <img src="./dist/images/gallery-03.jpg" class="img-fluid">
+                  </a>
                 </div>
-                <div class="col-6">
-                  <a href="./dist/images/gallery-03.jpg" class="card card-gallery" data-toggle="lightbox"
-                    data-gallery="gallery-karaoke-kinny">
+                <div class="col-6" id="gallery-kinny">
+                  <a href="./dist/images/gallery-03.jpg" class="card card-gallery">
                     <img src="./dist/images/gallery-03.jpg" class="card-img">
                     <div class="card-img-overlay">
                       <h4 class="card-title">KARAOKE KINNY</h4>
                       <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
                     </div>
                   </a>
-                  <div class="d-none">
-                    <a href="./dist/images/gallery-01.jpg" data-toggle="lightbox" data-gallery="gallery-karaoke-kinny">
-                      <img src="./dist/images/gallery-01.jpg">
-                    </a>
-                    <a href="./dist/images/gallery-02.jpg" data-toggle="lightbox" data-gallery="gallery-karaoke-kinny">
-                      <img src="./dist/images/gallery-02.jpg">
-                    </a>
-                  </div>
+                  <a href="./dist/images/gallery-03.jpg" class="d-none card-gallery">
+                    <img src="./dist/images/gallery-03.jpg" class="img-fluid">
+                  </a>
+                  <a href="./dist/images/gallery-03.jpg" class="d-none card-gallery">
+                    <img src="./dist/images/gallery-03.jpg" class="img-fluid">
+                  </a>
                 </div>
-                <div class="col-6">
-                  <a href="./dist/images/gallery-03.jpg" class="card card-gallery" data-toggle="lightbox"
-                    data-gallery="gallery-karaoke-chisty">
+                <div class="col-6" id="gallery-chisty">
+                  <a href="./dist/images/gallery-03.jpg" class="card card-gallery">
                     <img src="./dist/images/gallery-03.jpg" class="card-img">
                     <div class="card-img-overlay">
                       <h4 class="card-title">KARAOKE CHISTY</h4>
                       <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
                     </div>
                   </a>
-                  <div class="d-none">
-                    <a href="./dist/images/gallery-01.jpg" data-toggle="lightbox" data-gallery="gallery-karaoke-chisty">
-                      <img src="./dist/images/gallery-01.jpg">
-                    </a>
-                    <a href="./dist/images/gallery-02.jpg" data-toggle="lightbox" data-gallery="gallery-karaoke-chisty">
-                      <img src="./dist/images/gallery-02.jpg">
-                    </a>
-                  </div>
+                  <a href="./dist/images/gallery-03.jpg" class="d-none card-gallery">
+                    <img src="./dist/images/gallery-03.jpg" class="img-fluid">
+                  </a>
+                  <a href="./dist/images/gallery-03.jpg" class="d-none card-gallery">
+                    <img src="./dist/images/gallery-03.jpg" class="img-fluid">
+                  </a>
                 </div>
               </div>
             </div>
