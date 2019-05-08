@@ -1,0 +1,10 @@
+.breadcrumb {
+    padding-left: 0;
+    padding-right: 0;
+
+    &-item {
+        a {
+            color: $breadcrumb-active-color;
+        }
+    }
+}

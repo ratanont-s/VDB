@@ -18,3 +18,50 @@
         margin-right: .25rem;
     }
 }
+
+.list-share {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+
+    &-item {
+        border: 1px solid $border-color;
+        display: flex;
+
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+
+        a {
+            display: inline-block;
+            @include transition($transition-base);
+
+            @include hover-focus {
+                opacity: .5;
+                @include transition($transition-base);
+            }
+        }
+
+        span {
+            display: inline-block;
+            padding-left: .25rem;
+            padding-right: .25rem;
+        }
+    }
+}
+
+.list-group-article {
+    .list-group {
+        &-item {
+            border: unset;
+            border-bottom: 1px solid $border-color;
+            margin-bottom: 0;
+
+            &:last-child {
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+}
