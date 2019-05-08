@@ -640,10 +640,8 @@
     }
 
     @include media-breakpoint-down(md) {
-        display: none;
 
         &-hilight {
-            display: block;
 
             .card-img {
                 height: 40vh;

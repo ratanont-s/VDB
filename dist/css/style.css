@@ -4288,9 +4288,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .card-gallery:hover .card-icon, .card-gallery:focus .card-icon { opacity: 1; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-@media (max-width: 991.98px) { .card-gallery { display: none; }
-  .card-gallery-hilight { display: block; }
-  .card-gallery-hilight .card-img { height: 40vh; } }
+@media (max-width: 991.98px) { .card-gallery-hilight .card-img { height: 40vh; } }
 
 .card-post { border-radius: 0; color: #212529; margin-bottom: 1.5rem; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
