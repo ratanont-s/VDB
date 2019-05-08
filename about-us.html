@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<!-- Head -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Villa De Bear</title>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <!-- JS -->
+    <script src="./dist/js/jquery.min.js"></script>
+    <script src="./dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./dist/js/jquery.sticky.js"></script>
+    <script src="./dist/js/script.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" />
+                    <img src="./dist/images/LOGO-Scrolldown.png" alt="LOGO" class="navbar-logo-scrolldown" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="navbar-collapse offcanvas-collapse">
+                    <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+                        <i class="fas fa-times text-dark"></i>
+                    </button>
+                    <ul class="navbar-nav">
+                        <li class="nav-item nav-item-home">
+                            <a class="nav-link" href="#">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/home.png" alt="หน้าแรก"></div>
+                                <div class="nav-link-text">หน้าแรก</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/about.png"
+                                        alt="เรื่องเล่าพี่หมี"></div>
+                                <div class="nav-link-text">เรื่องเล่าพี่หมี</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/promotion.png" alt="โปรโมชั่น">
+                                </div>
+                                <div class="nav-link-text">โปรโมชั่น</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/karaoke.png"
+                                        alt="ห้องคาราโอเกะ">
+                                </div>
+                                <div class="nav-link-text">ห้องคาราโอเกะ</div>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-item-logo">
+                            <a class="nav-link" href="./index.html">
+                                <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/member.png"
+                                        alt="ครอบครัวพี่หมี"></div>
+                                <div class="nav-link-text">ครอบครัวพี่หมี</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/event.png" alt="กิจกรรมพี่หมี">
+                                </div>
+                                <div class="nav-link-text">กิจกรรมพี่หมี</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/restusrant.png"
+                                        alt="รายการอาหาร"></div>
+                                <div class="nav-link-text">รายการอาหาร</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="form-inline form-search">
+                        <button class="btn btn-search" type="button" onclick="toggleInputSearch();">
+                            <i class="fas"></i>
+                        </button>
+                        <input class="form-control form-control-search" id="inputSearch" type="search"
+                            placeholder="พี่หมีช่วยหาให้มั้ย....." />
+
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main main-page">
+        <!-- Sticky toolbar -->
+        <ul class="sticky-toolbar">
+            <li class="sticky-toolbar-item">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Line">
+                    <i class="fab fa-line fa-lg"></i>
+                </a>
+            </li>
+            <li class="sticky-toolbar-item">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Location">
+                    <i class="fas fa-map-marker-alt fa-lg"></i>
+                </a>
+            </li>
+            <li class="sticky-toolbar-item">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Telephone number">
+                    <i class="fas fa-phone fa-lg"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Container -->
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card card-about">
+                        <h2 class="card-title text-right">เรื่องเล่าพี่หมี 5 ตัว</h2>
+                        <p class="card-text"><strong>Villa De Bear</strong>
+                            ร้านอาหารหมู่บ้านหมีสีดำที่มีเรื่องราวของพี่หมีชื่อวิลลี่
+                            ซึ่งได้มรดกโรงงานผลิตหมีจากคุณปู่
+                            แต่ด้วยความที่พี่หมีนั้นชอบท่องเที่ยวไปแสวงหาของกินอร่อยๆ
+                            จึงดัดแปลงโรงงานผลิตหมีให้เป็นร้านอาหาร
+                            โดยที่เพื่อนๆอีก 4 ตัว คือ พี่หมีทูบี้ช่างซ่อมประจำร้าน
+                            พี่หมีแซมมี่ช่างตัดเย็บเสื้อผ้า
+                            พี่หมีคริสตี้หมีสาวสวยประจำร้านช่างเบเกอรี่ และหมีคินนี่หมีพ่อครัวตัวใหญ่
+                            ที่ช่วยกับสร้างให้โรงงานผลิตหมีเก่าๆกลายเป็นร้านอาหารสุดน่ารัก นั้นก็คือ Villa De
+                            Bear
+
+                        </p>
+                        <p class="card-text">อาหารของทางร้าน Villa De Bear เป็นอาหารที่หลากหลาย ทั้งอาหารไทย
+                            และอาหารนานาชาติ
+                            นอกจากนั้นยังมีทั้งของหวาน และเครื่องดื่มอีกมากมายพร้อมเสิร์ฟให้ลูกค้าทุกๆท่าน
+                            เมื่อเข้ามาในร้าน
+                            Villa
+                            De Bear บริเวณด้านหน้าร้านจะเจอพี่หมีวิลลี่ หมีดำตัวใหญ่ที่ไม่มีแขน
+                            เพราะอยากให้ทุกคนเข้ามาสวมกอดพี่หมีได้แน่นๆ พร้อมยืนต้อนรับด้วยรอยยิ้ม
+                            เพื่อเชิญทุกท่านไปยังโซนหน้าร้านที่จะเป็นทางเข้าโรงงานผลิตหมี Villa De Bear
+                            บริเวณทางเข้ายังมีมุมน่ารักๆของพี่หมีทั้ง 5 ตัว ไม่ว่าจะมาเป็นเพื่อน คู่รัก
+                            หรือครอบครัว
+                            ก็สามารถเก็บภาพความประทับใจกับโซนนี้ได้ </p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="./dist/images/about-01.jpg" alt="about" class="card-img">
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="./dist/images/about-01.jpg" alt="about" class="card-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card card-about">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <img src="./dist/images/about-01.jpg" alt="about" class="card-img">
+                            </div>
+                            <div class="col-lg-6">
+                                <h5 class="card-title">โซนสมูทตี้</h5>
+                                <p class="card-text">ผ่านจุดต้อนรับเข้ามาแล้ว
+                                    ด้านซ้ายจะเจออีกมุมนึงที่ต้องแวะเข้าไปนั่นคือโซนสมูทตี้
+                                    เป็นโซนทีมีเบเกอรี่พี่หมีน่ารักๆ เครื่องดื่มสมูทตี้มากมาย และของที่ระลึกของพี่หมี
+                                    ที่ต้องอดใจไม่ไหวกับความน่ารักของพี่หมี
+                                    แถมยังมีมุมถ่ายรูปที่ตกแต่งผนังไปด้วยฟั่นเฟือง มุมนี้พี่หมีขอแนะนำ
+                                    ภายในร้านแบ่งออกเป็น 3 โซน คือ โซน indoor outdoor และโซนคาราโอเกะ มาดูโซนแรกเป็นโซน
+                                    Outdoor โซนของความผ่อนคลายในการทานอาหาร พร้อมฟังเพลงดนตรีสด เหมาะกับทุกเพศ ทุกวัย
+                                    ในการมาทานข้าว สังสรรค์ กับบรรยากาศสุดโรแมนติกใต้แสงเทียน
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card card-about">
+                        <h5 class="card-title">โซน outdoor ริมน้ำ</h5>
+                        <p class="card-text">โซนริมน้ำ อีกหนึ่งมุมที่โรแมนติกเป็นมุม outdoor แบบมีหลังคา
+                            นอกจะเห็นบรรยากาศของภายนอกแล้ว
+                            โซนนี้ยังติดกับบาร์ โซนนี้ยังเหมาะกับการมาปาร์ตี้เล็กๆรวมตัวกลุ่มเพื่อน นัดพบปะกัน
+                            ที่ต้องทำให้คุณประทับใจแน่นอน โซนที่ 2 ที่พี่หมีจะมาแนะนำคือโซน Indoor
+                            เป็นโซนที่เล่าเรื่องราวของโรงงานผลิตหมีเก่าที่ทำให้คุณต้องเพลิดเพลินกับการตกแต่งต่างๆ
+                            ด้านในจะประกอบไปด้วย 4 มุม
+                        </p>
+                        <img src="./dist/images/about-01.jpg" alt="about" class="card-img-bottom">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card card-about">
+                        <img src="./dist/images/about-01.jpg" alt="about" class="card-img-top">
+                        <h5 class="card-title">โซนห้องตัดเย็บ</h5>
+                        <p class="card-text">
+                            มุมแรกเป็นมุมห้องตัดเย็บ เป็นจุดแรกในการผลิตหมี ตกแต่งด้วยแพท
+                            เทิร์นตัดเย็บตุ๊กตาหมีที่ผนังและหลอดด้ายหลากหลายสีขนาดใหญ่บนเพดาน
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card card-about">
+                        <img src="./dist/images/about-06.jpg" alt="about" class="card-img-top">
+                        <h5 class="card-title">โซนห้องกระดุม</h5>
+                        <p class="card-text">
+                            เมื่อตัดเย็บแล้วมุมถัดไปจะเป็นมุมห้องกระดุม ที่จะมาตกแต่งตุ๊กตาพี่หมี โซนนี้อยู่ส่วนชั้น 2
+                            ของอาหาร มุมนี้ตกแต่งด้วยกระดุมขนาดใหญ่
+                            และบนเพดานประดับตกแต่งหลอดไฟพาดสลับไปมาซึ่งจะสวยมากในช่วงกลางคืน
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card card-about">
+                        <img src="./dist/images/about-07.jpg" alt="about" class="card-img-top">
+                        <h5 class="card-title">โซนจัดแสดง</h5>
+                        <p class="card-text">
+                            มุมสุดท้าย มุมที่โดนใจทุกคน นั่นคือมุมแสดงสินค้า ซึ่งมุมนี้จะตกแต่งด้วยโซฟาหมีตัวใหญ่หลายตัว
+                            ให้ทุกท่านได้มาถ่ายรูปคู่กับพี่หมี ไม่ว่าจะเป็นเด็กหรือผู้ใหญ่ก็ต้องชอบแน่นอน
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card card-about">
+                        <img src="./dist/images/about-08.jpg" alt="about" class="card-img-top">
+                        <h5 class="card-title">โซนห้องลำเลียง</h5>
+                        <p class="card-text">
+                            มุมต่อมาเป็นมุมลำเลียง ประกอบด้วยฟันเฟืองขนาดใหญ่ โดยการจัดโต๊ะ
+                            มุมนี้จะเป็นตัวยูคล้ายสายพานที่กำลังลำเลียงตุ๊กตาหมีไปมุมถัดไป
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card card-about">
+                        <img src="./dist/images/about-09.jpg" alt="about" class="card-img-top">
+                        <h5 class="card-title">ห้องน้ำ</h5>
+                        <p class="card-text">
+                            ยังไม่หมดแค่นี้
+                            อีกสถานที่หนึ่งที่เราต้องแวะเข้าไปถ่ายภาพให้ได้นั่นคือห้องน้ำพี่หมีที่มีด้วยกันสองที่
+                            ที่แรกห้องน้ำในโซนอาคารอินดอร์ ที่ยัง คงความเป็นเอกลักษณ์ของพี่หมี ชวนให้เพื่อนๆ
+                            ได้ไปเซลฟี่สัก 2-3 ภาพ อย่างป้ายห้องน้ำสวยๆ สุดน่ารัก ไว้ยืนรอต้อนรับเพื่อนๆ กัน นอกจากนั้น
+                            ก๊อกอ่างล้างมือก็ยังเป็นก๊อกพี่หมี สุดน่ารัก ห้องน้ำที่สองคือ
+                            ห้องน้ำโซนเอ้าท์ดอร์ที่ใส่เอกลักษณ์ของร้าน Villa De Bear
+                            อย่างป้ายห้องน้ำที่มีรูปกราฟิกพี่หมีวิลลี่เป็นอีกหนึ่งมุมน่ารักที่ให้เพื่อนๆ
+                            สามารถอมยิ้มไปกับพี่หมีได้ และไฮไลท์สำคัญสำหรับโซนห้องน้ำเอ้าท์ดอร์
+                            ที่เต็มไปด้วยภาพวาดน่ารักๆ ที่มี
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card card-about border-bottom-0">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <img src="./dist/images/about-10.jpg" alt="about" class="card-img">
+                            </div>
+                            <div class="col-lg-6">
+                                <h5 class="card-title">โซนคาราโอเกะ</h5>
+                                <p class="card-text">
+
+                                    เป็นสถานที่ที่เหมาะกับการสังสรรค์ ภายในอาคารตกแต่งตามคาแเรกเตอร์ของหมี
+                                    วิลลี่และผองเพื่อน เปรียบดังโกดังเก็บตุ๊กตาหมี สามารถเก็บภาพได้ทุกมุม
+                                    ไม่ว่าจะเป็นผนัง ประตู ป้าย และที่พลาดไม่ได้ก็คือ
+                                    ตู้กระจกที่ภายในเต็มไปด้วยตุ๊กตาหมี ห้องคาราโอเกะก็มาพร้อมระบบแสง สี เสียงที่ครบครัน
+                                    มีทั้งเพลงไทย จีน สากล เกาหลี และญี่ปุ่น ที่อัพเดตเพลงใหม่ทุกเดือนมากกว่า 60,000
+                                    เพลง
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ประเภทห้องคาราโอเกะ -->
+            <div class="row align-items-center">
+                <div class="col">
+                    <hr>
+                </div>
+                <div class="col-auto">
+                    <h5 class="text-nowrap mb-0">ประเภทห้องคาราโอเกะ</h5>
+                </div>
+                <div class="col">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="#" class="card card-room-type">
+                        <!-- <img src="./dist/" alt=""> -->
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer image -->
+            <div class="text-center">
+                <img src="./dist/images/footer/about-us.png" class="w-75 mt-5">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            COPYRIGHT © 2019 VILLA DE BEAR, ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+</body>
+
+</html>
