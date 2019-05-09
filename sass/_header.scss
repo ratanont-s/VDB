@@ -364,29 +364,34 @@
         &-item {
           position: absolute;
 
+          &:nth-child(1) {
+            top: 48%;
+            left: 35%;
+          }
+
           &:nth-child(2) {
-            top: 65px;
-            left: 200px;
+            top: 13%;
+            left: 35%;
           }
 
           &:nth-child(3) {
-            top: 175px;
-            left: 44px;
+            top: 38%;
+            left: 7%;
           }
 
           &:nth-child(4) {
-            top: 265px;
-            left: 44px;
+            top: 57%;
+            left: 5%;
           }
 
           &:nth-child(5) {
-            top: 155px;
-            right: 95px;
+            top: 34%;
+            left: 62%;
           }
 
           &:nth-child(6) {
-            bottom: 155px;
-            left: 95px;
+            bottom: 14%;
+            left: 28%;
           }
         }
 
@@ -395,9 +400,19 @@
           padding: 0;
           @include transition($transition-base);
 
-          @include hover {
+          @include hover-focus {
             transform: scale(1.1);
             @include transition($transition-base);
+          }
+
+          img {
+            @include media-breakpoint-only(xs) {
+              max-width: 60%;
+            }
+
+            @include media-breakpoint-only(sm) {
+              max-width: 80%;
+            }
           }
         }
       }
@@ -406,7 +421,7 @@
 
   &-detail {
     position: relative;
-    padding: 0 3rem 2.5rem;
+    padding: 0 2rem 1rem;
     margin-top: 1.5rem;
 
     &::before {
@@ -431,8 +446,19 @@
       background-size: auto;
     }
 
+    .tab-content {
+      position: relative;
+    }
+
+    h5 {
+      background-color: $zone-bg;
+      display: inline-block;
+      padding-right: 1rem;
+    }
+
     @include media-breakpoint-up(lg) {
       margin-top: 5rem;
+      padding: 0 3rem 2.5rem;
     }
   }
 

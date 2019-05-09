@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<!-- Head -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Villa De Bear</title>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <!-- JS -->
+    <script src="./dist/js/jquery.min.js"></script>
+    <script src="./dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./dist/js/jquery.sticky.js"></script>
+    <script src="./dist/js/script.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" />
+                    <img src="./dist/images/LOGO-Scrolldown.png" alt="LOGO" class="navbar-logo-scrolldown" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="navbar-collapse offcanvas-collapse">
+                    <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+                        <i class="fas fa-times text-dark"></i>
+                    </button>
+                    <ul class="navbar-nav">
+                        <li class="nav-item nav-item-home">
+                            <a class="nav-link" href="./index.html">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/home.png" alt="หน้าแรก"></div>
+                                <div class="nav-link-text">หน้าแรก</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about-us.html">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/about.png"
+                                        alt="เรื่องเล่าพี่หมี"></div>
+                                <div class="nav-link-text">เรื่องเล่าพี่หมี</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./promotions.html">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/promotion.png" alt="โปรโมชั่น">
+                                </div>
+                                <div class="nav-link-text">โปรโมชั่น</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./karaoke.html">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/karaoke.png"
+                                        alt="ห้องคาราโอเกะ">
+                                </div>
+                                <div class="nav-link-text">ห้องคาราโอเกะ</div>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-item-logo">
+                            <a class="nav-link" href="./index.html">
+                                <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./member.html">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/member.png"
+                                        alt="ครอบครัวพี่หมี"></div>
+                                <div class="nav-link-text">ครอบครัวพี่หมี</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./event.html">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/event.png" alt="กิจกรรมพี่หมี">
+                                </div>
+                                <div class="nav-link-text">กิจกรรมพี่หมี</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./menu.html">
+                                <div class="nav-link-icon"><img src="./dist/images/icons/restusrant.png"
+                                        alt="รายการอาหาร"></div>
+                                <div class="nav-link-text">รายการอาหาร</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="form-inline form-search">
+                        <button class="btn btn-search" type="button" onclick="toggleInputSearch();">
+                            <i class="fas"></i>
+                        </button>
+                        <input class="form-control form-control-search" id="inputSearch" type="search"
+                            placeholder="พี่หมีช่วยหาให้มั้ย....." />
+
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main main-page bg-table">
+        <!-- Sticky toolbar -->
+        <ul class="sticky-toolbar">
+            <li class="sticky-toolbar-item">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Line">
+                    <i class="fab fa-line fa-lg"></i>
+                </a>
+            </li>
+            <li class="sticky-toolbar-item">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Location">
+                    <i class="fas fa-map-marker-alt fa-lg"></i>
+                </a>
+            </li>
+            <li class="sticky-toolbar-item">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Telephone number">
+                    <i class="fas fa-phone fa-lg"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Main title -->
+        <div class="main-title-menu">
+            <div class="container">
+                <h4 class="main-title">
+                    <span>รายการอาหาร</span>
+                </h4>
+                <ul class="nav nav-tabs nav-tabs-menu">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="food-tab" data-toggle="tab" href="#food"><img
+                                src="./dist/images/icons/food.png"> เมนูอาหาร</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile"><img
+                                src="./dist/images/icons/drink.png"> เมนูเครื่องดื่ม</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact"><img
+                                src="./dist/images/icons/bakery.png"> เมนูเบเกอรี่</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="food">
+                <div class="container">
+                    <a href="#" class="card card-today-special">
+                        <div class="row no-gutters">
+                            <div class="col-lg-7 col-xl-8">
+                                <img src="./dist/images/mango-paradise.jpg" alt="mango-paradise" class="card-img">
+                            </div>
+                            <div class="col-lg-5 col-xl-4">
+                                <div class="card-body">
+                                    <div class="card-body-inner">
+                                        <h5 class="card-title">TODAY’S SPECIAL</h5>
+                                        <h6 class="card-text">
+                                            แวะไปนั่งกินอาหารที่ร้าน ร้าน VILLA DE BEAR ทีไร กลิ่มหอม ๆ
+                                            ของผงกะหรี่ที่เป็นส่วนผสมในเมนูจานเด็ดอย่าง
+                                        </h6>
+                                        <h6 class="card-text">
+                                            "เนื้อปูผัดผงกะหรี่" ก็จะลอยเตะจมูกมาแต่ไกล แถมมองไปโต๊ะไหน
+                                            ก็ล้วนแต่สั่งเนื้อปูผัดผงกะหรี่
+                                            วันนี้จึงขอเสนอเมนูยอดนิยม ไปลองสั่งกันดูนะคะ
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile">...</div>
+            <div class="tab-pane fade" id="contact">...</div>
+        </div>
+
+        <!-- Container -->
+        <div class="container">
+            <!-- Footer image -->
+            <div class="text-center">
+                <img src="./dist/images/footer/menu.png" alt="Footer menu" class="w-75 mt-5">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            COPYRIGHT © 2019 VILLA DE BEAR, ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.nav-tabs-menu {
+    justify-content: center;
+    border-bottom: unset;
+
+    .nav {
+        &-item {
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+
+        &-link {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            background-color: white;
+            color: $body-color;
+            font-family: $font-kanit;
+            @include rfs(20);
+        }
+    }
+}

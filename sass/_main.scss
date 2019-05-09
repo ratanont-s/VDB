@@ -81,6 +81,16 @@
       border-radius: $rounded-pill;
       font-weight: 300;
     }
+
+    &-menu {
+      background: url('../images/bg/menu-title.jpg') no-repeat center top fixed;
+      background-size: 100% auto;
+      padding-top: 5rem;
+
+      .main-title {
+        margin-top: 0;
+      }
+    }
   }
 
   // BG
