@@ -107,7 +107,7 @@
     </header>
 
     <!-- Main -->
-    <main class="main main-page">
+    <main class="main main-page bg-table">
         <!-- Sticky toolbar -->
         <ul class="sticky-toolbar">
             <li class="sticky-toolbar-item">
@@ -133,13 +133,79 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="zone-map">
-                            <img src="./dist/images/vdb-city.png" alt="vdb-city" class="w-100">
+                            <img src="./dist/images/vdb-city.png" alt="vdb-city">
+                            <div class="zone-map-label">
+                                <ul class="nav nav-pills" id="pills-tab">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="pills-a-tab" data-toggle="pill" href="#pills-a">
+                                            <img src="./dist/images/b.png" alt="Zone A">
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-b-tab" data-toggle="pill" href="#pills-b">
+                                            <img src="./dist/images/b.png" alt="Zone B">
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-c-tab" data-toggle="pill" href="#pills-c">
+                                            <img src="./dist/images/c.png" alt="Zone C">
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-r-tab" data-toggle="pill" href="#pills-r">
+                                            <img src="./dist/images/r.png" alt="Zone R">
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-coffee-tab" data-toggle="pill"
+                                            href="#pills-coffee">
+                                            <img src="./dist/images/coffee-shop.png" alt="Coffee Shop">
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-karaoke-tab" data-toggle="pill"
+                                            href="#pills-karaoke">
+                                            <img src="./dist/images/karaoke.png" alt="Zone Karaoke">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <div class="zone-detail">
-                            <h5>โซน เอ (Zone A)</h5>
-                            <h6>อยู่บริเวณด้านนอกอาคารกลางแจ้ง (Outdoor) สามารถรองรับลูกค้าได้สูงสุด 160 ท่าน </h6>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-a">
+                                    <h5>โซน เอ <small>(Zone A)</small></h5>
+                                    <h6>อยู่บริเวณด้านนอกอาคารกลางแจ้ง (Outdoor) สามารถรองรับลูกค้าได้สูงสุด 160 ท่าน
+                                    </h6>
+                                </div>
+                                <div class="tab-pane fade" id="pills-b">
+                                    <h5>โซน บี <small>(Zone B)</small></h5>
+                                    <h6>อยู่บริเวณด้านนอกอาคารกลางแจ้ง (Outdoor) สามารถรองรับลูกค้าได้สูงสุด 160 ท่าน
+                                    </h6>
+                                </div>
+                                <div class="tab-pane fade" id="pills-c">
+                                    <h5>โซน ซี <small>(Zone C)</small></h5>
+                                    <h6>อยู่บริเวณด้านนอกอาคารกลางแจ้ง (Outdoor) สามารถรองรับลูกค้าได้สูงสุด 160 ท่าน
+                                    </h6>
+                                </div>
+                                <div class="tab-pane fade" id="pills-r">
+                                    <h5>โซน อาร์ วิล <small>(Zone R vill)</small></h5>
+                                    <h6>อยู่บริเวณด้านนอกอาคารกลางแจ้ง (Outdoor) สามารถรองรับลูกค้าได้สูงสุด 160 ท่าน
+                                    </h6>
+                                </div>
+                                <div class="tab-pane fade" id="pills-coffee">
+                                    <h5>คอฟฟี่ ช็อป <small>Coffee shop</small></h5>
+                                    <h6>อยู่บริเวณด้านนอกอาคารกลางแจ้ง (Outdoor) สามารถรองรับลูกค้าได้สูงสุด 160 ท่าน
+                                    </h6>
+                                </div>
+                                <div class="tab-pane fade" id="pills-karaoke">
+                                    <h5>โซน คาราโอเกะ <small>(Zone Karaoke)</small></h5>
+                                    <h6>อยู่บริเวณด้านนอกอาคารกลางแจ้ง (Outdoor) สามารถรองรับลูกค้าได้สูงสุด 160 ท่าน
+                                    </h6>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
