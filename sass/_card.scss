@@ -771,3 +771,41 @@
         }
     }
 }
+
+.card-menu {
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+    @include transition($transition-base);
+
+    .card {
+        &-img-top {
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+        }
+
+        &-title {
+            color: $gold;
+            margin-bottom: 0;
+            text-align: center;
+
+            small {
+                color: $body-color;
+                display: block;
+                font-weight: 300;
+            }
+        }
+    }
+
+    @include hover-focus {
+        background-color: $secondary;
+        @include transition($transition-base);
+
+        .card-title {
+            color: $yellow;
+
+            small {
+                color: white;
+            }
+        }
+    }
+}

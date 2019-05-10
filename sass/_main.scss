@@ -83,8 +83,9 @@
     }
 
     &-menu {
-      background: url('../images/bg/menu-title.jpg') no-repeat center top fixed;
-      background-size: 100% auto;
+      // background: url('../images/bg/menu-title.jpg') no-repeat center top;
+      // background-size: cover;
+      background: transparent;
       padding-top: 5rem;
 
       .main-title {
