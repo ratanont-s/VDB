@@ -4515,6 +4515,24 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .nav-pills-submenu .nav-link.active { background-color: #38393B; }
 
+#promotionModal button.close { position: relative; }
+
+#promotionModal .modal-content { border-radius: 0; }
+
+#promotionModal .modal-header { border-bottom: unset; padding-bottom: 0; }
+
+#promotionModal .modal-body { padding: 0; }
+
+#promotionModal .modal-slide { padding: 1.5rem; }
+
+#promotionModal .modal-nav { background-color: #38393B; padding: 1.5rem; }
+
+#promotionModal .modal-nav .slick-slide { margin-right: 1rem; }
+
+#promotionModal .modal-nav .promotion-karaoke-slide.slider-nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+#promotionModal .modal-nav .promotion-karaoke-slide.slider-nav .slick-list { margin: 0 1rem; }
+
 section { margin-bottom: 4rem; }
 
 #promotion .promotion-title { max-height: 71px; display: block; margin: 0 auto 1.5rem; }
