@@ -7,6 +7,10 @@ section {
     @include media-breakpoint-up(xl) {
         margin-top: -4rem;
     }
+
+    @include media-breakpoint-down(md) {
+        margin-top: 4rem;
+    }
 }
 
 // Promotion
