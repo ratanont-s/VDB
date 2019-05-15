@@ -46,22 +46,22 @@
 
             calendar.render();
         });
-        // $(document).ready(function () {
-        //     $('.room-images.slider-for').slick({
-        //         slidesToShow: 1,
-        //         slidesToScroll: 1,
-        //         arrows: false,
-        //         fade: true,
-        //         asNavFor: '.slider-nav'
-        //     });
-        //     $('.room-images.slider-nav').slick({
-        //         slidesToShow: 3,
-        //         slidesToScroll: 1,
-        //         asNavFor: '.slider-for',
-        //         centerMode: true,
-        //         focusOnSelect: true
-        //     });
-        // });
+        $(document).ready(function () {
+            $('.room-images.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.room-images.slider-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                centerMode: true,
+                focusOnSelect: true
+            });
+        });
     </script>
 </head>
 
