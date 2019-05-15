@@ -13,7 +13,7 @@
         &-link {
             border-top-left-radius: 0;
             border-top-right-radius: 0;
-            background-color: white;
+            background-color: $gray-400;
             color: $body-color;
             font-family: $font-kanit;
             @include rfs(20);
@@ -35,6 +35,10 @@
     li {
         &:not(:last-child) {
             margin-right: .25rem;
+        }
+
+        &:not(.nav-item) {
+            color: #b8b8b8;
         }
     }
 

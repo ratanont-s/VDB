@@ -24,8 +24,17 @@
       a {
         color: $dark;
 
+        i {
+          @include transition($transition-base);
+        }
+
         @include hover-focus {
           opacity: .8;
+
+          i {
+            transform: scale(1.5);
+            @include transition($transition-base);
+          }
         }
       }
     }

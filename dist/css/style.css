@@ -3408,7 +3408,7 @@ a.text-gold:hover, a.text-gold:focus { color: #61520b !important; }
 
 .lg-toolbar .lg-download:after { content: "\e0f2"; }
 
-.lg-sub-html { background-color: rgba(0, 0, 0, 0.45); bottom: 0; color: #EEE; font-size: 16px; left: 0; padding: 10px 40px; position: fixed; right: 0; text-align: center; z-index: 1080; }
+.lg-sub-html { background-color: rgba(0, 0, 0, 0.45); bottom: 0; color: #EEE; font-size: 16px; left: 0; padding: 10px 40px; position: absolute; right: 0; text-align: left; z-index: 1080; }
 
 .lg-sub-html h4 { margin: 0; font-size: 13px; font-weight: bold; }
 
@@ -4164,7 +4164,11 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .main .sticky-toolbar-item a { color: #38393B; }
 
+.main .sticky-toolbar-item a i { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+
 .main .sticky-toolbar-item a:hover, .main .sticky-toolbar-item a:focus { opacity: .8; }
+
+.main .sticky-toolbar-item a:hover i, .main .sticky-toolbar-item a:focus i { -webkit-transform: scale(1.5); transform: scale(1.5); -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
 .main .sticky-toolbar-text { font-family: "Kanit", sans-serif; display: none; }
 
@@ -4395,7 +4399,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .card-gallery { -webkit-box-shadow: 0 8px 2px rgba(0, 0, 0, 0.25); box-shadow: 0 8px 2px rgba(0, 0, 0, 0.25); border-width: 0; border-radius: 0; margin-bottom: 1.5rem; }
 
-.card-gallery::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); opacity: 0; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.card-gallery::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); opacity: 0.5; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
 .card-gallery::after { content: ''; position: absolute; top: 10px; left: 10px; width: calc(100% - 20px); height: calc(100% - 20px); border: 1px solid white; opacity: 0; }
 
@@ -4427,13 +4431,11 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .card-about { border: 0; border-bottom: 1px solid #dee2e6; border-radius: 0; padding-bottom: 2.5rem; height: calc(100% - 2.5rem); margin-bottom: 2.5rem; background-color: transparent; }
 
-.card-about .card-img { border-radius: inherit; }
+.card-about .card-img { -webkit-filter: grayscale(100%); filter: grayscale(100%); border-radius: inherit; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-@media (max-width: 991.98px) { .card-about .card-img { margin-bottom: 1rem; } }
+.card-about .card-img-hover { position: relative; overflow: hidden; margin-bottom: 1rem; }
 
-.card-about .card-img-top { border-top-left-radius: 0; border-top-right-radius: 0; margin-bottom: 1rem; }
-
-.card-about .card-img-bottom { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.card-about .card-img:hover { -webkit-filter: grayscale(0%); filter: grayscale(0%); -webkit-transform: scale(1.1); transform: scale(1.1); -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
 .card-room-type { border-radius: 0; margin-bottom: 1.5rem; }
 
@@ -4444,6 +4446,8 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 .card-room-type .card-title { text-align: center; margin-bottom: 0; }
 
 .card-room-type .card-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); color: white; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; opacity: 0; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+
+.card-room-type .card-overlay::before { content: ''; position: absolute; top: 1rem; left: 1rem; width: calc(100% - 2rem); height: calc(100% - 2rem); border: 1px solid white; }
 
 .card-room-type .card-overlay h4 { text-transform: uppercase; margin-bottom: -1rem; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
@@ -4503,13 +4507,15 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .nav-tabs-menu .nav-item:not(:last-child) { margin-right: 1rem; }
 
-.nav-tabs-menu .nav-link { border-top-left-radius: 0; border-top-right-radius: 0; background-color: white; color: #212529; font-family: "Kanit", sans-serif; font-size: 1.25rem; }
+.nav-tabs-menu .nav-link { border-top-left-radius: 0; border-top-right-radius: 0; background-color: #ced4da; color: #212529; font-family: "Kanit", sans-serif; font-size: 1.25rem; }
 
 @media (max-width: 575.98px) { .nav-tabs-menu .nav-link span { display: none; } }
 
 .nav-pills-submenu { margin-bottom: 1.5rem; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .nav-pills-submenu li:not(:last-child) { margin-right: .25rem; }
+
+.nav-pills-submenu li:not(.nav-item) { color: #b8b8b8; }
 
 .nav-pills-submenu .nav-link { padding: 0.25rem 0.5rem; font-family: "Kanit", sans-serif; color: #212529; }
 
