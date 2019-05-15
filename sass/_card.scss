@@ -310,57 +310,241 @@
 // Karaoke room
 .card-karaoke-room {
     align-items: center;
-    border: unset;
+    border: 4px solid $dark;
     border-radius: $border-radius;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    min-height: 200px;
+    height: 200px;
     box-shadow: $box-shadow-sm;
     margin-bottom: 1.5rem;
+    overflow: hidden;
     @include transition($transition-base);
 
-    .card-title {
-        background-color: white;
-        text-align: center;
-        margin-top: auto;
-        width: fit-content;
-        padding: .25rem 1.25rem;
-        border-radius: $rounded-pill;
-        border: $border-width-lg solid $dark;
-        color: $body-color;
-        box-shadow: $box-shadow-sm;
-        @include transition($transition-base);
+    .card {
+        &-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            img {
+                position: absolute;
+                max-width: 100%;
+            }
+
+            &-obj,
+            &-fg {
+                bottom: -1rem;
+            }
+        }
+
+        &-title {
+            background-color: white;
+            text-align: center;
+            margin-top: auto;
+            width: fit-content;
+            padding: .25rem 1.25rem;
+            border-radius: $rounded-pill;
+            border: $border-width-lg solid $dark;
+            color: $body-color;
+            box-shadow: $box-shadow-sm;
+            position: relative;
+            @include transition($transition-base);
+        }
     }
 
     @include hover-focus {
         box-shadow: $box-shadow;
         @include transition($transition-base);
 
-        .card-title {
-            background-color: $yellow;
-            @include transition($transition-base);
+        .card {
+            &-img {
+                img {
+                    animation-play-state: running;
+                }
+            }
+
+            &-title {
+                background-color: $yellow;
+                @include transition($transition-base);
+            }
         }
     }
 
     &.sammy {
-        background-image: url('../images/bg/sammy.png');
+
+        @include hover {
+            .card-img {
+                &-bg {
+                    animation: left-right 20s linear infinite alternate;
+                }
+
+                &-obj {
+                    animation: bear 10s linear infinite alternate;
+                }
+
+                &-fg {
+                    animation: bottom-right 20s linear infinite alternate;
+                }
+            }
+        }
     }
 
     &.christy {
-        background-image: url('../images/bg/christy.png');
+        @include hover {
+            .card-img {
+                &-bg {
+                    animation: left-right 20s linear infinite alternate;
+                }
+
+                &-obj {
+                    animation: bear 10s linear infinite alternate;
+                }
+
+                &-fg {
+                    animation: bottom-left 20s linear infinite alternate;
+                }
+            }
+        }
     }
 
     &.kinny {
-        background-image: url('../images/bg/kinny.png');
+        .card-img-fg {
+            bottom: -70px;
+        }
+
+        @include hover {
+            .card-img {
+                &-bg {
+                    animation: left-right 20s linear infinite alternate;
+                }
+
+                &-obj {
+                    animation: bear 10s linear infinite alternate;
+                }
+
+                &-fg {
+                    animation: bottom-right 20s linear infinite alternate;
+                }
+            }
+        }
     }
 
     &.tubie {
-        background-image: url('../images/bg/tubie.png');
+        @include hover {
+            .card-img {
+                &-bg {
+                    animation: left-right 20s linear infinite alternate;
+                }
+
+                &-obj {
+                    animation: bear 10s linear infinite alternate;
+                }
+
+                &-fg {
+                    animation: bottom-right 20s linear infinite alternate;
+                }
+            }
+        }
     }
 
     &.villy {
-        background-image: url('../images/bg/villy.png');
+        @include hover {
+            .card-img {
+                &-bg {
+                    animation: left-right 20s linear infinite alternate;
+                }
+
+                &-obj {
+                    animation: bear 10s linear infinite alternate;
+                }
+
+                &-fg {
+                    animation: bottom-right 20s linear infinite alternate;
+                }
+            }
+        }
+    }
+
+    @keyframes up-down {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(10px);
+        }
+    }
+
+    @keyframes bear {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(10deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(-10deg);
+        }
+    }
+
+    @keyframes left-right {
+        0% {
+            transform: translateX(0);
+        }
+
+        25% {
+            transform: translateX(10px);
+        }
+
+        50% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-10px);
+        }
+    }
+
+    @keyframes bottom-left {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        25% {
+            transform: translate(5px, 5px);
+        }
+
+        50% {
+            transform: translateX(0, 0);
+        }
+
+        100% {
+            transform: translate(-5px, -5px);
+        }
+    }
+
+    @keyframes bottom-right {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        25% {
+            transform: translate(-5px, -5px);
+        }
+
+        50% {
+            transform: translateX(0, 0);
+        }
+
+        100% {
+            transform: translate(5px, 5px);
+        }
     }
 }
 
