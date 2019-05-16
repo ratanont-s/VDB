@@ -1,43 +1,45 @@
 #promotionModal {
+  button.close {
+    position: relative;
+  }
 
-    button.close {
-        position: relative;
+  .modal {
+    &-content {
+      border-radius: 0;
     }
 
-    .modal {
-        &-content {
-            border-radius: 0;
-        }
-
-        &-header {
-            border-bottom: unset;
-            padding-bottom: 0;
-        }
-
-        &-body {
-            padding: 0;
-        }
-
-        &-slide {
-            padding: 1.5rem;
-        }
-
-        &-nav {
-            background-color: $dark;
-            padding: 1.5rem;
-
-            .slick-slide {
-                margin-right: 1rem;
-            }
-
-            .promotion-karaoke-slide.slider-nav {
-                display: flex;
-                align-items: center;
-
-                .slick-list {
-                    margin: 0 1rem;
-                }
-            }
-        }
+    &-header {
+      border-bottom: unset;
+      padding-bottom: 0;
     }
+
+    &-body {
+      padding: 0;
+    }
+
+    &-slide {
+      padding: 1.5rem;
+    }
+
+    &-nav {
+      background-color: $dark;
+      padding: 1.5rem;
+
+      .slick-slide {
+        margin-right: 1rem;
+      }
+
+      .promotion-karaoke-slide.slider-nav {
+        display: flex;
+        align-items: center;
+
+        .slick-list {
+          margin: 0 1rem;
+        }
+      }
+      @include media-breakpoint-down(md) {
+        padding: 1rem 0.5rem;
+      }
+    }
+  }
 }

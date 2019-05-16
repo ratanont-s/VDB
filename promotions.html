@@ -36,7 +36,33 @@
           asNavFor: '.slider-for',
           focusOnSelect: true,
           prevArrow: '<a href="#"><img src="./dist/images/icons/slick-prev-2.png"></a>',
-          nextArrow: '<a href="#"><img src="./dist/images/icons/slick-next-2.png"></a>'
+          nextArrow: '<a href="#"><img src="./dist/images/icons/slick-next-2.png"></a>',
+          responsive: [
+            {
+              breakpoint: 1199,
+              settings: {
+                slidesToShow: 3,
+                arrows: false,
+                centerMode: true
+              }
+            },
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 2,
+                arrows: false,
+                centerMode: true
+              }
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+                arrows: false,
+                centerMode: true
+              }
+            }
+          ]
         });
       });
     });

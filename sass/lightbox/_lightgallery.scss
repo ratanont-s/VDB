@@ -10,7 +10,39 @@
 @import "lg-pager";
 @import "lg-fullscreen";
 @import "lg-share";
-@import './lg-transitions';
+@import "./lg-transitions";
 
 // Core
 @import "lg-core";
+
+.lg-backdrop.in {
+  opacity: 0.85;
+}
+.fixed-size.lg-outer .lg-inner {
+  background-color: #fff;
+}
+.fixed-size.lg-outer .lg-sub-html {
+  position: absolute;
+  text-align: left;
+}
+.fixed-size.lg-outer .lg-toolbar {
+  background-color: transparent;
+  height: 0;
+}
+.fixed-size.lg-outer .lg-toolbar .lg-icon {
+  color: #fff;
+}
+.fixed-size.lg-outer .lg-img-wrap {
+  padding: 12px;
+}
+.lg-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .lg {
+    top: 0 !important;
+  }
+  .lg-image {
+    vertical-align: top;
+  }
+}

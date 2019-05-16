@@ -1,431 +1,649 @@
 <!DOCTYPE html>
 <html lang="th">
+  <!-- Head -->
 
-<!-- Head -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Villa De Bear</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <!-- JS -->
+    <script src="./dist/js/jquery.min.js"></script>
+    <script src="./dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./dist/js/jquery.sticky.js"></script>
+    <script src="./dist/js/script.js"></script>
+    <!-- Plugin -->
+    <script src="./dist/plugins/slick/slick.min.js"></script>
+    <script src="./dist/plugins/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="./banner/banner.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(function() {
+          $("#banner-animate").load("./banner/banner.html");
+        });
+        $(".promotion-slide").slick({
+          appendArrows: $(".promotion-slide-nav"),
+          prevArrow:
+            '<a href="#"><img src="./dist/images/icons/slick-prev.png"></a>',
+          nextArrow:
+            '<a href="#"><img src="./dist/images/icons/slick-next.png"></a>',
+          responsive: [
+            {
+              breakpoint: 991,
+              settings: {
+                arrows: false
+              }
+            }
+          ]
+        });
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Villa De Bear</title>
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-  <!-- Fontawesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <!-- CSS -->
-  <link rel="stylesheet" href="./dist/css/style.css" />
-  <!-- JS -->
-  <script src="./dist/js/jquery.min.js"></script>
-  <script src="./dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./dist/js/jquery.sticky.js"></script>
-  <script src="./dist/js/script.js"></script>
-  <!-- Plugin -->
-  <script src="./dist/plugins/slick/slick.min.js"></script>
-  <script src="./dist/plugins/lightGallery/js/lightgallery-all.min.js"></script>
-  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-  <script src="./banner/banner.js"></script>
-  <script>
-    $(document).ready(function () {
-      $(function () {
-        $("#banner-animate").load("./banner/banner.html");
+        //
+        $(
+          "#gallery-overview,#gallery-restaurant,#gallery-foods,#gallery-kinny,#gallery-chisty"
+        ).lightGallery({
+          selector: ".card-gallery",
+          toogleThumb: false,
+          download: false,
+          share: false,
+          zoom: false,
+          counter: false,
+          fullScreen: false,
+          autoplay: false,
+          autoplayControls: false,
+          mode: "lg-tube",
+          width: "1140px",
+          height: "700px",
+          addClass: "fixed-size"
+        });
       });
-      $('.promotion-slide').slick({
-        appendArrows: $(".promotion-slide-nav"),
-        prevArrow: '<a href="#"><img src="./dist/images/icons/slick-prev.png"></a>',
-        nextArrow: '<a href="#"><img src="./dist/images/icons/slick-next.png"></a>',
-        responsive: [{
-          breakpoint: 991,
-          settings: {
-            arrows: false
-          }
-        }]
-      });
+    </script>
+  </head>
 
-      // 
-      $("#gallery-overview,#gallery-restaurant,#gallery-foods,#gallery-kinny,#gallery-chisty").lightGallery({
-        selector: '.card-gallery',
-        toogleThumb: false,
-        download: false,
-        share: false,
-        zoom: false,
-        fullScreen: false,
-        autoplay: false,
-        autoplayControls: false,
-        mode: 'lg-tube',
-        width: '1140px'
-      });
-    });
-  </script>
-</head>
-
-<body onload="init();">
-  <!-- Header -->
-  <header class="header">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="./index.html">
-          <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" />
-          <img src="./dist/images/LOGO-Scrolldown.png" alt="LOGO" class="navbar-logo-scrolldown" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="offcanvas">
-          <i class="fas fa-bars"></i>
-        </button>
-
-        <div class="navbar-collapse offcanvas-collapse">
+  <body onload="init();">
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">
+            <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" />
+            <img
+              src="./dist/images/LOGO-Scrolldown.png"
+              alt="LOGO"
+              class="navbar-logo-scrolldown"
+            />
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="offcanvas">
-            <i class="fas fa-times text-dark"></i>
+            <i class="fas fa-bars"></i>
           </button>
-          <ul class="navbar-nav">
-            <li class="nav-item nav-item-home">
-              <a class="nav-link" href="./index.html">
-                <div class="nav-link-icon"><img src="./dist/images/icons/home.png" alt="หน้าแรก"></div>
-                <div class="nav-link-text">หน้าแรก</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./about-us.html">
-                <div class="nav-link-icon"><img src="./dist/images/icons/about.png" alt="เรื่องเล่าพี่หมี"></div>
-                <div class="nav-link-text">เรื่องเล่าพี่หมี</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./promotions.html">
-                <div class="nav-link-icon"><img src="./dist/images/icons/promotion.png" alt="โปรโมชั่น">
-                </div>
-                <div class="nav-link-text">โปรโมชั่น</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./karaoke.html">
-                <div class="nav-link-icon"><img src="./dist/images/icons/karaoke.png" alt="ห้องคาราโอเกะ">
-                </div>
-                <div class="nav-link-text">ห้องคาราโอเกะ</div>
-              </a>
-            </li>
-            <li class="nav-item nav-item-logo">
-              <a class="nav-link" href="./index.html">
-                <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" />
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./member.html">
-                <div class="nav-link-icon"><img src="./dist/images/icons/member.png" alt="ครอบครัวพี่หมี"></div>
-                <div class="nav-link-text">ครอบครัวพี่หมี</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./event.html">
-                <div class="nav-link-icon"><img src="./dist/images/icons/event.png" alt="กิจกรรมพี่หมี">
-                </div>
-                <div class="nav-link-text">กิจกรรมพี่หมี</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./menu.html">
-                <div class="nav-link-icon"><img src="./dist/images/icons/restusrant.png" alt="รายการอาหาร"></div>
-                <div class="nav-link-text">รายการอาหาร</div>
-              </a>
-            </li>
-          </ul>
-          <form class="form-inline form-search">
-            <button class="btn btn-search" type="button" onclick="toggleInputSearch();">
-              <i class="fas"></i>
+
+          <div class="navbar-collapse offcanvas-collapse">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="offcanvas"
+            >
+              <i class="fas fa-times text-dark"></i>
             </button>
-            <input class="form-control form-control-search" id="inputSearch" type="search"
-              placeholder="พี่หมีช่วยหาให้มั้ย....." />
-
-          </form>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Main -->
-  <main class="main bg-table">
-    <!-- Sticky toolbar -->
-    <ul class="sticky-toolbar">
-      <li class="sticky-toolbar-item">
-        <a href="#" data-toggle="tooltip" data-placement="left" title="Line">
-          <i class="fab fa-line fa-lg"></i>
-          <span class="sticky-toolbar-text">สนทนา</span>
-        </a>
-      </li>
-      <li class="sticky-toolbar-item">
-        <a href="#" data-toggle="tooltip" data-placement="left" title="Location">
-          <i class="fas fa-map-marker-alt fa-lg"></i>
-          <span class="sticky-toolbar-text">แผนที่</span>
-        </a>
-      </li>
-      <li class="sticky-toolbar-item">
-        <a href="#" data-toggle="tooltip" data-placement="left" title="Telephone number">
-          <i class="fas fa-phone fa-lg"></i>
-          <span class="sticky-toolbar-text">โทร</span>
-        </a>
-      </li>
-    </ul>
-
-    <!-- Banner -->
-    <section id="banner">
-      <div id="banner-animate"></div>
-    </section>
-
-    <!-- Promotion -->
-    <section id="promotion">
-      <div class="container">
-        <!-- Image title -->
-        <img src="./dist/images/title-promotion.png" alt="Promotion" class="promotion-title">
-
-        <!-- Content -->
-        <div class="promotion-content">
-          <!-- Slide -->
-          <div class="promotion-slide">
-            <div class="promotion-slide-item">
-              <a href="#" class="card card-today-special">
-                <div class="row no-gutters">
-                  <div class="col-lg-7 col-xl-8">
-                    <img src="./dist/images/today-special.jpg" alt="TODAY’S SPECIAL" class="card-img">
+            <ul class="navbar-nav">
+              <li class="nav-item nav-item-home">
+                <a class="nav-link" href="./index.html">
+                  <div class="nav-link-icon">
+                    <img src="./dist/images/icons/home.png" alt="หน้าแรก" />
                   </div>
-                  <div class="col-lg-5 col-xl-4">
-                    <div class="card-body">
-                      <div class="card-body-inner">
-                        <h5 class="card-title">TODAY’S SPECIAL</h5>
-                        <h6 class="card-text">
-                          แวะไปนั่งกินอาหารที่ร้าน ร้าน VILLA DE BEAR ทีไร กลิ่มหอม ๆ
-                          ของผงกะหรี่ที่เป็นส่วนผสมในเมนูจานเด็ดอย่าง
-                        </h6>
-                        <h6 class="card-text">
-                          "เนื้อปูผัดผงกะหรี่" ก็จะลอยเตะจมูกมาแต่ไกล แถมมองไปโต๊ะไหน
-                          ก็ล้วนแต่สั่งเนื้อปูผัดผงกะหรี่
-                          วันนี้จึงขอเสนอเมนูยอดนิยม ไปลองสั่งกันดูนะคะ
-                        </h6>
+                  <div class="nav-link-text">หน้าแรก</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about-us.html">
+                  <div class="nav-link-icon">
+                    <img
+                      src="./dist/images/icons/about.png"
+                      alt="เรื่องเล่าพี่หมี"
+                    />
+                  </div>
+                  <div class="nav-link-text">เรื่องเล่าพี่หมี</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./promotions.html">
+                  <div class="nav-link-icon">
+                    <img
+                      src="./dist/images/icons/promotion.png"
+                      alt="โปรโมชั่น"
+                    />
+                  </div>
+                  <div class="nav-link-text">โปรโมชั่น</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./karaoke.html">
+                  <div class="nav-link-icon">
+                    <img
+                      src="./dist/images/icons/karaoke.png"
+                      alt="ห้องคาราโอเกะ"
+                    />
+                  </div>
+                  <div class="nav-link-text">ห้องคาราโอเกะ</div>
+                </a>
+              </li>
+              <li class="nav-item nav-item-logo">
+                <a class="nav-link" href="./index.html">
+                  <img
+                    src="./dist/images/LOGO.png"
+                    alt="LOGO"
+                    class="navbar-logo"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./member.html">
+                  <div class="nav-link-icon">
+                    <img
+                      src="./dist/images/icons/member.png"
+                      alt="ครอบครัวพี่หมี"
+                    />
+                  </div>
+                  <div class="nav-link-text">ครอบครัวพี่หมี</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./event.html">
+                  <div class="nav-link-icon">
+                    <img
+                      src="./dist/images/icons/event.png"
+                      alt="กิจกรรมพี่หมี"
+                    />
+                  </div>
+                  <div class="nav-link-text">กิจกรรมพี่หมี</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./menu.html">
+                  <div class="nav-link-icon">
+                    <img
+                      src="./dist/images/icons/restusrant.png"
+                      alt="รายการอาหาร"
+                    />
+                  </div>
+                  <div class="nav-link-text">รายการอาหาร</div>
+                </a>
+              </li>
+            </ul>
+            <form class="form-inline form-search">
+              <button
+                class="btn btn-search"
+                type="button"
+                onclick="toggleInputSearch();"
+              >
+                <i class="fas"></i>
+              </button>
+              <input
+                class="form-control form-control-search"
+                id="inputSearch"
+                type="search"
+                placeholder="พี่หมีช่วยหาให้มั้ย....."
+              />
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main bg-table">
+      <!-- Sticky toolbar -->
+      <ul class="sticky-toolbar">
+        <li class="sticky-toolbar-item">
+          <a href="#" data-toggle="tooltip" data-placement="left" title="Line">
+            <i class="fab fa-line fa-lg"></i>
+            <span class="sticky-toolbar-text">สนทนา</span>
+          </a>
+        </li>
+        <li class="sticky-toolbar-item">
+          <a
+            href="#"
+            data-toggle="tooltip"
+            data-placement="left"
+            title="Location"
+          >
+            <i class="fas fa-map-marker-alt fa-lg"></i>
+            <span class="sticky-toolbar-text">แผนที่</span>
+          </a>
+        </li>
+        <li class="sticky-toolbar-item">
+          <a
+            href="#"
+            data-toggle="tooltip"
+            data-placement="left"
+            title="Telephone number"
+          >
+            <i class="fas fa-phone fa-lg"></i>
+            <span class="sticky-toolbar-text">โทร</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Banner -->
+      <section id="banner">
+        <div id="banner-animate"></div>
+      </section>
+
+      <!-- Promotion -->
+      <section id="promotion">
+        <div class="container">
+          <!-- Image title -->
+          <img
+            src="./dist/images/title-promotion.png"
+            alt="Promotion"
+            class="promotion-title"
+          />
+
+          <!-- Content -->
+          <div class="promotion-content">
+            <!-- Slide -->
+            <div class="promotion-slide">
+              <div class="promotion-slide-item">
+                <a href="#" class="card card-today-special">
+                  <div class="row no-gutters">
+                    <div class="col-lg-7 col-xl-8">
+                      <img
+                        src="./dist/images/today-special.jpg"
+                        alt="TODAY’S SPECIAL"
+                        class="card-img"
+                      />
+                    </div>
+                    <div class="col-lg-5 col-xl-4">
+                      <div class="card-body">
+                        <div class="card-body-inner">
+                          <h5 class="card-title">TODAY’S SPECIAL</h5>
+                          <h6 class="card-text">
+                            แวะไปนั่งกินอาหารที่ร้าน ร้าน VILLA DE BEAR ทีไร
+                            กลิ่มหอม ๆ
+                            ของผงกะหรี่ที่เป็นส่วนผสมในเมนูจานเด็ดอย่าง
+                          </h6>
+                          <h6 class="card-text">
+                            "เนื้อปูผัดผงกะหรี่" ก็จะลอยเตะจมูกมาแต่ไกล
+                            แถมมองไปโต๊ะไหน ก็ล้วนแต่สั่งเนื้อปูผัดผงกะหรี่
+                            วันนี้จึงขอเสนอเมนูยอดนิยม ไปลองสั่งกันดูนะคะ
+                          </h6>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div class="promotion-slide-item">
-              <a href="#" class="card card-today-special">
-                <div class="row no-gutters">
-                  <div class="col-lg-7 col-xl-8">
-                    <img src="./dist/images/today-special.jpg" alt="TODAY’S SPECIAL" class="card-img">
-                  </div>
-                  <div class="col-lg-5 col-xl-4">
-                    <div class="card-body">
-                      <div class="card-body-inner">
-                        <h5 class="card-title">TODAY’S SPECIAL</h5>
-                        <h6 class="card-text">
-                          แวะไปนั่งกินอาหารที่ร้าน ร้าน VILLA DE BEAR ทีไร กลิ่มหอม ๆ
-                          ของผงกะหรี่ที่เป็นส่วนผสมในเมนูจานเด็ดอย่าง
-                        </h6>
-                        <h6 class="card-text">
-                          "เนื้อปูผัดผงกะหรี่" ก็จะลอยเตะจมูกมาแต่ไกล แถมมองไปโต๊ะไหน
-                          ก็ล้วนแต่สั่งเนื้อปูผัดผงกะหรี่
-                          วันนี้จึงขอเสนอเมนูยอดนิยม ไปลองสั่งกันดูนะคะ
-                        </h6>
+                </a>
+              </div>
+              <div class="promotion-slide-item">
+                <a href="#" class="card card-today-special">
+                  <div class="row no-gutters">
+                    <div class="col-lg-7 col-xl-8">
+                      <img
+                        src="./dist/images/today-special.jpg"
+                        alt="TODAY’S SPECIAL"
+                        class="card-img"
+                      />
+                    </div>
+                    <div class="col-lg-5 col-xl-4">
+                      <div class="card-body">
+                        <div class="card-body-inner">
+                          <h5 class="card-title">TODAY’S SPECIAL</h5>
+                          <h6 class="card-text">
+                            แวะไปนั่งกินอาหารที่ร้าน ร้าน VILLA DE BEAR ทีไร
+                            กลิ่มหอม ๆ
+                            ของผงกะหรี่ที่เป็นส่วนผสมในเมนูจานเด็ดอย่าง
+                          </h6>
+                          <h6 class="card-text">
+                            "เนื้อปูผัดผงกะหรี่" ก็จะลอยเตะจมูกมาแต่ไกล
+                            แถมมองไปโต๊ะไหน ก็ล้วนแต่สั่งเนื้อปูผัดผงกะหรี่
+                            วันนี้จึงขอเสนอเมนูยอดนิยม ไปลองสั่งกันดูนะคะ
+                          </h6>
+                        </div>
                       </div>
                     </div>
                   </div>
+                </a>
+              </div>
+            </div>
+            <div class="promotion-slide-nav"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- พี่หมีเล่าเรื่อง -->
+      <section id="tell-story">
+        <div class="container">
+          <!-- Image title -->
+          <img
+            src="./dist/images/title-bear-story.png"
+            alt="พี่หมีเล่าเรื่อง"
+            class="tell-story-title"
+          />
+
+          <!-- Content -->
+          <div class="tell-story-content">
+            <div class="row">
+              <div class="col-xl-5">
+                <div class="tell-story-new">
+                  <div class="tell-story-new-img">
+                    <img src="./dist/images/new-01.jpg" alt="New" />
+                    <span>NEW</span>
+                  </div>
+                  <h6 class="tell-story-new-title">
+                    เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
+                    เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น
+                    <a href="#">อ่านต่อ...</a>
+                  </h6>
+                  <div class="tell-story-new-more">
+                    <img src="./dist/images/postit.png" alt="postit" />
+                    <a href="#"
+                      ><span class="d-none d-lg-inline-block">เรื่องเล่า</span
+                      >เพิ่มเติม</a
+                    >
+                  </div>
                 </div>
-              </a>
+              </div>
+              <div class="col-xl">
+                <div class="tell-story-video">
+                  <h4 class="tell-story-video-title">
+                    <img
+                      src="./dist/images/icons/pin.png"
+                      alt="น้องหมีแนะนำวีดีโอ"
+                    />
+                    น้องหมีแนะนำวีดีโอ
+                  </h4>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe
+                      class="embed-responsive-item"
+                      src="https://www.youtube.com/embed/yMR-xmcmb6A"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl">
+                <div class="tell-story-contact">
+                  <h4 class="tell-story-contact-title">
+                    ร้านอาหาร Villa De Bear
+                  </h4>
+                  <h6 class="tell-story-contact-text">
+                    ย่านฝั่งธนบุรี บนถนนราชพฤกษ์
+                    โดดเด่นด้วยรูปแบบโรงงานตุ๊กตาหมีดำ สวยงาม เป็นเอกลักษณ์
+                  </h6>
+                  <h6 class="tell-story-contact-text">
+                    เราให้บริการอาหารไทย นานาชาติ อาหารซีฟู้ด
+                    และเครื่องดื่มนานาชนิด มีห้องจัดเลี้ยง
+                    ห้องคาราโอเกะพร้อมให้บริการ
+                  </h6>
+                  <h6 class="tell-story-contact-text">
+                    โทรสอบ 098-496-6245 หรือ 02-443-3724 ต่อ 0
+                  </h6>
+                  <h6>LINE Official : @villadebear (มี@)</h6>
+                  <nav class="nav justify-content-center">
+                    <a class="nav-link px-2" href="#"
+                      ><img src="./dist/images/icons/fb.png" alt="Facebook"
+                    /></a>
+                    <a class="nav-link px-2" href="#"
+                      ><img src="./dist/images/icons/ig.png" alt="Instagram"
+                    /></a>
+                    <a class="nav-link px-2" href="#"
+                      ><img src="./dist/images/icons/yt.png" alt="Youtube"
+                    /></a>
+                  </nav>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="promotion-slide-nav"></div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- พี่หมีเล่าเรื่อง -->
-    <section id="tell-story">
+      <!-- แกลเลอรี่ -->
+      <section id="gallery">
+        <div class="container">
+          <!-- Image title -->
+          <img
+            src="./dist/images/title-gallery.png"
+            alt="แกลเลอรี่"
+            class="gallery-title"
+          />
+
+          <!-- Content -->
+          <div class="gallery-content">
+            <div class="row align-items-center">
+              <div class="col-lg-4" id="gallery-overview">
+                <a
+                  href="./dist/images/gallery-01.jpg"
+                  class="card card-gallery card-gallery-hilight"
+                  data-sub-html="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia aliquid, quo consequuntur laboriosam dolore expedita dolorum doloremque possimus rerum totam, id non repudiandae. Beatae odit illum quos, obcaecati eaque quo?"
+                >
+                  <img src="./dist/images/gallery-01.jpg" class="card-img" />
+                  <div class="card-img-overlay">
+                    <h4 class="card-title">Overview</h4>
+                    <span class="card-icon"
+                      ><img src="./dist/images/icons/icon-plus.png" alt="View"
+                    /></span>
+                  </div>
+                </a>
+                <a
+                  href="./dist/images/gallery-01.jpg"
+                  class="d-none card-gallery"
+                  data-sub-html="Aut libero ea velit veritatis. Incidunt recusandae unde occaecati ipsa et error culpa consequuntur et. Quos deleniti ea quia. Expedita provident temporibus quo ut saepe et qui debitis."
+                >
+                  <img src="./dist/images/gallery-01.jpg" class="img-fluid" />
+                </a>
+                <a
+                  href="./dist/images/gallery-01.jpg"
+                  class="d-none card-gallery"
+                  data-sub-html="Dolor quisquam non. Nemo enim explicabo odio vero omnis voluptas. Porro molestiae placeat sit modi ratione voluptate nam illum laudantium. Hic rerum et ea molestias aliquam."
+                >
+                  <img src="./dist/images/gallery-01.jpg" class="img-fluid" />
+                </a>
+              </div>
+              <div class="col-lg-8 d-none d-lg-block">
+                <div class="row">
+                  <div class="col-6" id="gallery-restaurant">
+                    <a
+                      href="./dist/images/gallery-02.jpg"
+                      class="card card-gallery"
+                      data-sub-html="Similique omnis recusandae occaecati. Adipisci est natus quod quia eum eum repellat autem consequatur. Sed qui voluptatem."
+                    >
+                      <img
+                        src="./dist/images/gallery-02.jpg"
+                        class="card-img"
+                      />
+                      <div class="card-img-overlay">
+                        <h4 class="card-title">restaurant</h4>
+                        <span class="card-icon"
+                          ><img
+                            src="./dist/images/icons/icon-plus.png"
+                            alt="View"
+                        /></span>
+                      </div>
+                    </a>
+                    <a
+                      href="./dist/images/gallery-02.jpg"
+                      class="d-none card-gallery"
+                      data-sub-html="Ea veritatis voluptatem placeat nostrum voluptatum ducimus. Occaecati ducimus quisquam reiciendis ratione voluptatem nihil quo. Dignissimos quibusdam sint nobis ullam et. Magni aut voluptatem. Vel ab nisi repudiandae dolores beatae mollitia."
+                    >
+                      <img
+                        src="./dist/images/gallery-02.jpg"
+                        class="img-fluid"
+                      />
+                    </a>
+                    <a
+                      href="./dist/images/gallery-02.jpg"
+                      class="d-none card-gallery"
+                      data-sub-html="Ea rem mollitia sit cum. Repellendus et autem quidem sed alias eum. Doloremque aperiam tempore molestiae adipisci. Tempora omnis voluptatem dolorem recusandae itaque. Repellat minus rerum voluptates velit id."
+                    >
+                      <img
+                        src="./dist/images/gallery-02.jpg"
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-6" id="gallery-foods">
+                    <a
+                      href="./dist/images/gallery-03.jpg"
+                      class="card card-gallery"
+                      data-sub-html="Quibusdam deleniti id. Ipsam autem laudantium dolorem quis qui tenetur. Voluptatem impedit quisquam odit alias tempore est iste."
+                    >
+                      <img
+                        src="./dist/images/gallery-03.jpg"
+                        class="card-img"
+                      />
+                      <div class="card-img-overlay">
+                        <h4 class="card-title">foods</h4>
+                        <span class="card-icon"
+                          ><img
+                            src="./dist/images/icons/icon-plus.png"
+                            alt="View"
+                        /></span>
+                      </div>
+                    </a>
+                    <a
+                      href="./dist/images/gallery-03.jpg"
+                      class="d-none card-gallery"
+                      data-sub-html="Asperiores est voluptas animi quis. Voluptatem itaque dolores odio tempora vitae iure et. Corporis non qui ab. Et dolores commodi facilis. Voluptatem provident animi qui."
+                    >
+                      <img
+                        src="./dist/images/gallery-03.jpg"
+                        class="img-fluid"
+                      />
+                    </a>
+                    <a
+                      href="./dist/images/gallery-03.jpg"
+                      class="d-none card-gallery"
+                      data-sub-html="Sint veritatis doloremque. Tempora amet omnis voluptatem architecto qui. Qui rerum vero aut sed."
+                    >
+                      <img
+                        src="./dist/images/gallery-03.jpg"
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-6" id="gallery-kinny">
+                    <a
+                      href="./dist/images/gallery-03.jpg"
+                      class="card card-gallery"
+                      data-sub-html="Assumenda est fugit officia voluptatem impedit omnis quo ut. Et aliquid non debitis excepturi quisquam. Et a nihil aliquid."
+                    >
+                      <img
+                        src="./dist/images/gallery-03.jpg"
+                        class="card-img"
+                      />
+                      <div class="card-img-overlay">
+                        <h4 class="card-title">KARAOKE KINNY</h4>
+                        <span class="card-icon"
+                          ><img
+                            src="./dist/images/icons/icon-plus.png"
+                            alt="View"
+                        /></span>
+                      </div>
+                    </a>
+                    <a
+                      href="./dist/images/gallery-03.jpg"
+                      class="d-none card-gallery"
+                      data-sub-html="Consequatur aut ipsum autem. Ex culpa voluptas inventore ex dolorum ut quisquam sunt. Dolore incidunt et at. Quibusdam minus molestiae itaque. Nihil quidem amet maiores et voluptatem nam quae optio."
+                    >
+                      <img
+                        src="./dist/images/gallery-03.jpg"
+                        class="img-fluid"
+                      />
+                    </a>
+                    <a
+                      href="./dist/images/gallery-03.jpg"
+                      class="d-none card-gallery"
+                      data-sub-html="Incidunt aut maiores animi quia magnam debitis. Sed at et aut quia beatae rerum totam et reiciendis. Dolorem quo vero qui. Modi beatae necessitatibus qui voluptas nisi."
+                    >
+                      <img
+                        src="./dist/images/gallery-03.jpg"
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-6" id="gallery-chisty">
+                    <a
+                      href="./dist/images/gallery-03.jpg"
+                      class="card card-gallery"
+                      data-sub-html="Accusantium quae praesentium impedit voluptatum quis minima. Qui perferendis accusamus in id ratione quisquam blanditiis. Alias similique consequatur quo. Aut occaecati tenetur amet ea. Expedita sint et est. Qui nam reprehenderit."
+                    >
+                      <img
+                        src="./dist/images/gallery-03.jpg"
+                        class="card-img"
+                      />
+                      <div class="card-img-overlay">
+                        <h4 class="card-title">KARAOKE CHISTY</h4>
+                        <span class="card-icon"
+                          ><img
+                            src="./dist/images/icons/icon-plus.png"
+                            alt="View"
+                        /></span>
+                      </div>
+                    </a>
+                    <a
+                      href="./dist/images/gallery-03.jpg"
+                      class="d-none card-gallery"
+                      data-sub-html="Dolores voluptas similique autem quibusdam quis eius ut. Temporibus commodi laborum aliquam beatae aut aliquid quis facere ipsa. Doloremque quae accusamus repellat eum rerum aut labore. Et inventore est cupiditate assumenda qui tempora adipisci reiciendis. Consequuntur dolor rem voluptatibus neque debitis labore numquam recusandae. Consectetur est consequatur est dicta iste ipsum."
+                    >
+                      <img
+                        src="./dist/images/gallery-03.jpg"
+                        class="img-fluid"
+                      />
+                    </a>
+                    <a
+                      href="./dist/images/gallery-03.jpg"
+                      class="d-none card-gallery"
+                      data-sub-html="Consequuntur natus odit voluptates qui nesciunt est minus. Architecto nam culpa qui rerum aut velit. Sunt ut tempore nihil asperiores. Neque modi sint delectus qui. Quod inventore porro quidem repellendus et excepturi ducimus id."
+                    >
+                      <img
+                        src="./dist/images/gallery-03.jpg"
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-3">
+            <a href="#" class="btn btn-dark btn-lg rounded-sm"
+              >อัลบั้มเพิ่มเติม</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer image -->
+      <div class="text-center mt-5">
+        <img
+          src="./dist/images/footer/home-sm.png"
+          alt="Footer home"
+          class="w-50 d-md-none"
+        />
+        <img
+          src="./dist/images/footer/home.png"
+          alt="Footer home"
+          class="w-100 d-none d-md-block"
+        />
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
       <div class="container">
-        <!-- Image title -->
-        <img src="./dist/images/title-bear-story.png" alt="พี่หมีเล่าเรื่อง" class="tell-story-title">
-
-        <!-- Content -->
-        <div class="tell-story-content">
-          <div class="row">
-            <div class="col-xl-5">
-              <div class="tell-story-new">
-                <div class="tell-story-new-img">
-                  <img src="./dist/images/new-01.jpg" alt="New">
-                  <span>NEW</span>
-                </div>
-                <h6 class="tell-story-new-title">
-                  เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
-                  เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น <a
-                    href="#">อ่านต่อ...</a>
-                </h6>
-                <div class="tell-story-new-more">
-                  <img src="./dist/images/postit.png" alt="postit">
-                  <a href="#"><span class="d-none d-lg-inline-block">เรื่องเล่า</span>เพิ่มเติม</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl">
-              <div class="tell-story-video">
-                <h4 class="tell-story-video-title"><img src="./dist/images/icons/pin.png" alt="น้องหมีแนะนำวีดีโอ">
-                  น้องหมีแนะนำวีดีโอ</h4>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yMR-xmcmb6A"
-                    allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl">
-              <div class="tell-story-contact">
-                <h4 class="tell-story-contact-title">ร้านอาหาร Villa De Bear</h4>
-                <h6 class="tell-story-contact-text">
-                  ย่านฝั่งธนบุรี บนถนนราชพฤกษ์ โดดเด่นด้วยรูปแบบโรงงานตุ๊กตาหมีดำ สวยงาม
-                  เป็นเอกลักษณ์
-                </h6>
-                <h6 class="tell-story-contact-text">
-                  เราให้บริการอาหารไทย นานาชาติ อาหารซีฟู้ด และเครื่องดื่มนานาชนิด มีห้องจัดเลี้ยง
-                  ห้องคาราโอเกะพร้อมให้บริการ
-                </h6>
-                <h6 class="tell-story-contact-text">
-                  โทรสอบ 098-496-6245
-                  หรือ 02-443-3724 ต่อ 0
-                </h6>
-                <h6>LINE Official : @villadebear (มี@)</h6>
-                <nav class="nav justify-content-center">
-                  <a class="nav-link px-2" href="#"><img src="./dist/images/icons/fb.png" alt="Facebook"></a>
-                  <a class="nav-link px-2" href="#"><img src="./dist/images/icons/ig.png" alt="Instagram"></a>
-                  <a class="nav-link px-2" href="#"><img src="./dist/images/icons/yt.png" alt="Youtube"></a>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
+        COPYRIGHT © 2019 VILLA DE BEAR, ALL RIGHTS RESERVED.
       </div>
-    </section>
-
-    <!-- แกลเลอรี่ -->
-    <section id="gallery">
-      <div class="container">
-        <!-- Image title -->
-        <img src="./dist/images/title-gallery.png" alt="แกลเลอรี่" class="gallery-title">
-
-        <!-- Content -->
-        <div class="gallery-content">
-          <div class="row align-items-center">
-            <div class="col-lg-4" id="gallery-overview">
-              <a href="./dist/images/gallery-01.jpg" class="card card-gallery card-gallery-hilight"
-                data-sub-html="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia aliquid, quo consequuntur laboriosam dolore expedita dolorum doloremque possimus rerum totam, id non repudiandae. Beatae odit illum quos, obcaecati eaque quo?">
-
-                <img src="./dist/images/gallery-01.jpg" class="card-img">
-                <div class="card-img-overlay">
-                  <h4 class="card-title">Overview</h4>
-                  <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
-                </div>
-              </a>
-              <a href="./dist/images/gallery-01.jpg" class="d-none card-gallery"
-                data-sub-html="Aut libero ea velit veritatis. Incidunt recusandae unde occaecati ipsa et error culpa consequuntur et. Quos deleniti ea quia. Expedita provident temporibus quo ut saepe et qui debitis.">
-                <img src="./dist/images/gallery-01.jpg" class="img-fluid">
-              </a>
-              <a href="./dist/images/gallery-01.jpg" class="d-none card-gallery"
-                data-sub-html="Dolor quisquam non. Nemo enim explicabo odio vero omnis voluptas. Porro molestiae placeat sit modi ratione voluptate nam illum laudantium. Hic rerum et ea molestias aliquam.">
-                <img src="./dist/images/gallery-01.jpg" class="img-fluid">
-              </a>
-            </div>
-            <div class="col-lg-8 d-none d-lg-block">
-              <div class="row">
-                <div class="col-6" id="gallery-restaurant">
-                  <a href="./dist/images/gallery-02.jpg" class="card card-gallery"
-                    data-sub-html="Similique omnis recusandae occaecati. Adipisci est natus quod quia eum eum repellat autem consequatur. Sed qui voluptatem.">
-                    <img src="./dist/images/gallery-02.jpg" class="card-img">
-                    <div class="card-img-overlay">
-                      <h4 class="card-title">restaurant</h4>
-                      <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
-                    </div>
-                  </a>
-                  <a href="./dist/images/gallery-02.jpg" class="d-none card-gallery"
-                    data-sub-html="Ea veritatis voluptatem placeat nostrum voluptatum ducimus. Occaecati ducimus quisquam reiciendis ratione voluptatem nihil quo. Dignissimos quibusdam sint nobis ullam et. Magni aut voluptatem. Vel ab nisi repudiandae dolores beatae mollitia.">
-                    <img src="./dist/images/gallery-02.jpg" class="img-fluid">
-                  </a>
-                  <a href="./dist/images/gallery-02.jpg" class="d-none card-gallery"
-                    data-sub-html="Ea rem mollitia sit cum. Repellendus et autem quidem sed alias eum. Doloremque aperiam tempore molestiae adipisci. Tempora omnis voluptatem dolorem recusandae itaque. Repellat minus rerum voluptates velit id.">
-                    <img src="./dist/images/gallery-02.jpg" class="img-fluid">
-                  </a>
-                </div>
-                <div class="col-6" id="gallery-foods">
-                  <a href="./dist/images/gallery-03.jpg" class="card card-gallery"
-                    data-sub-html="Quibusdam deleniti id. Ipsam autem laudantium dolorem quis qui tenetur. Voluptatem impedit quisquam odit alias tempore est iste.">
-                    <img src="./dist/images/gallery-03.jpg" class="card-img">
-                    <div class="card-img-overlay">
-                      <h4 class="card-title">foods</h4>
-                      <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
-                    </div>
-                  </a>
-                  <a href="./dist/images/gallery-03.jpg" class="d-none card-gallery"
-                    data-sub-html="Asperiores est voluptas animi quis. Voluptatem itaque dolores odio tempora vitae iure et. Corporis non qui ab. Et dolores commodi facilis. Voluptatem provident animi qui.">
-                    <img src="./dist/images/gallery-03.jpg" class="img-fluid">
-                  </a>
-                  <a href="./dist/images/gallery-03.jpg" class="d-none card-gallery"
-                    data-sub-html="Sint veritatis doloremque. Tempora amet omnis voluptatem architecto qui. Qui rerum vero aut sed.">
-                    <img src="./dist/images/gallery-03.jpg" class="img-fluid">
-                  </a>
-                </div>
-                <div class="col-6" id="gallery-kinny">
-                  <a href="./dist/images/gallery-03.jpg" class="card card-gallery"
-                    data-sub-html="Assumenda est fugit officia voluptatem impedit omnis quo ut. Et aliquid non debitis excepturi quisquam. Et a nihil aliquid.">
-                    <img src="./dist/images/gallery-03.jpg" class="card-img">
-                    <div class="card-img-overlay">
-                      <h4 class="card-title">KARAOKE KINNY</h4>
-                      <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
-                    </div>
-                  </a>
-                  <a href="./dist/images/gallery-03.jpg" class="d-none card-gallery"
-                    data-sub-html="Consequatur aut ipsum autem. Ex culpa voluptas inventore ex dolorum ut quisquam sunt. Dolore incidunt et at. Quibusdam minus molestiae itaque. Nihil quidem amet maiores et voluptatem nam quae optio.">
-                    <img src="./dist/images/gallery-03.jpg" class="img-fluid">
-                  </a>
-                  <a href="./dist/images/gallery-03.jpg" class="d-none card-gallery"
-                    data-sub-html="Incidunt aut maiores animi quia magnam debitis. Sed at et aut quia beatae rerum totam et reiciendis. Dolorem quo vero qui. Modi beatae necessitatibus qui voluptas nisi.">
-                    <img src="./dist/images/gallery-03.jpg" class="img-fluid">
-                  </a>
-                </div>
-                <div class="col-6" id="gallery-chisty">
-                  <a href="./dist/images/gallery-03.jpg" class="card card-gallery"
-                    data-sub-html="Accusantium quae praesentium impedit voluptatum quis minima. Qui perferendis accusamus in id ratione quisquam blanditiis. Alias similique consequatur quo. Aut occaecati tenetur amet ea. Expedita sint et est. Qui nam reprehenderit.">
-                    <img src="./dist/images/gallery-03.jpg" class="card-img">
-                    <div class="card-img-overlay">
-                      <h4 class="card-title">KARAOKE CHISTY</h4>
-                      <span class="card-icon"><img src="./dist/images/icons/icon-plus.png" alt="View"></span>
-                    </div>
-                  </a>
-                  <a href="./dist/images/gallery-03.jpg" class="d-none card-gallery"
-                    data-sub-html="Dolores voluptas similique autem quibusdam quis eius ut. Temporibus commodi laborum aliquam beatae aut aliquid quis facere ipsa. Doloremque quae accusamus repellat eum rerum aut labore. Et inventore est cupiditate assumenda qui tempora adipisci reiciendis. Consequuntur dolor rem voluptatibus neque debitis labore numquam recusandae. Consectetur est consequatur est dicta iste ipsum.">
-                    <img src="./dist/images/gallery-03.jpg" class="img-fluid">
-                  </a>
-                  <a href="./dist/images/gallery-03.jpg" class="d-none card-gallery"
-                    data-sub-html="Consequuntur natus odit voluptates qui nesciunt est minus. Architecto nam culpa qui rerum aut velit. Sunt ut tempore nihil asperiores. Neque modi sint delectus qui. Quod inventore porro quidem repellendus et excepturi ducimus id.">
-                    <img src="./dist/images/gallery-03.jpg" class="img-fluid">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-3">
-          <a href="#" class="btn btn-dark btn-lg rounded-sm">อัลบั้มเพิ่มเติม</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer image -->
-    <div class="text-center mt-5">
-      <img src="./dist/images/footer/home-sm.png" alt="Footer home" class="w-50 d-md-none">
-      <img src="./dist/images/footer/home.png" alt="Footer home" class="w-100 d-none d-md-block">
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      COPYRIGHT © 2019 VILLA DE BEAR, ALL RIGHTS RESERVED.
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

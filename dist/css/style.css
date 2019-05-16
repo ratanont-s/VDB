@@ -3924,7 +3924,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .lg-group:after { content: ""; display: table; clear: both; }
 
-.lg-outer { width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 1050; text-align: left; opacity: 0; padding: 2rem; -webkit-transition: opacity 0.15s ease 0s; transition: opacity 0.15s ease 0s; }
+.lg-outer { width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 1050; text-align: left; opacity: 0; padding: 1rem; -webkit-transition: opacity 0.15s ease 0s; transition: opacity 0.15s ease 0s; }
 
 .lg-outer * { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -4003,6 +4003,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .lg-css3.lg-slide.lg-use-left .lg-item.lg-current { left: 0; opacity: 1; }
 
 .lg-css3.lg-slide.lg-use-left .lg-item.lg-prev-slide, .lg-css3.lg-slide.lg-use-left .lg-item.lg-next-slide, .lg-css3.lg-slide.lg-use-left .lg-item.lg-current { -webkit-transition: left 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s; transition: left 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s; }
+
+.lg-backdrop.in { opacity: 0.85; }
+
+.fixed-size.lg-outer .lg-inner { background-color: #fff; }
+
+.fixed-size.lg-outer .lg-sub-html { position: absolute; text-align: left; }
+
+.fixed-size.lg-outer .lg-toolbar { background-color: transparent; height: 0; }
+
+.fixed-size.lg-outer .lg-toolbar .lg-icon { color: #fff; }
+
+.fixed-size.lg-outer .lg-img-wrap { padding: 12px; }
+
+.lg-outer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.lg-outer .lg { top: 0 !important; }
+
+.lg-outer .lg-image { vertical-align: top; }
 
 html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
@@ -4614,6 +4632,8 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 #promotionModal .modal-nav .promotion-karaoke-slide.slider-nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 #promotionModal .modal-nav .promotion-karaoke-slide.slider-nav .slick-list { margin: 0 1rem; }
+
+@media (max-width: 991.98px) { #promotionModal .modal-nav { padding: 1rem 0.5rem; } }
 
 section { margin-bottom: 4rem; }
 
