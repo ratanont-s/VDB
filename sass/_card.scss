@@ -1,1007 +1,1003 @@
 // Link
 .card-link {
-    margin-bottom: 1.5rem;
-    border-radius: 0;
-    border: unset;
-    box-shadow: $box-shadow-sm;
-    @include transition($transition-base);
+  margin-bottom: 1.5rem;
+  border-radius: 0;
+  border: unset;
+  box-shadow: $box-shadow-sm;
+  @include transition($transition-base);
 
-    @include hover-focus {
-        box-shadow: $box-shadow;
-        @include transition($transition-base);
-    }
+  @include hover-focus {
+    box-shadow: $box-shadow;
+    @include transition($transition-base);
+  }
 }
 
 // Event
 .card-event {
-    margin-bottom: 1.5rem;
-    box-shadow: $box-shadow-sm;
-    border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: $box-shadow-sm;
+  border-radius: 1rem;
+  @include transition($transition-base);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid transparent;
+    border-radius: inherit;
+    @include transition($transition-base);
+  }
+
+  @include hover-focus {
+    text-decoration: none;
+    box-shadow: $box-shadow;
     @include transition($transition-base);
 
     &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 4px solid transparent;
-        border-radius: inherit;
-        @include transition($transition-base);
+      border-color: $dark;
+      @include transition($transition-base);
+    }
+  }
+
+  .card {
+    &-img-top {
+      padding: 1.25rem 1.25rem 0;
     }
 
-    @include hover-focus {
-        text-decoration: none;
-        box-shadow: $box-shadow;
-        @include transition($transition-base);
+    &-body {
+      display: flex;
+      color: $body-color;
+    }
 
-        &::before {
-            border-color: $dark;
-            @include transition($transition-base);
-        }
+    &-date {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: $light;
+      border-radius: 100%;
+      min-width: 5rem;
+      height: 5rem;
+      margin-right: 1rem;
+
+      &-number {
+        margin-bottom: unset;
+      }
+
+      &-month {
+        margin-top: -0.5rem;
+        margin-bottom: unset;
+      }
+    }
+
+    &-subtitle {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: $text-muted;
+    }
+  }
+
+  &-hilight {
+    box-shadow: unset;
+    border: unset;
+
+    @include hover-focus {
+      box-shadow: unset;
+
+      &::before {
+        display: none;
+      }
     }
 
     .card {
-        &-img-top {
-            padding: 1.25rem 1.25rem 0;
+      &-img-top {
+        padding: unset;
+        border-top-left-radius: unset;
+        border-top-right-radius: unset;
+      }
+
+      &-body {
+        margin-top: 1.25rem;
+        border: 1px solid $border-color;
+
+        @include media-breakpoint-up(lg) {
+          margin-left: 5rem;
+          margin-right: 5rem;
         }
-
-        &-body {
-            display: flex;
-            color: $body-color;
-        }
-
-        &-date {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: $light;
-            border-radius: 100%;
-            min-width: 5rem;
-            height: 5rem;
-            margin-right: 1rem;
-
-            &-number {
-                margin-bottom: unset;
-            }
-
-            &-month {
-                margin-top: -.5rem;
-                margin-bottom: unset;
-            }
-        }
-
-
-        &-subtitle {
-            display: block;
-            margin-bottom: .5rem;
-            color: $text-muted;
-        }
+      }
     }
-
-    &-hilight {
-        box-shadow: unset;
-        border: unset;
-
-        @include hover-focus {
-            box-shadow: unset;
-
-            &::before {
-                display: none;
-            }
-        }
-
-        .card {
-            &-img-top {
-                padding: unset;
-                border-top-left-radius: unset;
-                border-top-right-radius: unset;
-            }
-
-            &-body {
-                margin-top: 1.25rem;
-                border: 1px solid $border-color;
-
-                @include media-breakpoint-up(lg) {
-                    margin-left: 5rem;
-                    margin-right: 5rem;
-                }
-            }
-        }
-    }
+  }
 }
 
 // TODAY’S SPECIAL
 .card-today-special {
-    border-radius: 0;
-    margin-bottom: 1.5rem;
-    box-shadow: $box-shadow-sm;
+  border-radius: 0;
+  margin-bottom: 1.5rem;
+  box-shadow: $box-shadow-sm;
+  @include transition($transition-base);
+
+  @include hover-focus {
+    box-shadow: $box-shadow;
     @include transition($transition-base);
+  }
 
-    @include hover-focus {
+  .card {
+    &-img {
+      border-radius: inherit;
+    }
+
+    &-body {
+      color: $body-color;
+      height: 100%;
+      padding: 2rem;
+      border-radius: inherit;
+      background: url("../images/bg/card-body.jpg") no-repeat center center;
+      background-size: cover;
+
+      &-inner {
+        background-color: white;
+        height: inherit;
+        padding: 1rem;
         box-shadow: $box-shadow;
-        @include transition($transition-base);
+        border: 1px solid $border-color;
+      }
     }
 
-    .card {
-        &-img {
-            border-radius: inherit;
-        }
-
-        &-body {
-            color: $body-color;
-            height: 100%;
-            padding: 2rem;
-            border-radius: inherit;
-            background: url('../images/bg/card-body.jpg') no-repeat center center;
-            background-size: cover;
-
-            &-inner {
-                background-color: white;
-                height: inherit;
-                padding: 1rem;
-                box-shadow: $box-shadow;
-                border: 1px solid $border-color;
-            }
-        }
-
-        &-title {
-            text-align: center;
-        }
+    &-title {
+      text-align: center;
     }
+  }
 }
 
 // Promotion
 .card-promotion {
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: auto calc(100% - 2rem);
-    border-radius: $border-radius-lg;
-    min-height: 17rem;
-    border-width: $border-width-lg;
-    margin-bottom: 1.5rem;
-    box-shadow: $box-shadow-sm;
-    @include transition($transition-base);
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: auto calc(100% - 2rem);
+  border-radius: $border-radius-lg;
+  min-height: 17rem;
+  border-width: $border-width-lg;
+  margin-bottom: 1.5rem;
+  box-shadow: $box-shadow-sm;
+  @include transition($transition-base);
 
-    @include hover-focus {
-        border-color: $dark;
-        box-shadow: $box-shadow;
-        @include transition($transition-base);
+  @include hover-focus {
+    border-color: $dark;
+    box-shadow: $box-shadow;
+    @include transition($transition-base);
+  }
+
+  .card {
+    &-title {
+      text-align: center;
+      display: inline-flex;
+      flex-direction: column;
+      align-self: flex-start;
+      color: $body-color;
+
+      span {
+        color: $text-muted;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    background-position: center bottom 1rem;
+    background-size: calc(100% - 2rem) auto;
+  }
+
+  &-happy-birthday {
+    background-image: url("../images/bg/pro-happy-birthday.png");
+  }
+
+  &-congregation {
+    background-image: url("../images/bg/pro-congregation.png");
+  }
+
+  &-karaoke {
+    position: relative;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../images/bg/pro-karaoke-floor.png") no-repeat center
+        bottom 1rem;
+      background-size: calc(100% - 2rem) auto;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../images/bg/pro-karaoke.png") no-repeat right 1rem
+        bottom 1.5rem;
+      background-size: auto calc(100% - 2.5rem);
     }
 
     .card {
-        &-title {
-            text-align: center;
-            display: inline-flex;
-            flex-direction: column;
-            align-self: flex-start;
-            color: $body-color;
+      &-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-            span {
-                color: $text-muted;
-            }
+        &-icon {
+          margin-right: 1rem;
+
+          img {
+            max-height: 4rem;
+          }
         }
+
+        &-text {
+          text-align: left;
+
+          h4 {
+            margin-bottom: -15px;
+            color: $text-muted;
+
+            @include media-breakpoint-down(md) {
+              margin-bottom: -10px;
+            }
+          }
+
+          h1 {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      justify-content: center;
+
+      .card-title {
+        margin-left: 2rem;
+      }
     }
 
     @include media-breakpoint-down(md) {
+      &::before {
         background-position: center bottom 1rem;
-        background-size: calc(100% - 2rem) auto;
+        background-size: calc(100% - 2rem) 1rem;
+      }
+
+      &:after {
+        background-position: center bottom 1.5rem;
+        background-size: calc(100% - 3rem) auto;
+      }
     }
+  }
 
-    &-happy-birthday {
-        background-image: url('../images/bg/pro-happy-birthday.png');
+  &-drink {
+    background-image: url("../images/bg/pro-drink.png");
+    background-position: center bottom 1rem;
+    background-size: 80% auto;
 
+    .card-title {
+      flex-direction: row;
+      align-self: center;
+
+      span {
+        margin-right: 0.5rem;
+      }
     }
+  }
 
-    &-congregation {
-        background-image: url('../images/bg/pro-congregation.png');
+  &-credit-card {
+    background-image: url("../images/bg/pro-credit-card.png");
+    background-position: left 1rem center;
+
+    .card-title {
+      align-self: flex-end;
     }
-
-    &-karaoke {
-        position: relative;
-        align-items: center;
-
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: url('../images/bg/pro-karaoke-floor.png') no-repeat center bottom 1rem;
-            background-size: calc(100% - 2rem) auto;
-        }
-
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: url('../images/bg/pro-karaoke.png') no-repeat right 1rem bottom 1.5rem;
-            background-size: auto calc(100% - 2.5rem);
-        }
-
-        .card {
-            &-title {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-
-                &-icon {
-                    margin-right: 1rem;
-
-                    img {
-                        max-height: 4rem;
-                    }
-                }
-
-                &-text {
-                    text-align: left;
-
-                    h4 {
-                        margin-bottom: -15px;
-                        color: $text-muted;
-
-                        @include media-breakpoint-down(md) {
-                            margin-bottom: -10px;
-                        }
-                    }
-
-                    h1 {
-                        margin-bottom: 0;
-                    }
-                }
-            }
-        }
-
-        @include media-breakpoint-up(lg) {
-            justify-content: center;
-
-            .card-title {
-                margin-left: 2rem;
-            }
-        }
-
-        @include media-breakpoint-down(md) {
-            &::before {
-                background-position: center bottom 1rem;
-                background-size: calc(100% - 2rem) 1rem;
-            }
-
-            &:after {
-                background-position: center bottom 1.5rem;
-                background-size: calc(100% - 3rem) auto;
-            }
-        }
-    }
-
-    &-drink {
-        background-image: url('../images/bg/pro-drink.png');
-        background-position: center bottom 1rem;
-        background-size: 80% auto;
-
-        .card-title {
-            flex-direction: row;
-            align-self: center;
-
-            span {
-                margin-right: .5rem;
-            }
-        }
-    }
-
-    &-credit-card {
-        background-image: url('../images/bg/pro-credit-card.png');
-        background-position: left 1rem center;
-
-        .card-title {
-            align-self: flex-end;
-        }
-    }
+  }
 }
 
 // Karaoke room
 .card-karaoke-room {
-    align-items: center;
-    border: 4px solid $dark;
-    border-radius: $border-radius;
-    height: 200px;
-    box-shadow: $box-shadow-sm;
-    margin-bottom: 1.5rem;
-    overflow: hidden;
+  align-items: center;
+  border: 4px solid $dark;
+  border-radius: $border-radius;
+  height: 200px;
+  box-shadow: $box-shadow-sm;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  @include transition($transition-base);
+
+  .card {
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        position: absolute;
+        max-width: 100%;
+      }
+
+      &-obj,
+      &-fg {
+        bottom: -1rem;
+      }
+    }
+
+    &-title {
+      background-color: white;
+      text-align: center;
+      margin-top: auto;
+      width: fit-content;
+      padding: 0.25rem 1.25rem;
+      border-radius: $rounded-pill;
+      border: $border-width-lg solid $dark;
+      color: $body-color;
+      box-shadow: $box-shadow-sm;
+      position: relative;
+      @include transition($transition-base);
+    }
+  }
+
+  @include hover-focus {
+    box-shadow: $box-shadow;
     @include transition($transition-base);
 
     .card {
-        &-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-
-            img {
-                position: absolute;
-                max-width: 100%;
-            }
-
-            &-obj,
-            &-fg {
-                bottom: -1rem;
-            }
+      &-img {
+        img {
+          animation-play-state: running;
         }
+      }
 
-        &-title {
-            background-color: white;
-            text-align: center;
-            margin-top: auto;
-            width: fit-content;
-            padding: .25rem 1.25rem;
-            border-radius: $rounded-pill;
-            border: $border-width-lg solid $dark;
-            color: $body-color;
-            box-shadow: $box-shadow-sm;
-            position: relative;
-            @include transition($transition-base);
-        }
-    }
-
-    @include hover-focus {
-        box-shadow: $box-shadow;
+      &-title {
+        background-color: $yellow;
         @include transition($transition-base);
+      }
+    }
+  }
 
-        .card {
-            &-img {
-                img {
-                    animation-play-state: running;
-                }
-            }
+  &.sammy {
+    .card-img {
+      &-bg {
+        animation: left-right 20s linear infinite alternate;
+        animation-play-state: paused;
+      }
 
-            &-title {
-                background-color: $yellow;
-                @include transition($transition-base);
-            }
-        }
+      &-obj {
+        animation: bear 10s linear infinite alternate;
+        animation-play-state: paused;
+      }
+
+      &-fg {
+        animation: bottom-right 20s linear infinite alternate;
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  &.christy {
+    .card-img {
+      &-bg {
+        animation: left-right 20s linear infinite alternate;
+        animation-play-state: paused;
+      }
+
+      &-obj {
+        animation: bear 10s linear infinite alternate;
+        animation-play-state: paused;
+      }
+
+      &-fg {
+        animation: bottom-left 20s linear infinite alternate;
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  &.kinny {
+    .card-img {
+      &-bg {
+        animation: left-right 20s linear infinite alternate;
+        animation-play-state: paused;
+      }
+
+      &-obj {
+        animation: bear 10s linear infinite alternate;
+        animation-play-state: paused;
+      }
+
+      &-fg {
+        bottom: -70px;
+        animation: bottom-right 20s linear infinite alternate;
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  &.tubie {
+    .card-img {
+      &-bg {
+        animation: left-right 20s linear infinite alternate;
+        animation-play-state: paused;
+      }
+
+      &-obj {
+        animation: bear 10s linear infinite alternate;
+        animation-play-state: paused;
+      }
+
+      &-fg {
+        animation: bottom-right 20s linear infinite alternate;
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  &.villy {
+    .card-img {
+      &-bg {
+        animation: left-right 20s linear infinite alternate;
+        animation-play-state: paused;
+      }
+
+      &-obj {
+        animation: bear 10s linear infinite alternate;
+        animation-play-state: paused;
+      }
+
+      &-fg {
+        animation: bottom-right 20s linear infinite alternate;
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  @keyframes up-down {
+    from {
+      transform: translateY(0);
     }
 
-    &.sammy {
+    to {
+      transform: translateY(10px);
+    }
+  }
 
-        @include hover {
-            .card-img {
-                &-bg {
-                    animation: left-right 20s linear infinite alternate;
-                }
-
-                &-obj {
-                    animation: bear 10s linear infinite alternate;
-                }
-
-                &-fg {
-                    animation: bottom-right 20s linear infinite alternate;
-                }
-            }
-        }
+  @keyframes bear {
+    0% {
+      transform: rotate(0deg);
     }
 
-    &.christy {
-        @include hover {
-            .card-img {
-                &-bg {
-                    animation: left-right 20s linear infinite alternate;
-                }
-
-                &-obj {
-                    animation: bear 10s linear infinite alternate;
-                }
-
-                &-fg {
-                    animation: bottom-left 20s linear infinite alternate;
-                }
-            }
-        }
+    25% {
+      transform: rotate(10deg);
     }
 
-    &.kinny {
-        .card-img-fg {
-            bottom: -70px;
-        }
-
-        @include hover {
-            .card-img {
-                &-bg {
-                    animation: left-right 20s linear infinite alternate;
-                }
-
-                &-obj {
-                    animation: bear 10s linear infinite alternate;
-                }
-
-                &-fg {
-                    animation: bottom-right 20s linear infinite alternate;
-                }
-            }
-        }
+    50% {
+      transform: rotate(0deg);
     }
 
-    &.tubie {
-        @include hover {
-            .card-img {
-                &-bg {
-                    animation: left-right 20s linear infinite alternate;
-                }
+    100% {
+      transform: rotate(-10deg);
+    }
+  }
 
-                &-obj {
-                    animation: bear 10s linear infinite alternate;
-                }
-
-                &-fg {
-                    animation: bottom-right 20s linear infinite alternate;
-                }
-            }
-        }
+  @keyframes left-right {
+    0% {
+      transform: translateX(0);
     }
 
-    &.villy {
-        @include hover {
-            .card-img {
-                &-bg {
-                    animation: left-right 20s linear infinite alternate;
-                }
-
-                &-obj {
-                    animation: bear 10s linear infinite alternate;
-                }
-
-                &-fg {
-                    animation: bottom-right 20s linear infinite alternate;
-                }
-            }
-        }
+    25% {
+      transform: translateX(10px);
     }
 
-    @keyframes up-down {
-        from {
-            transform: translateY(0);
-        }
-
-        to {
-            transform: translateY(10px);
-        }
+    50% {
+      transform: translateX(0);
     }
 
-    @keyframes bear {
-        0% {
-            transform: rotate(0deg);
-        }
+    100% {
+      transform: translateX(-10px);
+    }
+  }
 
-        25% {
-            transform: rotate(10deg);
-        }
-
-        50% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(-10deg);
-        }
+  @keyframes bottom-left {
+    0% {
+      transform: translate(0, 0);
     }
 
-    @keyframes left-right {
-        0% {
-            transform: translateX(0);
-        }
-
-        25% {
-            transform: translateX(10px);
-        }
-
-        50% {
-            transform: translateX(0);
-        }
-
-        100% {
-            transform: translateX(-10px);
-        }
+    25% {
+      transform: translate(5px, 5px);
     }
 
-    @keyframes bottom-left {
-        0% {
-            transform: translate(0, 0);
-        }
-
-        25% {
-            transform: translate(5px, 5px);
-        }
-
-        50% {
-            transform: translateX(0, 0);
-        }
-
-        100% {
-            transform: translate(-5px, -5px);
-        }
+    50% {
+      transform: translateX(0, 0);
     }
 
-    @keyframes bottom-right {
-        0% {
-            transform: translate(0, 0);
-        }
-
-        25% {
-            transform: translate(-5px, -5px);
-        }
-
-        50% {
-            transform: translateX(0, 0);
-        }
-
-        100% {
-            transform: translate(5px, 5px);
-        }
+    100% {
+      transform: translate(-5px, -5px);
     }
+  }
+
+  @keyframes bottom-right {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    25% {
+      transform: translate(-5px, -5px);
+    }
+
+    50% {
+      transform: translateX(0, 0);
+    }
+
+    100% {
+      transform: translate(5px, 5px);
+    }
+  }
 }
 
 // Promotion other
 .card-promotion-other {
-    border-radius: 0;
-    height: calc(100% - 1.5rem);
-    margin-bottom: 1.5rem;
-    box-shadow: $box-shadow-sm;
-    text-align: center;
-    color: $body-color;
+  border-radius: 0;
+  height: calc(100% - 1.5rem);
+  margin-bottom: 1.5rem;
+  box-shadow: $box-shadow-sm;
+  text-align: center;
+  color: $body-color;
+  @include transition($transition-base);
+
+  @include hover-focus {
+    color: white;
+    background-color: $dark;
+    box-shadow: $box-shadow;
     @include transition($transition-base);
+  }
 
-    @include hover-focus {
-        color: white;
-        background-color: $dark;
-        box-shadow: $box-shadow;
-        @include transition($transition-base);
+  .card {
+    &-img-top {
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
     }
-
-    .card {
-        &-img-top {
-            border-top-left-radius: inherit;
-            border-top-right-radius: inherit;
-        }
-    }
+  }
 }
 
 // Karaoke detail
 .card-karaoke-detail {
-    border: $border-width-lg solid $dark;
-    margin-bottom: 1.5rem;
-    box-shadow: $box-shadow-sm;
+  border: $border-width-lg solid $dark;
+  margin-bottom: 1.5rem;
+  box-shadow: $box-shadow-sm;
 
-    .card {
-        &-body {
-            height: 100%;
-            padding: .5rem;
+  .card {
+    &-body {
+      height: 100%;
+      padding: 0.5rem;
 
-            &:not(.card-body-right) {
-                border-right: $border-width-lg solid $dark;
-            }
+      &:not(.card-body-right) {
+        border-right: $border-width-lg solid $dark;
+      }
 
-            &-left {
-                .room-images {
-                    margin-bottom: .5rem;
-                }
-
-                .slider-nav {
-                    .slick-slide {
-                        margin-right: .5rem;
-                    }
-                }
-
-                img {
-                    width: 100%;
-                }
-
-                @include media-breakpoint-down(lg) {
-                    border-right: unset !important;
-                    border-bottom: $border-width-lg solid $dark;
-                }
-            }
-
-            &-center {
-                padding-left: 2.5rem;
-                padding-right: 2.5rem;
-
-                .fc {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    height: 100%;
-
-                    &-toolbar {
-                        justify-content: space-around;
-
-                        &.fc-header-toolbar {
-                            margin-bottom: unset;
-                        }
-                    }
-
-                    &-button {
-                        background-color: unset;
-                        color: $body-color;
-                        border: unset;
-                    }
-
-                    &-head {
-                        border-bottom: 1px solid $border-color;
-                    }
-
-                    &-day-header {
-                        padding-bottom: .5rem;
-                    }
-
-                    &-day-number {
-                        float: none !important;
-                        // padding-top: .5rem;
-                        display: block;
-                    }
-
-                    &-day-top {
-                        text-align: center;
-                    }
-
-                    &-bg {
-                        .fc-today {
-                            background-color: unset;
-                            background: url('../images/bg/today.png') no-repeat center top;
-                            background-size: 80%;
-                        }
-                    }
-
-                    &-widget-content {
-                        padding-top: .5rem;
-                    }
-
-                    th {
-                        border: unset;
-                    }
-
-                    td {
-                        border: unset;
-                    }
-                }
-
-                @include media-breakpoint-down(md) {
-                    border-right: unset !important;
-                    border-bottom: $border-width-lg solid $dark;
-                    padding-left: .5rem;
-                    padding-right: .5rem;
-                }
-            }
-
-            &-right {
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                padding: 0;
-
-                &-item {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    flex: 1 1 auto;
-                    padding: .25rem;
-
-                    &:not(:last-child) {
-                        border-bottom: $border-width-lg solid $dark;
-                    }
-
-                    img {
-                        display: inline-block;
-                        width: 80px;
-                        height: 80px;
-                        object-fit: contain;
-                        margin: .5rem auto;
-
-                        &.date,
-                        &.day,
-                        &.night {
-                            width: 20px;
-                            height: 20px;
-                            object-fit: contain;
-                            margin: 0 auto;
-                        }
-                    }
-                }
-
-                @include media-breakpoint-down(md) {
-                    flex-direction: row;
-
-                    .card-body-right-item {
-                        border-bottom: unset;
-
-                        &:not(:last-child) {
-                            border-right: $border-width-lg solid $dark;
-                        }
-                    }
-                }
-            }
+      &-left {
+        .room-images {
+          margin-bottom: 0.5rem;
         }
+
+        .slider-nav {
+          .slick-slide {
+            margin-right: 0.5rem;
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+
+        @include media-breakpoint-down(lg) {
+          border-right: unset !important;
+          border-bottom: $border-width-lg solid $dark;
+        }
+      }
+
+      &-center {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+
+        .fc {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+
+          &-toolbar {
+            justify-content: space-around;
+
+            &.fc-header-toolbar {
+              margin-bottom: unset;
+            }
+          }
+
+          &-button {
+            background-color: unset;
+            color: $body-color;
+            border: unset;
+          }
+
+          &-head {
+            border-bottom: 1px solid $border-color;
+          }
+
+          &-day-header {
+            padding-bottom: 0.5rem;
+          }
+
+          &-day-number {
+            float: none !important;
+            // padding-top: .5rem;
+            display: block;
+          }
+
+          &-day-top {
+            text-align: center;
+          }
+
+          &-bg {
+            .fc-today {
+              background-color: unset;
+              background: url("../images/bg/today.png") no-repeat center top;
+              background-size: 80%;
+            }
+          }
+
+          &-widget-content {
+            padding-top: 0.5rem;
+          }
+
+          th {
+            border: unset;
+          }
+
+          td {
+            border: unset;
+          }
+        }
+
+        @include media-breakpoint-down(md) {
+          border-right: unset !important;
+          border-bottom: $border-width-lg solid $dark;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+      }
+
+      &-right {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+
+        &-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          flex: 1 1 auto;
+          padding: 0.25rem;
+
+          &:not(:last-child) {
+            border-bottom: $border-width-lg solid $dark;
+          }
+
+          img {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin: 0.5rem auto;
+
+            &.date,
+            &.day,
+            &.night {
+              width: 20px;
+              height: 20px;
+              object-fit: contain;
+              margin: 0 auto;
+            }
+          }
+        }
+
+        @include media-breakpoint-down(md) {
+          flex-direction: row;
+
+          .card-body-right-item {
+            border-bottom: unset;
+
+            &:not(:last-child) {
+              border-right: $border-width-lg solid $dark;
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 // Gallery
 .card-gallery {
-    box-shadow: 0 8px 2px rgba(black, .25);
-    border-width: 0;
-    border-radius: 0;
-    margin-bottom: 1.5rem;
+  box-shadow: 0 8px 2px rgba(black, 0.25);
+  border-width: 0;
+  border-radius: 0;
+  margin-bottom: 1.5rem;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(black, 0.5);
+    opacity: 0.5;
+    @include transition($transition-base);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border: 1px solid white;
+    opacity: 0;
+  }
+
+  @include hover-focus {
     &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(black, .5);
-        opacity: 0.5;
-        @include transition($transition-base);
+      opacity: 1;
+      @include transition($transition-base);
     }
 
     &::after {
-        content: '';
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: calc(100% - 20px);
-        height: calc(100% - 20px);
-        border: 1px solid white;
-        opacity: 0;
+      opacity: 1;
+      @include transition($transition-base);
+    }
+  }
+
+  .card {
+    &-img {
+      border-radius: 0;
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+
+      &-overlay {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     }
 
-    @include hover-focus {
-        &::before {
-            opacity: 1;
-            @include transition($transition-base);
-        }
-
-        &::after {
-            opacity: 1;
-            @include transition($transition-base);
-        }
+    &-title {
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: -20px;
+      @include transition($transition-base);
     }
 
+    &-icon {
+      opacity: 0;
+      @include transition($transition-base);
+    }
+  }
+
+  &-hilight {
+    .card-img {
+      height: 549px;
+    }
+  }
+
+  @include hover-focus {
     .card {
-        &-img {
-            border-radius: 0;
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
+      &-title {
+        transform: scale(1.1);
+        margin-bottom: 0;
+        @include transition($transition-base);
+      }
 
-            &-overlay {
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-
-        &-title {
-            color: white;
-            text-transform: uppercase;
-            margin-bottom: -20px;
-            @include transition($transition-base);
-        }
-
-        &-icon {
-            opacity: 0;
-            @include transition($transition-base);
-        }
+      &-icon {
+        opacity: 1;
+        @include transition($transition-base);
+      }
     }
+  }
 
+  @include media-breakpoint-down(md) {
     &-hilight {
-        .card-img {
-            height: 549px;
-        }
+      .card-img {
+        height: 40vh;
+      }
     }
-
-
-
-    @include hover-focus {
-        .card {
-            &-title {
-                transform: scale(1.1);
-                margin-bottom: 0;
-                @include transition($transition-base);
-            }
-
-            &-icon {
-                opacity: 1;
-                @include transition($transition-base);
-            }
-        }
-    }
-
-    @include media-breakpoint-down(md) {
-
-        &-hilight {
-
-            .card-img {
-                height: 40vh;
-            }
-        }
-    }
+  }
 }
 
 // Post
 .card-post {
-    border-radius: 0;
-    color: $body-color;
-    margin-bottom: 1.5rem;
+  border-radius: 0;
+  color: $body-color;
+  margin-bottom: 1.5rem;
+  @include transition($transition-base);
+
+  .card {
+    &-img-top {
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
+  }
+
+  @include hover-focus {
+    color: white;
+    background-color: $secondary;
     @include transition($transition-base);
-
-    .card {
-        &-img-top {
-            border-top-left-radius: inherit;
-            border-top-right-radius: inherit;
-        }
-    }
-
-    @include hover-focus {
-        color: white;
-        background-color: $secondary;
-        @include transition($transition-base);
-    }
+  }
 }
 
 .card-about {
-    border: 0;
-    border-bottom: 1px solid $border-color;
-    border-radius: 0;
-    padding-bottom: 2.5rem;
-    height: calc(100% - 2.5rem);
-    margin-bottom: 2.5rem;
-    background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid $border-color;
+  border-radius: 0;
+  padding-bottom: 2.5rem;
+  height: calc(100% - 2.5rem);
+  margin-bottom: 2.5rem;
+  background-color: transparent;
 
-    .card {
+  .card {
+    &-img {
+      filter: grayscale(100%);
+      border-radius: inherit;
+      @include transition($transition-base);
 
-        &-img {
-            filter: grayscale(100%);
-            border-radius: inherit;
-            @include transition($transition-base);
+      &-hover {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 1rem;
+      }
 
-            &-hover {
-                position: relative;
-                overflow: hidden;
-                margin-bottom: 1rem;
-            }
-
-            @include hover {
-                filter: grayscale(0%);
-                transform: scale(1.1);
-                @include transition($transition-base);
-            }
-        }
+      @include hover {
+        filter: grayscale(0%);
+        transform: scale(1.1);
+        @include transition($transition-base);
+      }
     }
+  }
 }
 
 .card-room-type {
-    border-radius: 0;
-    margin-bottom: 1.5rem;
+  border-radius: 0;
+  margin-bottom: 1.5rem;
 
-    .card {
-        &-img {
-            border-radius: inherit;
-            border: 8px solid $gray-200;
-        }
-
-        &-body {
-            padding: 1rem;
-            color: $body-color;
-        }
-
-        &-title {
-            text-align: center;
-            margin-bottom: 0;
-        }
-
-        &-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(black, .8);
-            color: white;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            @include transition($transition-base);
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 1rem;
-                left: 1rem;
-                width: calc(100% - 2rem);
-                height: calc(100% - 2rem);
-                border: 1px solid white;
-            }
-
-            h4 {
-                text-transform: uppercase;
-                margin-bottom: -1rem;
-                @include transition($transition-base);
-            }
-
-            .line {
-                display: block;
-                width: 0px;
-                height: 1px;
-                background-color: white;
-                @include transition($transition-base);
-            }
-        }
+  .card {
+    &-img {
+      border-radius: inherit;
+      border: 8px solid $gray-200;
     }
 
-    @include hover {
-        .card-overlay {
-            opacity: 1;
-            @include transition($transition-base);
-
-            h4 {
-                margin-bottom: .25rem;
-                @include transition($transition-base);
-            }
-
-            .line {
-                width: 93px;
-                @include transition($transition-base);
-            }
-        }
+    &-body {
+      padding: 1rem;
+      color: $body-color;
     }
+
+    &-title {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    &-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(black, 0.8);
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      @include transition($transition-base);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        width: calc(100% - 2rem);
+        height: calc(100% - 2rem);
+        border: 1px solid white;
+      }
+
+      h4 {
+        text-transform: uppercase;
+        margin-bottom: -1rem;
+        @include transition($transition-base);
+      }
+
+      .line {
+        display: block;
+        width: 0px;
+        height: 1px;
+        background-color: white;
+        @include transition($transition-base);
+      }
+    }
+  }
+
+  @include hover {
+    .card-overlay {
+      opacity: 1;
+      @include transition($transition-base);
+
+      h4 {
+        margin-bottom: 0.25rem;
+        @include transition($transition-base);
+      }
+
+      .line {
+        width: 93px;
+        @include transition($transition-base);
+      }
+    }
+  }
 }
 
 .card-menu {
-    border-radius: 0;
-    margin-bottom: 1.5rem;
+  border-radius: 0;
+  margin-bottom: 1.5rem;
+  @include transition($transition-base);
+
+  .card {
+    &-img-top {
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
+
+    &-title {
+      color: $gold;
+      margin-bottom: 0;
+      text-align: center;
+
+      small {
+        color: $body-color;
+        display: block;
+        font-weight: 300;
+      }
+    }
+  }
+
+  @include hover-focus {
+    background-color: $secondary;
     @include transition($transition-base);
 
-    .card {
-        &-img-top {
-            border-top-left-radius: inherit;
-            border-top-right-radius: inherit;
-        }
+    .card-title {
+      color: $yellow;
 
-        &-title {
-            color: $gold;
-            margin-bottom: 0;
-            text-align: center;
-
-            small {
-                color: $body-color;
-                display: block;
-                font-weight: 300;
-            }
-        }
+      small {
+        color: white;
+      }
     }
-
-    @include hover-focus {
-        background-color: $secondary;
-        @include transition($transition-base);
-
-        .card-title {
-            color: $yellow;
-
-            small {
-                color: white;
-            }
-        }
-    }
+  }
 }
