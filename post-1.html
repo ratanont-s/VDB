@@ -1,390 +1,296 @@
 <!DOCTYPE html>
 <html lang="th">
-  <!-- Head -->
+<!-- Head -->
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Villa De Bear</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-    <!-- Fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./dist/css/style.css" />
-    <!-- JS -->
-    <script src="./dist/js/jquery.min.js"></script>
-    <script src="./dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./dist/js/jquery.sticky.js"></script>
-    <script src="./dist/js/script.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Villa De Bear</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./dist/css/style.css" />
+  <!-- JS -->
+  <script src="./dist/js/jquery.min.js"></script>
+  <script src="./dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./dist/js/jquery.sticky.js"></script>
+  <script src="./dist/js/script.js"></script>
+</head>
 
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="./index.html">
-            <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" />
-            <img
-              src="./dist/images/LOGO-Scrolldown.png"
-              alt="LOGO"
-              class="navbar-logo-scrolldown"
-            />
-          </a>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" />
+          <img src="./dist/images/LOGO-Scrolldown.png" alt="LOGO" class="navbar-logo-scrolldown" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="navbar-collapse offcanvas-collapse">
           <button class="navbar-toggler" type="button" data-toggle="offcanvas">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-times text-dark"></i>
           </button>
-
-          <div class="navbar-collapse offcanvas-collapse">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="offcanvas"
-            >
-              <i class="fas fa-times text-dark"></i>
+          <ul class="navbar-nav">
+            <li class="nav-item nav-item-home">
+              <a class="nav-link" href="./index.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/home.png" alt="หน้าแรก" />
+                </div>
+                <div class="nav-link-text">หน้าแรก</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about-us.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/about.png" alt="เรื่องเล่าพี่หมี" />
+                </div>
+                <div class="nav-link-text">เรื่องเล่าพี่หมี</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./promotions.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/promotion.png" alt="โปรโมชั่น" />
+                </div>
+                <div class="nav-link-text">โปรโมชั่น</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./karaoke.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/karaoke.png" alt="ห้องคาราโอเกะ" />
+                </div>
+                <div class="nav-link-text">ห้องคาราโอเกะ</div>
+              </a>
+            </li>
+            <li class="nav-item nav-item-logo">
+              <a class="nav-link" href="./index.html">
+                <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./member.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/member.png" alt="ครอบครัวพี่หมี" />
+                </div>
+                <div class="nav-link-text">ครอบครัวพี่หมี</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./event.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/event.png" alt="กิจกรรมพี่หมี" />
+                </div>
+                <div class="nav-link-text">กิจกรรมพี่หมี</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/restusrant.png" alt="รายการอาหาร" />
+                </div>
+                <div class="nav-link-text">รายการอาหาร</div>
+              </a>
+            </li>
+          </ul>
+          <form class="form-inline form-search">
+            <button class="btn btn-search" type="button" onclick="toggleInputSearch();">
+              <i class="fas"></i>
             </button>
-            <ul class="navbar-nav">
-              <li class="nav-item nav-item-home">
-                <a class="nav-link" href="./index.html">
-                  <div class="nav-link-icon">
-                    <img src="./dist/images/icons/home.png" alt="หน้าแรก" />
-                  </div>
-                  <div class="nav-link-text">หน้าแรก</div>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./about-us.html">
-                  <div class="nav-link-icon">
-                    <img
-                      src="./dist/images/icons/about.png"
-                      alt="เรื่องเล่าพี่หมี"
-                    />
-                  </div>
-                  <div class="nav-link-text">เรื่องเล่าพี่หมี</div>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./promotions.html">
-                  <div class="nav-link-icon">
-                    <img
-                      src="./dist/images/icons/promotion.png"
-                      alt="โปรโมชั่น"
-                    />
-                  </div>
-                  <div class="nav-link-text">โปรโมชั่น</div>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./karaoke.html">
-                  <div class="nav-link-icon">
-                    <img
-                      src="./dist/images/icons/karaoke.png"
-                      alt="ห้องคาราโอเกะ"
-                    />
-                  </div>
-                  <div class="nav-link-text">ห้องคาราโอเกะ</div>
-                </a>
-              </li>
-              <li class="nav-item nav-item-logo">
-                <a class="nav-link" href="./index.html">
-                  <img
-                    src="./dist/images/LOGO.png"
-                    alt="LOGO"
-                    class="navbar-logo"
-                  />
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./member.html">
-                  <div class="nav-link-icon">
-                    <img
-                      src="./dist/images/icons/member.png"
-                      alt="ครอบครัวพี่หมี"
-                    />
-                  </div>
-                  <div class="nav-link-text">ครอบครัวพี่หมี</div>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./event.html">
-                  <div class="nav-link-icon">
-                    <img
-                      src="./dist/images/icons/event.png"
-                      alt="กิจกรรมพี่หมี"
-                    />
-                  </div>
-                  <div class="nav-link-text">กิจกรรมพี่หมี</div>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./menu.html">
-                  <div class="nav-link-icon">
-                    <img
-                      src="./dist/images/icons/restusrant.png"
-                      alt="รายการอาหาร"
-                    />
-                  </div>
-                  <div class="nav-link-text">รายการอาหาร</div>
-                </a>
-              </li>
-            </ul>
-            <form class="form-inline form-search">
-              <button
-                class="btn btn-search"
-                type="button"
-                onclick="toggleInputSearch();"
-              >
-                <i class="fas"></i>
-              </button>
-              <input
-                class="form-control form-control-search"
-                id="inputSearch"
-                type="search"
-                placeholder="พี่หมีช่วยหาให้มั้ย....."
-              />
-            </form>
-          </div>
+            <input class="form-control form-control-search" id="inputSearch" type="search"
+              placeholder="พี่หมีช่วยหาให้มั้ย....." />
+          </form>
         </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="main main-page">
+    <!-- Sticky toolbar -->
+    <ul class="sticky-toolbar">
+      <li class="sticky-toolbar-item">
+        <a href="#" data-toggle="tooltip" data-placement="left" title="คุยกับเราซิ">
+          <i class="fab fa-line fa-lg"></i>
+          <span class="sticky-toolbar-text">สนทนา</span>
+        </a>
+      </li>
+      <li class="sticky-toolbar-item">
+        <a href="#" data-toggle="tooltip" data-placement="left" title="ร้านเราอยู่น่ะ">
+          <i class="fas fa-map-marker-alt fa-lg"></i>
+          <span class="sticky-toolbar-text">แผนที่</span>
+        </a>
+      </li>
+      <li class="sticky-toolbar-item">
+        <a href="#" data-toggle="tooltip" data-placement="left" title="โทรหาเราซิ">
+          <i class="fas fa-phone fa-lg"></i>
+          <span class="sticky-toolbar-text">โทร</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Container -->
+    <div class="container">
+      <!-- Main title -->
+      <h4 class="main-title">
+        <span>พี่หมีเล่าเรื่อง</span>
+      </h4>
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">พี่หมีเล่าเรื่อง</a></li>
+          <li class="breadcrumb-item active" aria-current="page">ประเภท</li>
+        </ol>
       </nav>
-    </header>
 
-    <!-- Main -->
-    <main class="main main-page">
-      <!-- Sticky toolbar -->
-      <ul class="sticky-toolbar">
-        <li class="sticky-toolbar-item">
-          <a href="#" data-toggle="tooltip" data-placement="left" title="Line">
-            <i class="fab fa-line fa-lg"></i>
+      <h2 class="mb-4">
+        <img src="./dist/images/icons/title.png" /> ชื่อประเภท
+      </h2>
+      <div class="row mb-5">
+        <div class="col-6 col-lg-4">
+          <a href="#" class="card card-post">
+            <img src="./dist/images/post-01.jpg" alt="Post" class="card-img-top" />
+            <div class="card-body">
+              <p class="card-text">
+                เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
+                เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
+              </p>
+            </div>
           </a>
-        </li>
-        <li class="sticky-toolbar-item">
-          <a
-            href="#"
-            data-toggle="tooltip"
-            data-placement="left"
-            title="Location"
-          >
-            <i class="fas fa-map-marker-alt fa-lg"></i>
+        </div>
+        <div class="col-6 col-lg-4">
+          <a href="#" class="card card-post">
+            <img src="./dist/images/post-01.jpg" alt="Post" class="card-img-top" />
+            <div class="card-body">
+              <p class="card-text">
+                เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
+                เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
+              </p>
+            </div>
           </a>
-        </li>
-        <li class="sticky-toolbar-item">
-          <a
-            href="#"
-            data-toggle="tooltip"
-            data-placement="left"
-            title="Telephone number"
-          >
-            <i class="fas fa-phone fa-lg"></i>
+        </div>
+        <div class="col-6 col-lg-4">
+          <a href="#" class="card card-post">
+            <img src="./dist/images/post-01.jpg" alt="Post" class="card-img-top" />
+            <div class="card-body">
+              <p class="card-text">
+                เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
+                เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
+              </p>
+            </div>
           </a>
-        </li>
-      </ul>
-
-      <!-- Container -->
-      <div class="container">
-        <!-- Main title -->
-        <h4 class="main-title">
-          <span>พี่หมีเล่าเรื่อง</span>
-        </h4>
-
-        <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">พี่หมีเล่าเรื่อง</a></li>
-            <li class="breadcrumb-item active" aria-current="page">ประเภท</li>
-          </ol>
-        </nav>
-
-        <h2 class="mb-4">
-          <img src="./dist/images/icons/title.png" /> ชื่อประเภท
-        </h2>
-        <div class="row mb-5">
-          <div class="col-6 col-lg-4">
-            <a href="#" class="card card-post">
-              <img
-                src="./dist/images/post-01.jpg"
-                alt="Post"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
-                  เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-lg-4">
-            <a href="#" class="card card-post">
-              <img
-                src="./dist/images/post-01.jpg"
-                alt="Post"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
-                  เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-lg-4">
-            <a href="#" class="card card-post">
-              <img
-                src="./dist/images/post-01.jpg"
-                alt="Post"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
-                  เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="col-12">
-            <a href="#" class="btn btn-outline-secondary btn-block"
-              >แสดงทั้งหมด <i class="fas fa-chevron-down"></i
-            ></a>
-          </div>
         </div>
-
-        <h2 class="mb-4">
-          <img src="./dist/images/icons/title.png" /> ชื่อประเภท
-        </h2>
-        <div class="row mb-5">
-          <div class="col-6 col-lg-4">
-            <a href="#" class="card card-post">
-              <img
-                src="./dist/images/post-01.jpg"
-                alt="Post"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
-                  เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-lg-4">
-            <a href="#" class="card card-post">
-              <img
-                src="./dist/images/post-01.jpg"
-                alt="Post"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
-                  เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-lg-4">
-            <a href="#" class="card card-post">
-              <img
-                src="./dist/images/post-01.jpg"
-                alt="Post"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
-                  เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="col-12">
-            <a href="#" class="btn btn-outline-secondary btn-block"
-              >แสดงทั้งหมด <i class="fas fa-chevron-down"></i
-            ></a>
-          </div>
-        </div>
-
-        <h2 class="mb-4">
-          <img src="./dist/images/icons/title.png" /> ชื่อประเภท
-        </h2>
-        <div class="row mb-5">
-          <div class="col-6 col-lg-4">
-            <a href="#" class="card card-post">
-              <img
-                src="./dist/images/post-01.jpg"
-                alt="Post"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
-                  เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-lg-4">
-            <a href="#" class="card card-post">
-              <img
-                src="./dist/images/post-01.jpg"
-                alt="Post"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
-                  เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-lg-4">
-            <a href="#" class="card card-post">
-              <img
-                src="./dist/images/post-01.jpg"
-                alt="Post"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
-                  เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="col-12">
-            <a href="#" class="btn btn-outline-secondary btn-block"
-              >แสดงทั้งหมด <i class="fas fa-chevron-down"></i
-            ></a>
-          </div>
-        </div>
-
-        <!-- Footer image -->
-        <div class="text-center">
-          <img
-            src="./dist/images/footer/post.png"
-            alt="Footer post"
-            class="w-100 mt-5"
-          />
+        <div class="col-12">
+          <a href="#" class="btn btn-outline-secondary btn-block">แสดงทั้งหมด <i class="fas fa-chevron-down"></i></a>
         </div>
       </div>
-    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        COPYRIGHT © 2019 VILLA DE BEAR, ALL RIGHTS RESERVED.
+      <h2 class="mb-4">
+        <img src="./dist/images/icons/title.png" /> ชื่อประเภท
+      </h2>
+      <div class="row mb-5">
+        <div class="col-6 col-lg-4">
+          <a href="#" class="card card-post">
+            <img src="./dist/images/post-01.jpg" alt="Post" class="card-img-top" />
+            <div class="card-body">
+              <p class="card-text">
+                เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
+                เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-4">
+          <a href="#" class="card card-post">
+            <img src="./dist/images/post-01.jpg" alt="Post" class="card-img-top" />
+            <div class="card-body">
+              <p class="card-text">
+                เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
+                เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-4">
+          <a href="#" class="card card-post">
+            <img src="./dist/images/post-01.jpg" alt="Post" class="card-img-top" />
+            <div class="card-body">
+              <p class="card-text">
+                เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
+                เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-12">
+          <a href="#" class="btn btn-outline-secondary btn-block">แสดงทั้งหมด <i class="fas fa-chevron-down"></i></a>
+        </div>
       </div>
-    </footer>
-  </body>
+
+      <h2 class="mb-4">
+        <img src="./dist/images/icons/title.png" /> ชื่อประเภท
+      </h2>
+      <div class="row mb-5">
+        <div class="col-6 col-lg-4">
+          <a href="#" class="card card-post">
+            <img src="./dist/images/post-01.jpg" alt="Post" class="card-img-top" />
+            <div class="card-body">
+              <p class="card-text">
+                เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
+                เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-4">
+          <a href="#" class="card card-post">
+            <img src="./dist/images/post-01.jpg" alt="Post" class="card-img-top" />
+            <div class="card-body">
+              <p class="card-text">
+                เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
+                เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-4">
+          <a href="#" class="card card-post">
+            <img src="./dist/images/post-01.jpg" alt="Post" class="card-img-top" />
+            <div class="card-body">
+              <p class="card-text">
+                เสาร์ อาทิตย์นี้ไม่ต้องรอตอนเย็นก็สนุกได้ทั้งครอบครัว!!
+                เพราะพี่หมีมีโปรสุดฮอตมาให้ทุกสนุกสนานต้องรอตอนเย็นต้องรอตอนเย็นต้องรอเตอนเย็น...
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-12">
+          <a href="#" class="btn btn-outline-secondary btn-block">แสดงทั้งหมด <i class="fas fa-chevron-down"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer image -->
+      <div class="text-center">
+        <img src="./dist/images/footer/post.png" alt="Footer post" class="w-100 mt-5" />
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      COPYRIGHT © 2019 VILLA DE BEAR, ALL RIGHTS RESERVED.
+    </div>
+  </footer>
+</body>
+
 </html>
