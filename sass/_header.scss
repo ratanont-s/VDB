@@ -115,8 +115,7 @@
         background-color: transparent;
 
         &-search {
-          background: white url("../images/icons/icon-search.png") no-repeat
-            right 0.75rem center;
+          background: white url("../images/icons/icon-search.png") no-repeat right 0.75rem center;
           background-size: auto 1rem;
           border-radius: inherit;
         }
@@ -308,7 +307,8 @@
           }
 
           &-logo {
-            max-height: 70px;
+            // max-height: 70px;
+            transform: scale(.75) translate(-35px, -15px);
             @include transition($transition-base);
 
             &-scrolldown {
@@ -417,6 +417,7 @@
     padding: 0 2rem 1rem;
     margin-top: 1.5rem;
     font-family: $font-kanit;
+
     &::before {
       content: "";
       position: absolute;
@@ -449,6 +450,7 @@
       padding-right: 1rem;
       font-size: 1.4rem;
     }
+
     h6 {
       font-size: 1.2rem;
     }
@@ -465,6 +467,25 @@
 
     &::before {
       display: none;
+    }
+  }
+}
+
+.logo-animate {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  &-icon {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    animation: spin 10s linear infinite;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
     }
   }
 }

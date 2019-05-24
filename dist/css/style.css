@@ -4124,7 +4124,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
   .sticky-wrapper.is-sticky .header { background-color: unset; -webkit-box-shadow: unset; box-shadow: unset; }
   .sticky-wrapper.is-sticky .header::before { top: 0; height: 50%; -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
   .sticky-wrapper.is-sticky .header .navbar-toggler { font-size: 1.5rem; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
-  .sticky-wrapper.is-sticky .header .navbar-logo { max-height: 70px; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+  .sticky-wrapper.is-sticky .header .navbar-logo { -webkit-transform: scale(0.75) translate(-35px, -15px); transform: scale(0.75) translate(-35px, -15px); -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
   .sticky-wrapper.is-sticky .header .navbar-logo-scrolldown { display: none; } }
 
 .zone { background-color: #bec690; position: relative; padding: 2rem 0; }
@@ -4177,6 +4177,14 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 @media (max-width: 991.98px) { .zone { padding-top: 4rem; margin-bottom: 1.5rem; }
   .zone::before { display: none; } }
+
+.logo-animate { position: relative; display: inline-block; overflow: hidden; }
+
+.logo-animate-icon { position: absolute; top: 25px; right: 0; -webkit-animation: spin 10s linear infinite; animation: spin 10s linear infinite; }
+
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
 
 .main .sticky-toolbar { position: fixed; top: 45vh; right: 0; list-style: none; padding-left: unset; padding: .5rem; text-align: center; background-color: white; -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem; z-index: 1029; margin-bottom: 0; }
 
