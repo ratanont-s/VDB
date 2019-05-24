@@ -24,8 +24,8 @@
       padding-bottom: 0;
 
       &-brand {
-        padding-top: .5rem;
-        padding-bottom: .5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
 
         .navbar-logo {
           @include media-breakpoint-up(lg) {
@@ -107,7 +107,7 @@
     .form-search {
       display: none;
       border: 1px solid $border-color;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       background-color: white;
 
       .form-control {
@@ -115,7 +115,8 @@
         background-color: transparent;
 
         &-search {
-          background: white url('../images/icons/icon-search.png') no-repeat right 0.75rem center;
+          background: white url("../images/icons/icon-search.png") no-repeat
+            right 0.75rem center;
           background-size: auto 1rem;
           border-radius: inherit;
         }
@@ -149,7 +150,6 @@
         @include transition($transition-base);
 
         &.active {
-
           @include media-breakpoint-up(lg) {
             visibility: hidden;
             opacity: 0;
@@ -188,7 +188,7 @@
               }
 
               &-text {
-                font-size: .6rem;
+                font-size: 0.6rem;
                 @include transition($transition-base);
               }
             }
@@ -199,8 +199,6 @@
       .form-search {
         display: block;
 
-
-
         @include media-breakpoint-up(lg) {
           border-color: transparent;
           display: flex !important;
@@ -210,20 +208,19 @@
           flex-wrap: nowrap;
           align-self: center;
 
-
           .btn-search {
             font-size: 1.25rem;
 
             .fas {
               &::before {
-                content: '\f002';
+                content: "\f002";
               }
             }
 
             &.active {
               .fas {
                 &::before {
-                  content: '\f00d';
+                  content: "\f00d";
                 }
               }
             }
@@ -260,7 +257,7 @@
         }
 
         &-toggler {
-          margin-top: .5rem;
+          margin-top: 0.5rem;
           padding: unset;
           font-size: 2.5rem;
           @include transition($transition-base);
@@ -324,14 +321,13 @@
   }
 }
 
-
 .zone {
   background-color: $zone-bg;
   position: relative;
   padding: 2rem 0;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -346,9 +342,6 @@
     img {
       max-width: 100%;
     }
-
-
-
 
     &-label {
       position: absolute;
@@ -423,26 +416,26 @@
     position: relative;
     padding: 0 2rem 1rem;
     margin-top: 1.5rem;
-
+    font-family: $font-kanit;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
-      background: url('../images/bg/top-right.png') no-repeat right top .75rem;
+      background: url("../images/bg/top-right.png") no-repeat right top 0.75rem;
       background-size: auto;
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('../images/bg/bottom-left.png') no-repeat left bottom;
+      background: url("../images/bg/bottom-left.png") no-repeat left bottom;
       background-size: auto;
     }
 
@@ -454,6 +447,10 @@
       background-color: $zone-bg;
       display: inline-block;
       padding-right: 1rem;
+      font-size: 1.4rem;
+    }
+    h6 {
+      font-size: 1.2rem;
     }
 
     @include media-breakpoint-up(lg) {

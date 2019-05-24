@@ -373,17 +373,17 @@
   &.sammy {
     .card-img {
       &-bg {
-        animation: left-right 20s linear infinite alternate;
+        animation: left-right 1s linear infinite alternate;
         animation-play-state: paused;
       }
 
       &-obj {
-        animation: bear 10s linear infinite alternate;
+        animation: bear 1s linear infinite alternate;
         animation-play-state: paused;
       }
 
       &-fg {
-        animation: bottom-right 20s linear infinite alternate;
+        animation: bottom-right 1s linear infinite alternate;
         animation-play-state: paused;
       }
     }
@@ -392,17 +392,17 @@
   &.christy {
     .card-img {
       &-bg {
-        animation: left-right 20s linear infinite alternate;
+        animation: left-right 1s linear infinite alternate;
         animation-play-state: paused;
       }
 
       &-obj {
-        animation: bear 10s linear infinite alternate;
+        animation: bear 1s linear infinite alternate;
         animation-play-state: paused;
       }
 
       &-fg {
-        animation: bottom-left 20s linear infinite alternate;
+        animation: bottom-left 1s linear infinite alternate;
         animation-play-state: paused;
       }
     }
@@ -411,18 +411,18 @@
   &.kinny {
     .card-img {
       &-bg {
-        animation: left-right 20s linear infinite alternate;
+        animation: left-right 1s linear infinite alternate;
         animation-play-state: paused;
       }
 
       &-obj {
-        animation: bear 10s linear infinite alternate;
+        animation: bear 1s linear infinite alternate;
         animation-play-state: paused;
       }
 
       &-fg {
         bottom: -70px;
-        animation: bottom-right 20s linear infinite alternate;
+        animation: bottom-right 1s linear infinite alternate;
         animation-play-state: paused;
       }
     }
@@ -431,17 +431,17 @@
   &.tubie {
     .card-img {
       &-bg {
-        animation: left-right 20s linear infinite alternate;
+        animation: left-right 1s linear infinite alternate;
         animation-play-state: paused;
       }
 
       &-obj {
-        animation: bear 10s linear infinite alternate;
+        animation: bear 1s linear infinite alternate;
         animation-play-state: paused;
       }
 
       &-fg {
-        animation: bottom-right 20s linear infinite alternate;
+        animation: bottom-right 1s linear infinite alternate;
         animation-play-state: paused;
       }
     }
@@ -450,17 +450,17 @@
   &.villy {
     .card-img {
       &-bg {
-        animation: left-right 20s linear infinite alternate;
+        animation: left-right 1s linear infinite alternate;
         animation-play-state: paused;
       }
 
       &-obj {
-        animation: bear 10s linear infinite alternate;
+        animation: bear 1s linear infinite alternate;
         animation-play-state: paused;
       }
 
       &-fg {
-        animation: bottom-right 20s linear infinite alternate;
+        animation: bottom-right 1s linear infinite alternate;
         animation-play-state: paused;
       }
     }
@@ -477,75 +477,99 @@
   }
 
   @keyframes bear {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    25% {
+    from {
       transform: rotate(10deg);
     }
-
-    50% {
-      transform: rotate(0deg);
-    }
-
-    100% {
+    to {
       transform: rotate(-10deg);
     }
+    // 0% {
+    //   transform: rotate(0deg);
+    // }
+
+    // 25% {
+    //   transform: rotate(10deg);
+    // }
+
+    // 50% {
+    //   transform: rotate(0deg);
+    // }
+
+    // 100% {
+    //   transform: rotate(-10deg);
+    // }
   }
 
   @keyframes left-right {
-    0% {
-      transform: translateX(0);
+    from {
+      transform: translateX(5px);
     }
+    to {
+      transform: translateX(-5px);
+    }
+    // 0% {
+    //   transform: translateX(0);
+    // }
 
-    25% {
-      transform: translateX(10px);
-    }
+    // 25% {
+    //   transform: translateX(5px);
+    // }
 
-    50% {
-      transform: translateX(0);
-    }
+    // 50% {
+    //   transform: translateX(0);
+    // }
 
-    100% {
-      transform: translateX(-10px);
-    }
+    // 100% {
+    //   transform: translateX(-5px);
+    // }
   }
 
   @keyframes bottom-left {
-    0% {
-      transform: translate(0, 0);
-    }
-
-    25% {
+    from {
       transform: translate(5px, 5px);
     }
-
-    50% {
-      transform: translateX(0, 0);
-    }
-
-    100% {
+    to {
       transform: translate(-5px, -5px);
     }
+    // 0% {
+    //   transform: translate(0, 0);
+    // }
+
+    // 25% {
+    //   transform: translate(5px, 5px);
+    // }
+
+    // 50% {
+    //   transform: translateX(0, 0);
+    // }
+
+    // 100% {
+    //   transform: translate(-5px, -5px);
+    // }
   }
 
   @keyframes bottom-right {
-    0% {
-      transform: translate(0, 0);
-    }
-
-    25% {
+    from {
       transform: translate(-5px, -5px);
     }
-
-    50% {
-      transform: translateX(0, 0);
-    }
-
-    100% {
+    to {
       transform: translate(5px, 5px);
     }
+    // 0% {
+    //   transform: translate(0, 0);
+    // }
+
+    // 25% {
+    //   transform: translate(-5px, -5px);
+    // }
+
+    // 50% {
+    //   transform: translateX(0, 0);
+    // }
+
+    // 100% {
+    //   transform: translate(5px, 5px);
+    // }
   }
 }
 
@@ -805,7 +829,7 @@
 
   &-hilight {
     .card-img {
-      height: 549px;
+      height: 448px;
     }
   }
 
@@ -865,7 +889,6 @@
 
   .card {
     &-img {
-      filter: grayscale(100%);
       border-radius: inherit;
       @include transition($transition-base);
 
@@ -876,7 +899,6 @@
       }
 
       @include hover {
-        filter: grayscale(0%);
         transform: scale(1.1);
         @include transition($transition-base);
       }

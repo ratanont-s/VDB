@@ -34,6 +34,8 @@
           $("#banner-animate").load("./banner/banner.html");
         });
         $(".promotion-slide").slick({
+          autoplay: true,
+          autoplaySpeed: 5000,
           appendArrows: $(".promotion-slide-nav"),
           prevArrow:
             '<a href="#"><img src="./dist/images/icons/slick-prev.png"></a>',
@@ -206,7 +208,12 @@
       <!-- Sticky toolbar -->
       <ul class="sticky-toolbar">
         <li class="sticky-toolbar-item">
-          <a href="#" data-toggle="tooltip" data-placement="left" title="Line">
+          <a
+            href="#"
+            data-toggle="tooltip"
+            data-placement="left"
+            title="คุยกับเราซิ"
+          >
             <i class="fab fa-line fa-lg"></i>
             <span class="sticky-toolbar-text">สนทนา</span>
           </a>
@@ -216,7 +223,7 @@
             href="#"
             data-toggle="tooltip"
             data-placement="left"
-            title="Location"
+            title="ร้านเราอยู่น่ะ"
           >
             <i class="fas fa-map-marker-alt fa-lg"></i>
             <span class="sticky-toolbar-text">แผนที่</span>
@@ -227,7 +234,7 @@
             href="#"
             data-toggle="tooltip"
             data-placement="left"
-            title="Telephone number"
+            title="โทรหาเราซิ"
           >
             <i class="fas fa-phone fa-lg"></i>
             <span class="sticky-toolbar-text">โทร</span>
@@ -362,13 +369,18 @@
                     />
                     น้องหมีแนะนำวีดีโอ
                   </h4>
-                  <div class="embed-responsive embed-responsive-16by9">
+                  <div class="embed-responsive embed-responsive-16by9 mb-4">
                     <iframe
                       class="embed-responsive-item"
                       src="https://www.youtube.com/embed/yMR-xmcmb6A"
                       allowfullscreen
                     ></iframe>
                   </div>
+                  <h6>
+                    ร้านอาหารหมู่บ้านหมีสีดําที่มี
+                    เรื่องราวของพี่หมีชื่อวิลลี่ซื้อได้
+                    มรดกโรงงานผลิตหมีจากคุณปู่
+                  </h6>
                 </div>
               </div>
               <div class="col-xl">
@@ -627,14 +639,9 @@
       <!-- Footer image -->
       <div class="text-center mt-5">
         <img
-          src="./dist/images/footer/home-sm.png"
-          alt="Footer home"
-          class="w-50 d-md-none"
-        />
-        <img
           src="./dist/images/footer/home.png"
           alt="Footer home"
-          class="w-100 d-none d-md-block"
+          class="w-100"
         />
       </div>
     </main>
