@@ -4351,7 +4351,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .card-karaoke-room .card-img img { position: absolute; max-width: 100%; }
 
-.card-karaoke-room .card-img-obj, .card-karaoke-room .card-img-fg { bottom: -1rem; }
+.card-karaoke-room .card-img-fg { bottom: -1rem; }
 
 .card-karaoke-room .card-title { background-color: white; text-align: center; margin-top: auto; width: -webkit-fit-content; width: -moz-fit-content; width: fit-content; padding: 0.25rem 1.25rem; border-radius: 50rem; border: 4px solid #38393B; color: #212529; -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); position: relative; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
@@ -4365,31 +4365,29 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .card-karaoke-room.sammy .card-img-bg { -webkit-animation: left-right 1s linear infinite alternate; animation: left-right 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
-.card-karaoke-room.sammy .card-img-obj { -webkit-animation: bear 1s linear infinite alternate; animation: bear 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
+.card-karaoke-room.sammy .card-img-obj { bottom: -45px; -webkit-animation: bear 1s linear infinite alternate; animation: bear 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
 .card-karaoke-room.sammy .card-img-fg { -webkit-animation: bottom-right 1s linear infinite alternate; animation: bottom-right 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
 .card-karaoke-room.christy .card-img-bg { -webkit-animation: left-right 1s linear infinite alternate; animation: left-right 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
-.card-karaoke-room.christy .card-img-obj { -webkit-animation: bear 1s linear infinite alternate; animation: bear 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
+.card-karaoke-room.christy .card-img-obj { bottom: -33px; right: -36px; -webkit-animation: bear 1s linear infinite alternate; animation: bear 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
 .card-karaoke-room.christy .card-img-fg { -webkit-animation: bottom-left 1s linear infinite alternate; animation: bottom-left 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
 .card-karaoke-room.kinny .card-img-bg { -webkit-animation: left-right 1s linear infinite alternate; animation: left-right 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
-.card-karaoke-room.kinny .card-img-obj { -webkit-animation: bear 1s linear infinite alternate; animation: bear 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
+.card-karaoke-room.kinny .card-img-obj { bottom: -15px; -webkit-animation: bear 1s linear infinite alternate; animation: bear 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
 .card-karaoke-room.kinny .card-img-fg { bottom: -70px; -webkit-animation: bottom-right 1s linear infinite alternate; animation: bottom-right 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
-.card-karaoke-room.tubie .card-img-bg { -webkit-animation: left-right 1s linear infinite alternate; animation: left-right 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
+.card-karaoke-room.tubie .card-img-bg { -webkit-animation: bear 1s linear infinite alternate; animation: bear 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
-.card-karaoke-room.tubie .card-img-obj { -webkit-animation: bear 1s linear infinite alternate; animation: bear 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
-
-.card-karaoke-room.tubie .card-img-fg { -webkit-animation: bottom-right 1s linear infinite alternate; animation: bottom-right 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
+.card-karaoke-room.tubie .card-img-obj { bottom: -40px; left: -20px; -webkit-animation: bottom-right 1s linear infinite alternate; animation: bottom-right 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
 .card-karaoke-room.villy .card-img-bg { -webkit-animation: left-right 1s linear infinite alternate; animation: left-right 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
-.card-karaoke-room.villy .card-img-obj { -webkit-animation: bear 1s linear infinite alternate; animation: bear 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
+.card-karaoke-room.villy .card-img-obj { bottom: -45px; left: -20px; -webkit-animation: bear 1s linear infinite alternate; animation: bear 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 
 .card-karaoke-room.villy .card-img-fg { -webkit-animation: bottom-right 1s linear infinite alternate; animation: bottom-right 1s linear infinite alternate; -webkit-animation-play-state: paused; animation-play-state: paused; }
 

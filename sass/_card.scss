@@ -329,7 +329,6 @@
         max-width: 100%;
       }
 
-      &-obj,
       &-fg {
         bottom: -1rem;
       }
@@ -380,6 +379,7 @@
       }
 
       &-obj {
+        bottom: -45px;
         animation: bear 1s linear infinite alternate;
         animation-play-state: paused;
       }
@@ -399,6 +399,8 @@
       }
 
       &-obj {
+        bottom: -33px;
+        right: -36px;
         animation: bear 1s linear infinite alternate;
         animation-play-state: paused;
       }
@@ -418,6 +420,7 @@
       }
 
       &-obj {
+        bottom: -15px;
         animation: bear 1s linear infinite alternate;
         animation-play-state: paused;
       }
@@ -433,19 +436,21 @@
   &.tubie {
     .card-img {
       &-bg {
-        animation: left-right 1s linear infinite alternate;
-        animation-play-state: paused;
-      }
-
-      &-obj {
         animation: bear 1s linear infinite alternate;
         animation-play-state: paused;
       }
 
-      &-fg {
+      &-obj {
+        bottom: -40px;
+        left: -20px;
         animation: bottom-right 1s linear infinite alternate;
         animation-play-state: paused;
       }
+
+      // &-fg {
+      //   animation: bottom-right 1s linear infinite alternate;
+      //   animation-play-state: paused;
+      // }
     }
   }
 
@@ -457,6 +462,8 @@
       }
 
       &-obj {
+        bottom: -45px;
+        left: -20px;
         animation: bear 1s linear infinite alternate;
         animation-play-state: paused;
       }
