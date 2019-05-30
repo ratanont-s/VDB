@@ -383,8 +383,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/bg.jpg", id:"bg"},
-		{src:"images/banner_atlas_P_.png", id:"banner_atlas_P_"}
+		{src:"./banner/images/bg.jpg", id:"bg"},
+		{src:"./banner/images/banner_atlas_P_.png", id:"banner_atlas_P_"}
 	],
 	preloads: []
 };
