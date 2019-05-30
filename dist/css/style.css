@@ -4635,7 +4635,7 @@ section { margin-bottom: 4rem; }
 
 @media (max-width: 991.98px) { #banner { margin-top: 4rem; } }
 
-#promotion .promotion-title { max-height: 71px; display: block; margin: 0 auto 1.5rem; }
+#promotion .promotion-title { max-height: 71px; display: block; margin: 0 auto; }
 
 #promotion .promotion-slide-nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background: url("../images/bg/promotion-nav.png") no-repeat center center; background-size: contain; height: 73px; }
 
