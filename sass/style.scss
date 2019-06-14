@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css?family=Kanit:300,400,500,700");
 @import "./variables";
 
@@ -22,3 +23,28 @@
 @import "./calendar";
 
 @import "./landing";
+=======
+@import url("https://fonts.googleapis.com/css?family=Kanit:300,400,500,700");
+@import "./variables";
+
+// Bootstrap
+@import "./bootstrap/bootstrap";
+// Slick
+@import './slick/slick';
+// Lightbox
+@import './lightbox/lightgallery';
+
+@import './offcanvas';
+@import "./header";
+@import "./main";
+@import "./footer";
+@import './title';
+
+@import './card';
+@import './list';
+@import './breadcrumb';
+@import './nav';
+@import './modal';
+
+@import './landing';
+>>>>>>> 37ffb27a52a0c39a4ba1570c6ae0e48d23890cea
