@@ -4301,9 +4301,13 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .card-promotion:hover, .card-promotion:focus { border-color: #38393B; -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
+@media (min-width: 768px) and (max-width: 991.98px) { .card-promotion:not(.card-promotion-karaoke) { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; } }
+
 .card-promotion .card-title { text-align: center; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-item-align: start; align-self: flex-start; color: #212529; }
 
 .card-promotion .card-title span { color: #6c757d; }
+
+@media (min-width: 768px) and (max-width: 991.98px) { .card-promotion .card-title { font-size: 2rem; } }
 
 @media (max-width: 1199.98px) { .card-promotion { background-position: right bottom 1rem; background-size: auto calc(100% - 2rem); } }
 
@@ -4311,7 +4315,11 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .card-promotion-happy-birthday { background-image: url("../images/bg/pro-happy-birthday.png"); }
 
-.card-promotion-congregation { background-image: url("../images/bg/pro-congregation.png"); }
+@media (min-width: 768px) and (max-width: 991.98px) { .card-promotion-happy-birthday { background-size: auto 90%; background-position: right bottom; } }
+
+.card-promotion-congregation { background-image: url("../images/bg/pro-congregation.png"); background-position: left 1rem bottom 1rem; }
+
+@media (min-width: 768px) and (max-width: 991.98px) { .card-promotion-congregation .card-title { -ms-flex-item-align: end; align-self: flex-end; } }
 
 .card-promotion-karaoke { position: relative; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
@@ -4342,11 +4350,12 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .card-promotion-drink { background-image: url("../images/bg/pro-drink.png"); background-position: center bottom 1rem; background-size: 80% auto; }
 
-@media (min-width: 768px) and (max-width: 991.98px) { .card-promotion-drink { background-size: auto calc(100% - 5rem); } }
-
 .card-promotion-drink .card-title { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; }
 
 .card-promotion-drink .card-title span { margin-right: 0.5rem; }
+
+@media (min-width: 768px) and (max-width: 991.98px) { .card-promotion-drink { background-size: auto 90%; background-position: right -4rem bottom; }
+  .card-promotion-drink .card-title { -ms-flex-item-align: start; align-self: flex-start; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } }
 
 .card-promotion-credit-card { background-image: url("../images/bg/pro-credit-card.png"); background-position: left 1rem center; }
 
@@ -4356,7 +4365,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .card-karaoke-room { -webkit-box-align: center; -ms-flex-align: center; align-items: center; border: 4px solid #38393B; border-radius: 0.5rem; height: 200px; -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); margin-bottom: 1.5rem; overflow: hidden; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-@media (min-width: 768px) and (max-width: 991.98px) { .card-karaoke-room { height: 250px; } }
+@media (min-width: 768px) and (max-width: 991.98px) { .card-karaoke-room { height: 150px; } }
 
 .card-karaoke-room .card-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
@@ -4366,7 +4375,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .card-karaoke-room .card-title { background-color: white; text-align: center; margin-top: auto; width: -webkit-fit-content; width: -moz-fit-content; width: fit-content; padding: 0.25rem 1.25rem; border-radius: 50rem; border: 4px solid #38393B; color: #212529; -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); position: relative; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-@media (max-width: 991.98px) { .card-karaoke-room .card-title { margin-top: 1rem; } }
+@media (max-width: 991.98px) { .card-karaoke-room .card-title { margin-top: 1rem; font-size: 1rem; } }
 
 .card-karaoke-room:hover, .card-karaoke-room:focus { -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
@@ -4604,7 +4613,7 @@ html, body { overflow-x: hidden; /* Prevent scroll on narrow devices */ }
 
 .nav-tabs-menu .nav-item:not(:last-child) { margin-right: 1rem; }
 
-.nav-tabs-menu .nav-link { border-top-left-radius: 0; border-top-right-radius: 0; background-color: #ced4da; color: #212529; font-family: "Kanit", sans-serif; font-size: 1.25rem; }
+.nav-tabs-menu .nav-link { border-top-left-radius: 0; border-top-right-radius: 0; background-color: #ced4da; color: #212529; font-family: "Kanit", sans-serif; white-space: nowrap; font-size: 1.25rem; }
 
 @media (max-width: 575.98px) { .nav-tabs-menu .nav-link span { display: none; } }
 

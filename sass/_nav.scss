@@ -16,6 +16,7 @@
             background-color: $gray-400;
             color: $body-color;
             font-family: $font-kanit;
+            white-space: nowrap;
             @include rfs(20);
 
             @include media-breakpoint-down(xs) {

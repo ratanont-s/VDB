@@ -171,6 +171,12 @@
     @include transition($transition-base);
   }
 
+  @include media-breakpoint-only(md) {
+    &:not(.card-promotion-karaoke) {
+      justify-content: center;
+    }
+  }
+
   .card {
     &-title {
       text-align: center;
@@ -181,6 +187,10 @@
 
       span {
         color: $text-muted;
+      }
+
+      @include media-breakpoint-only(md) {
+        font-size: 2rem;
       }
     }
   }
@@ -197,10 +207,22 @@
 
   &-happy-birthday {
     background-image: url("../images/bg/pro-happy-birthday.png");
+
+    @include media-breakpoint-only(md) {
+      background-size: auto 90%;
+      background-position: right bottom;
+    }
   }
 
   &-congregation {
     background-image: url("../images/bg/pro-congregation.png");
+    background-position: left 1rem bottom 1rem;
+
+    @include media-breakpoint-only(md) {
+      .card-title {
+        align-self: flex-end;
+      }
+    }
   }
 
   &-karaoke {
@@ -295,9 +317,7 @@
     background-position: center bottom 1rem;
     background-size: 80% auto;
 
-    @include media-breakpoint-only(md) {
-      background-size: auto calc(100% - 5rem);
-    }
+
 
     .card-title {
       flex-direction: row;
@@ -305,6 +325,16 @@
 
       span {
         margin-right: 0.5rem;
+      }
+    }
+
+    @include media-breakpoint-only(md) {
+      background-size: auto 90%;
+      background-position: right -4rem bottom;
+
+      .card-title {
+        align-self: flex-start;
+        flex-direction: column;
       }
     }
   }
@@ -335,7 +365,7 @@
   @include transition($transition-base);
 
   @include media-breakpoint-only(md) {
-    height: 250px;
+    height: 150px;
   }
 
   .card {
@@ -371,6 +401,7 @@
 
       @include media-breakpoint-down(md) {
         margin-top: 1rem;
+        font-size: 1rem;
       }
     }
   }
