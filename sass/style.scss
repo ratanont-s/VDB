@@ -2,22 +2,23 @@
 @import "./variables";
 
 // Bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./bootstrap/bootstrap";
 // Slick
-@import './slick/slick';
+@import "./slick/slick";
 // Lightbox
-@import './lightbox/lightgallery';
+@import "./lightbox/lightgallery";
 
-@import './offcanvas';
+@import "./offcanvas";
 @import "./header";
 @import "./main";
 @import "./footer";
-@import './title';
+@import "./title";
 
-@import './card';
-@import './list';
-@import './breadcrumb';
-@import './nav';
-@import './modal';
+@import "./card";
+@import "./list";
+@import "./breadcrumb";
+@import "./nav";
+@import "./modal";
+@import "./calendar";
 
-@import './landing';
+@import "./landing";

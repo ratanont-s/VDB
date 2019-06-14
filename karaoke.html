@@ -1,410 +1,766 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <!-- Head -->
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Villa De Bear</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./dist/css/style.css" />
-    <!-- JS -->
-    <script src="./dist/js/jquery.min.js"></script>
-    <script src="./dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./dist/js/jquery.sticky.js"></script>
-    <script src="./dist/js/script.js"></script>
-    <!-- Slick -->
-    <script src="./dist/plugins/slick/slick.min.js"></script>
-    <!-- Fullcalendar -->
-    <link rel="stylesheet" href="./dist/plugins/fullcalendar/packages/core/main.css">
-    <link rel="stylesheet" href="./dist/plugins/fullcalendar/packages/daygrid/main.css">
-    <link rel="stylesheet" href="./dist/plugins/fullcalendar/packages/bootstrap/main.css">
-    <script src="./dist/plugins/fullcalendar/packages/core/main.js"></script>
-    <script src="./dist/plugins/fullcalendar/packages/daygrid/main.js"></script>
-    <script src="./dist/plugins/fullcalendar/packages/bootstrap/main.js"></script>
-    <script src="./dist/plugins/fullcalendar/packages/core/locales/th.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Villa De Bear</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./dist/css/style.css" />
+  <!-- JS -->
+  <script src="./dist/js/jquery.min.js"></script>
+  <script src="./dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./dist/js/jquery.sticky.js"></script>
+  <script src="./dist/js/script.js"></script>
+  <!-- Slick -->
+  <script src="./dist/plugins/slick/slick.min.js"></script>
+  <!-- Fullcalendar -->
+  <link rel="stylesheet" href="./dist/plugins/fullcalendar/packages/core/main.css" />
+  <link rel="stylesheet" href="./dist/plugins/fullcalendar/packages/daygrid/main.css" />
+  <link rel="stylesheet" href="./dist/plugins/fullcalendar/packages/bootstrap/main.css" />
+  <script src="./dist/plugins/fullcalendar/packages/core/main.js"></script>
+  <script src="./dist/plugins/fullcalendar/packages/daygrid/main.js"></script>
+  <script src="./dist/plugins/fullcalendar/packages/bootstrap/main.js"></script>
+  <script src="./dist/plugins/fullcalendar/packages/core/locales/th.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var calendarEl = document.getElementById("calendar");
 
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: ['dayGrid'],
-                header: {
-                    left: 'prev',
-                    center: 'title',
-                    right: 'next'
-                },
-                height: "auto",
-                locale: 'th',
-                firstDay: 1
-            });
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        plugins: ["dayGrid"],
+        header: {
+          left: "prev",
+          center: "title",
+          right: "next"
+        },
+        height: "auto",
+        locale: "th",
+        firstDay: 1,
+        events: [{
+            title: "ว่าง",
+            start: "2019-06-01",
+            className: "available"
+          },
+          {
+            title: "ไม่ว่าง",
+            start: "2019-06-03",
+            className: "unavailable"
+          }
+        ]
+      });
 
-            calendar.render();
+      calendar.render();
+    });
+    $(document).ready(function () {
+      $(".room-images.slider-for").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: ".slider-nav"
+      });
+      $(".room-images.slider-nav").slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: ".slider-for",
+        centerMode: true,
+        focusOnSelect: true
+      });
+
+      $('#promotionModal').on('shown.bs.modal', function (e) {
+        $('.promotion-karaoke-slide.slider-for').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: '.slider-nav'
         });
-        $(document).ready(function () {
-            $('.room-images.slider-for').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                fade: true,
-                asNavFor: '.slider-nav'
-            });
-            $('.room-images.slider-nav').slick({
+        $('.promotion-karaoke-slide.slider-nav').slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          asNavFor: '.slider-for',
+          focusOnSelect: true,
+          prevArrow: '<a href="#"><img src="./dist/images/icons/slick-prev-2.png"></a>',
+          nextArrow: '<a href="#"><img src="./dist/images/icons/slick-next-2.png"></a>',
+          responsive: [{
+              breakpoint: 1199,
+              settings: {
                 slidesToShow: 3,
-                slidesToScroll: 1,
-                asNavFor: '.slider-for',
-                centerMode: true,
-                focusOnSelect: true
-            });
+                arrows: false,
+                centerMode: true
+              }
+            },
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 2,
+                arrows: false,
+                centerMode: true
+              }
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+                arrows: false,
+                centerMode: true
+              }
+            }
+          ]
         });
-    </script>
+      });
+    });
+  </script>
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container">
-            <a class="navbar-brand" href="./index.html">
-              <!-- <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" /> -->
-              <img src="./dist/images/LOGO-Scrolldown.png" alt="LOGO" class="navbar-logo-scrolldown" />
-              <div class="navbar-logo">
-                <div class="logo-animate">
-                  <img src="./dist/images/logo-animate.png">
-                  <span class="logo-animate-icon"><img src="./dist/images/logo-animate-icon.png"></span>
-                </div>
-              </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="offcanvas">
-              <i class="fas fa-bars"></i>
-            </button>
-    
-            <div class="navbar-collapse offcanvas-collapse">
-              <button class="navbar-toggler" type="button" data-toggle="offcanvas">
-                <i class="fas fa-times text-dark"></i>
-              </button>
-              <ul class="navbar-nav">
-                <li class="nav-item nav-item-home">
-                  <a class="nav-link" href="./index.html">
-                    <div class="nav-link-icon">
-                      <img src="./dist/images/icons/home.png" alt="หน้าแรก" />
-                    </div>
-                    <div class="nav-link-text">หน้าแรก</div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./about-us.html">
-                    <div class="nav-link-icon">
-                      <img src="./dist/images/icons/about.png" alt="เรื่องเล่าพี่หมี" />
-                    </div>
-                    <div class="nav-link-text">เรื่องเล่าพี่หมี</div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./promotions.html">
-                    <div class="nav-link-icon">
-                      <img src="./dist/images/icons/promotion.png" alt="โปรโมชั่น" />
-                    </div>
-                    <div class="nav-link-text">โปรโมชั่น</div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./karaoke.html">
-                    <div class="nav-link-icon">
-                      <img src="./dist/images/icons/karaoke.png" alt="ห้องคาราโอเกะ" />
-                    </div>
-                    <div class="nav-link-text">ห้องคาราโอเกะ</div>
-                  </a>
-                </li>
-                <li class="nav-item nav-item-logo">
-                  <a class="nav-link" href="./index.html">
-                    <!-- <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" /> -->
-                    <div class="navbar-logo">
-                      <div class="logo-animate">
-                        <img src="./dist/images/logo-animate.png">
-                        <span class="logo-animate-icon"><img src="./dist/images/logo-animate-icon.png"></span>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./member.html">
-                    <div class="nav-link-icon">
-                      <img src="./dist/images/icons/member.png" alt="ครอบครัวพี่หมี" />
-                    </div>
-                    <div class="nav-link-text">ครอบครัวพี่หมี</div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./event.html">
-                    <div class="nav-link-icon">
-                      <img src="./dist/images/icons/event.png" alt="กิจกรรมพี่หมี" />
-                    </div>
-                    <div class="nav-link-text">กิจกรรมพี่หมี</div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./menu.html">
-                    <div class="nav-link-icon">
-                      <img src="./dist/images/icons/restusrant.png" alt="รายการอาหาร" />
-                    </div>
-                    <div class="nav-link-text">รายการอาหาร</div>
-                  </a>
-                </li>
-              </ul>
-              <form class="form-inline form-search">
-                <button class="btn btn-search" type="button" onclick="toggleInputSearch();">
-                  <i class="fas"></i>
-                </button>
-                <input class="form-control form-control-search" id="inputSearch" type="search"
-                  placeholder="พี่หมีช่วยหาให้มั้ย....." />
-              </form>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <!-- <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" /> -->
+          <img src="./dist/images/LOGO-Scrolldown.png" alt="LOGO" class="navbar-logo-scrolldown" />
+          <div class="navbar-logo">
+            <div class="logo-animate">
+              <img src="./dist/images/logo-animate.png" />
+              <span class="logo-animate-icon"><img src="./dist/images/logo-animate-icon.png" /></span>
             </div>
           </div>
-        </nav>
-      </header>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+          <i class="fas fa-bars"></i>
+        </button>
 
-    <!-- Main -->
-    <main class="main main-page bg-table">
-        <!-- Sticky toolbar -->
-        <ul class="sticky-toolbar">
-            <li class="sticky-toolbar-item">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="คุยกับเราซิ">
-                    <i class="fab fa-line fa-lg"></i>
-                    <span class="sticky-toolbar-text">สนทนา</span>
-                </a>
+        <div class="navbar-collapse offcanvas-collapse">
+          <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+            <i class="fas fa-times text-dark"></i>
+          </button>
+          <ul class="navbar-nav">
+            <li class="nav-item nav-item-home">
+              <a class="nav-link" href="./index.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/home.png" alt="หน้าแรก" />
+                </div>
+                <div class="nav-link-text">หน้าแรก</div>
+              </a>
             </li>
-            <li class="sticky-toolbar-item">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="ร้านเราอยู่น่ะ">
-                    <i class="fas fa-map-marker-alt fa-lg"></i>
-                    <span class="sticky-toolbar-text">แผนที่</span>
-                </a>
+            <li class="nav-item">
+              <a class="nav-link" href="./about-us.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/about.png" alt="เรื่องเล่าพี่หมี" />
+                </div>
+                <div class="nav-link-text">เรื่องเล่าพี่หมี</div>
+              </a>
             </li>
-            <li class="sticky-toolbar-item">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="โทรหาเราซิ">
-                    <i class="fas fa-phone fa-lg"></i>
-                    <span class="sticky-toolbar-text">โทร</span>
-                </a>
+            <li class="nav-item">
+              <a class="nav-link" href="./promotions.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/promotion.png" alt="โปรโมชั่น" />
+                </div>
+                <div class="nav-link-text">โปรโมชั่น</div>
+              </a>
             </li>
-        </ul>
-
-        <!-- Container -->
-        <div class="container">
-
-            <!-- Main title -->
-            <h4 class="main-title">
-                <span>ห้องคาราโอเกะ</span>
-            </h4>
-
-            <!-- Subtitle -->
-            <h6 class="text-center mb-5">
-                ห้องคาราโอเกะที่ดีที่สุดในย่านฝั่งธนบุรี บนถนนราชพฤกษ์-พระราม 5 ห้องส่วนตัวสุดแฟนตาซี ตกแต่งสวยงาม
-                พร้อมเพลงใหม่ให้เลือกมากมายกว่า 40,000 เพลง จะร้องเพลงไทย เพลงเกาหลี เพลงญี่ปุ่น หรือเพลงสากล
-                ร้องเพลงสนุกไม่มีเบื่อกับห้อง
-                คาราโอเกะสวยๆ ที่ VILLA DE BEAR
-            </h6>
-
-            <!-- โปรโมชั่นคาราโอเกะ -->
-            <h2 class="text-center">โปรโมชั่นคาราโอเกะ</h2>
-            <a href="#" class="card card-link">
-                <img src="./dist/images/karaoke-discount.png" alt="โปรโมชั่นคาราโอเกะ" class="w-100">
-            </a>
-
-            <!-- Karaoke rooms -->
-            <div class="row">
-                <!-- Sammy -->
-                <div class="col-6 col-lg">
-                    <a href="#" class="card card-karaoke-room sammy">
-                        <div class="card-img">
-                            <img src="./dist/images/sammy/4.png" class="card-img-bg" />
-                            <img src="./dist/images/sammy/Sammy.png" class="card-img-obj" />
-                            <img src="./dist/images/sammy/2.png" class="card-img-fg" />
-                        </div>
-                        <h5 class="card-title">Sammy</h5>
-                    </a>
+            <li class="nav-item">
+              <a class="nav-link" href="./karaoke.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/karaoke.png" alt="ห้องคาราโอเกะ" />
                 </div>
-                <!-- Sammy -->
-                <div class="col-6 col-lg">
-                    <a href="#" class="card card-karaoke-room christy">
-                        <div class="card-img">
-                            <img src="./dist/images/Christy/4.png" class="card-img-bg" />
-                            <img src="./dist/images/Christy/Christy.png" class="card-img-obj" />
-                            <img src="./dist/images/Christy/2.png" class="card-img-fg" />
-                        </div>
-                        <h5 class="card-title">Christy</h5>
-                    </a>
+                <div class="nav-link-text">ห้องคาราโอเกะ</div>
+              </a>
+            </li>
+            <li class="nav-item nav-item-logo">
+              <a class="nav-link" href="./index.html">
+                <!-- <img src="./dist/images/LOGO.png" alt="LOGO" class="navbar-logo" /> -->
+                <div class="navbar-logo">
+                  <div class="logo-animate">
+                    <img src="./dist/images/logo-animate.png" />
+                    <span class="logo-animate-icon"><img src="./dist/images/logo-animate-icon.png" /></span>
+                  </div>
                 </div>
-                <!-- Sammy -->
-                <div class="col-6 col-lg">
-                    <a href="#" class="card card-karaoke-room kinny">
-                        <div class="card-img">
-                            <img src="./dist/images/kinny/4.png" class="card-img-bg" />
-                            <img src="./dist/images/kinny/Kinny.png" class="card-img-obj" />
-                            <img src="./dist/images/kinny/2.png" class="card-img-fg" />
-                        </div>
-                        <h5 class="card-title">Kinny</h5>
-                    </a>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./member.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/member.png" alt="ครอบครัวพี่หมี" />
                 </div>
-                <!-- Sammy -->
-                <div class="col-6 col-lg">
-                    <a href="#" class="card card-karaoke-room tubie">
-                        <div class="card-img">
-                            <img src="./dist/images/Tubie/3.png" class="card-img-bg" />
-                            <img src="./dist/images/Tubie/Tubie.png" class="card-img-obj" />
-                            <!-- <img src="./dist/images/Tubie/2.png" class="card-img-fg" /> -->
-                        </div>
-                        <h5 class="card-title">Tubie</h5>
-                    </a>
+                <div class="nav-link-text">ครอบครัวพี่หมี</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./event.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/event.png" alt="กิจกรรมพี่หมี" />
                 </div>
-                <!-- Sammy -->
-                <div class="col-6 col-lg">
-                    <a href="#" class="card card-karaoke-room villy">
-                        <div class="card-img">
-                            <img src="./dist/images/R villy/4.png" class="card-img-bg" />
-                            <img src="./dist/images/R villy/Rvilly.png" class="card-img-obj" />
-                            <img src="./dist/images/R villy/2.png" class="card-img-fg" />
-                        </div>
-                        <h5 class="card-title">R villy</h5>
-                    </a>
+                <div class="nav-link-text">กิจกรรมพี่หมี</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">
+                <div class="nav-link-icon">
+                  <img src="./dist/images/icons/restusrant.png" alt="รายการอาหาร" />
                 </div>
-            </div>
-
-            <!-- Detail -->
-            <div class="card card-karaoke-detail">
-                <div class="row no-gutters">
-                    <div class="col-12 col-xl-5">
-                        <div class="card-body card-body-left">
-                            <h5 class="card-title mb-0">ห้องคาราโอเกะหมี TUBIE</h5>
-                            <p>รองรับสูงสุด 26 ท่าน ราคาเต็ม 2,000 บาท</p>
-                            <div class="room-images slider-for">
-                                <div>
-                                    <img src="./dist/images/room.png" alt="Room">
-                                </div>
-                                <div>
-                                    <img src="./dist/images/room.png" alt="Room">
-                                </div>
-                                <div>
-                                    <img src="./dist/images/room.png" alt="Room">
-                                </div>
-                            </div>
-                            <div class="room-images slider-nav">
-                                <div>
-                                    <img src="./dist/images/room.png" alt="Room">
-                                </div>
-                                <div>
-                                    <img src="./dist/images/room.png" alt="Room">
-                                </div>
-                                <div>
-                                    <img src="./dist/images/room.png" alt="Room">
-                                </div>
-                            </div>
-                            <p class="card-text">หมี Tubie
-                                หมีหนุ่มสุดซ่าบุคลิกกวนใจที่อาสารับซ่อมอุปกรณ์ทุกสิ่งอย่างภายในร้าน Villa De Bear
-                                ภายในห้องคาราโอเกะห้องนี้ก็จะเต็มไปด้วยอุปกรณ์ช่าง
-                                เครื่องไม้เครื่องมือในการซ่อมต่างๆเมื่อเข้ามาแล้วจะสัมผัสได้ถึงบรรยากาศเหมือนอยู่ในห้องช่าง
-                                ร้องเพลงคาราโอเกะสนุกไม่มีเบื่อ</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-8 col-xl-5">
-                        <div class="card-body card-body-center">
-                            <div id='calendar'></div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4 col-xl">
-                        <div class="card-body card-body-right">
-                            <div class="card-body-right-item">
-                                <img src="./dist/images/icons/calendar.png" alt="Date" class="date">
-                                <h5 class="mb-0">17 ก.พ 2562</h5>
-                            </div>
-                            <div class="card-body-right-item">
-                                <img src="./dist/images/icons/day.png" alt="Day" class="day" />
-                                <h6 class="mb-0">11.00 - 16.00</h6>
-                                <img src="./dist/images/icons/smille.png" alt="ห้องว่าง โทรเลย!">
-                                <h6 class="mb-0 text-success">ห้องว่าง โทรเลย!</h6>
-                            </div>
-                            <div class="card-body-right-item">
-                                <img src="./dist/images/icons/night.png" alt="Night" class="night" />
-                                <h6 class="mb-0">17.00 - 24.00</h6>
-                                <img src="./dist/images/icons/sad.png" alt="เสียใจ ห้องไม่ว่าง">
-                                <h6 class="mb-0 text-danger">เสียใจ ห้องไม่ว่าง</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Promotion other -->
-            <div class="text-center mt-5 mb-4">
-                <img src="./dist/images/title-promotion.png" alt="Promotion other" class="img-fluid">
-            </div>
-            <div class="row">
-                <div class="col-6 col-lg-3">
-                    <a href="#" class="card card-promotion-other">
-                        <img src="./dist/images/promotion-other-01.png" alt="Promotion" class="card-img-top">
-                        <div class="card-body">
-                            <h6 class="card-text">
-                                SATURDAY&SUNDAY
-                                PROMOTION
-                                @VILLA DE BEAR
-                            </h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <a href="#" class="card card-promotion-other">
-                        <img src="./dist/images/promotion-other-02.png" alt="Promotion" class="card-img-top">
-                        <div class="card-body">
-                            <h6 class="card-text">
-                                สั่ง HOEGAARDEN รสชาติใดก็ได้
-                                3 แก้วใหญ่ รับฟรี 1 แก้วเล็กไปเลย
-                            </h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <a href="#" class="card card-promotion-other">
-                        <img src="./dist/images/promotion-other-03.png" alt="Promotion" class="card-img-top">
-                        <div class="card-body">
-                            <h6 class="card-text">
-                                สั่ง HOEGAARDEN รสชาติใดก็ได้
-                                3 แก้วใหญ่ รับฟรี 1 แก้วเล็กไปเลย
-                            </h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <a href="#" class="card card-promotion-other">
-                        <img src="./dist/images/promotion-other-04.png" alt="Promotion" class="card-img-top">
-                        <div class="card-body">
-                            <h6 class="card-text">
-                                สั่ง HOEGAARDEN รสชาติใดก็ได้
-                                3 แก้วใหญ่ รับฟรี 1 แก้วเล็กไปเลย
-                            </h6>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Footer image -->
-            <div class="text-center">
-                <img src="./dist/images/footer/karaoke.png" alt="Footer promotion" class="w-75 mt-5">
-            </div>
+                <div class="nav-link-text">รายการอาหาร</div>
+              </a>
+            </li>
+          </ul>
+          <form class="form-inline form-search">
+            <button class="btn btn-search" type="button" onclick="toggleInputSearch();">
+              <i class="fas"></i>
+            </button>
+            <input class="form-control form-control-search" id="inputSearch" type="search"
+              placeholder="พี่หมีช่วยหาให้มั้ย....." />
+          </form>
         </div>
-    </main>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            COPYRIGHT © 2019 VILLA DE BEAR, ALL RIGHTS RESERVED.
+  <!-- Main -->
+  <main class="main main-page bg-table">
+    <!-- Sticky toolbar -->
+    <ul class="sticky-toolbar">
+      <li class="sticky-toolbar-item">
+        <a href="#" data-toggle="tooltip" data-placement="left" title="คุยกับเราซิ">
+          <i class="fab fa-line fa-lg"></i>
+          <span class="sticky-toolbar-text">สนทนา</span>
+        </a>
+      </li>
+      <li class="sticky-toolbar-item">
+        <a href="https://goo.gl/maps/RSY654asM382" target="_blank" data-toggle="tooltip" data-placement="left"
+          title="แผนที่ร้านเรา">
+          <i class="fas fa-map-marker-alt fa-lg"></i>
+          <span class="sticky-toolbar-text">แผนที่</span>
+        </a>
+      </li>
+      <li class="sticky-toolbar-item">
+        <a href="tel:024031515" data-toggle="tooltip" data-placement="left" title="โทรหาเราเลย">
+          <i class="fas fa-phone fa-lg"></i>
+          <span class="sticky-toolbar-text">โทร</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Container -->
+    <div class="container">
+      <!-- Main title -->
+      <h4 class="main-title">
+        <span>ห้องคาราโอเกะ</span>
+      </h4>
+
+      <!-- Subtitle -->
+      <h6 class="text-center mb-5">
+        ห้องคาราโอเกะที่ดีที่สุดในย่านฝั่งธนบุรี บนถนนราชพฤกษ์-พระราม 5
+        ห้องส่วนตัวสุดแฟนตาซี ตกแต่งสวยงาม พร้อมเพลงใหม่ให้เลือกมากมายกว่า
+        40,000 เพลง จะร้องเพลงไทย เพลงเกาหลี เพลงญี่ปุ่น หรือเพลงสากล
+        ร้องเพลงสนุกไม่มีเบื่อกับห้อง คาราโอเกะสวยๆ ที่ VILLA DE BEAR
+      </h6>
+
+      <!-- โปรโมชั่นคาราโอเกะ -->
+      <h2 class="text-center">โปรโมชั่นคาราโอเกะ</h2>
+      <a href="#" class="card card-link">
+        <img src="./dist/images/karaoke-discount.png" alt="โปรโมชั่นคาราโอเกะ" class="w-100" />
+      </a>
+
+      <!-- Karaoke rooms -->
+      <div class="row">
+        <!-- Sammy -->
+        <div class="col-6 col-md-4 col-lg">
+          <a href="#" class="card card-karaoke-room sammy">
+            <div class="card-img">
+              <img src="./dist/images/sammy/4.png" class="card-img-bg" />
+              <img src="./dist/images/sammy/Sammy.png" class="card-img-obj" />
+              <img src="./dist/images/sammy/2.png" class="card-img-fg" />
+            </div>
+            <h5 class="card-title">Sammy</h5>
+          </a>
         </div>
-    </footer>
+        <!-- Sammy -->
+        <div class="col-6 col-md-4 col-lg">
+          <a href="#" class="card card-karaoke-room christy">
+            <div class="card-img">
+              <img src="./dist/images/Christy/4.png" class="card-img-bg" />
+              <img src="./dist/images/Christy/Christy.png" class="card-img-obj" />
+              <img src="./dist/images/Christy/2.png" class="card-img-fg" />
+            </div>
+            <h5 class="card-title">Christy</h5>
+          </a>
+        </div>
+        <!-- Sammy -->
+        <div class="col-6 col-md-4 col-lg">
+          <a href="#" class="card card-karaoke-room kinny">
+            <div class="card-img">
+              <img src="./dist/images/kinny/4.png" class="card-img-bg" />
+              <img src="./dist/images/kinny/Kinny.png" class="card-img-obj" />
+              <img src="./dist/images/kinny/2.png" class="card-img-fg" />
+            </div>
+            <h5 class="card-title">Kinny</h5>
+          </a>
+        </div>
+        <!-- Sammy -->
+        <div class="col-6 col-md-4 col-lg">
+          <a href="#" class="card card-karaoke-room tubie">
+            <div class="card-img">
+              <img src="./dist/images/Tubie/3.png" class="card-img-bg" />
+              <img src="./dist/images/Tubie/Tubie.png" class="card-img-obj" />
+              <!-- <img src="./dist/images/Tubie/2.png" class="card-img-fg" /> -->
+            </div>
+            <h5 class="card-title">Tubie</h5>
+          </a>
+        </div>
+        <!-- Sammy -->
+        <div class="col-6 col-md-4 col-lg">
+          <a href="#" class="card card-karaoke-room villy">
+            <div class="card-img">
+              <img src="./dist/images/R villy/4.png" class="card-img-bg" />
+              <img src="./dist/images/R villy/Rvilly.png" class="card-img-obj" />
+              <img src="./dist/images/R villy/2.png" class="card-img-fg" />
+            </div>
+            <h5 class="card-title">R villy</h5>
+          </a>
+        </div>
+      </div>
+
+      <!-- Detail -->
+      <div class="card card-karaoke-detail">
+        <div class="row no-gutters">
+          <div class="col-12 col-xl-5">
+            <div class="card-body card-body-left">
+              <h5 class="card-title mb-0">ห้องคาราโอเกะหมี TUBIE</h5>
+              <p>รองรับสูงสุด 26 ท่าน ราคาเต็ม 2,000 บาท</p>
+              <div class="room-images slider-for">
+                <div>
+                  <img src="./dist/images/room.png" alt="Room" />
+                </div>
+                <div>
+                  <img src="./dist/images/room.png" alt="Room" />
+                </div>
+                <div>
+                  <img src="./dist/images/room.png" alt="Room" />
+                </div>
+              </div>
+              <div class="room-images slider-nav">
+                <div>
+                  <img src="./dist/images/room.png" alt="Room" />
+                </div>
+                <div>
+                  <img src="./dist/images/room.png" alt="Room" />
+                </div>
+                <div>
+                  <img src="./dist/images/room.png" alt="Room" />
+                </div>
+              </div>
+              <p class="card-text">
+                หมี Tubie
+                หมีหนุ่มสุดซ่าบุคลิกกวนใจที่อาสารับซ่อมอุปกรณ์ทุกสิ่งอย่างภายในร้าน
+                Villa De Bear
+                ภายในห้องคาราโอเกะห้องนี้ก็จะเต็มไปด้วยอุปกรณ์ช่าง
+                เครื่องไม้เครื่องมือในการซ่อมต่างๆเมื่อเข้ามาแล้วจะสัมผัสได้ถึงบรรยากาศเหมือนอยู่ในห้องช่าง
+                ร้องเพลงคาราโอเกะสนุกไม่มีเบื่อ
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-8 col-xl-5">
+            <div class="card-body card-body-center">
+              <div id="calendar"></div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-xl">
+            <div class="card-body card-body-right">
+              <div class="card-body-right-item">
+                <img src="./dist/images/icons/calendar.png" alt="Date" class="date" />
+                <h5 class="mb-0">17 ก.พ 2562</h5>
+              </div>
+              <div class="card-body-right-item">
+                <img src="./dist/images/icons/day.png" alt="Day" class="day" />
+                <h6 class="mb-0">11.00 - 16.00</h6>
+                <img src="./dist/images/icons/smille.png" alt="ห้องว่าง โทรเลย!" />
+                <h6 class="mb-0 text-success">ห้องว่าง โทรเลย!</h6>
+              </div>
+              <div class="card-body-right-item">
+                <img src="./dist/images/icons/night.png" alt="Night" class="night" />
+                <h6 class="mb-0">17.00 - 24.00</h6>
+                <img src="./dist/images/icons/sad.png" alt="เสียใจ ห้องไม่ว่าง" />
+                <h6 class="mb-0 text-danger">เสียใจ ห้องไม่ว่าง</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promotion other -->
+      <div class="text-center mt-5 mb-4">
+        <img src="./dist/images/title-promotion.png" alt="Promotion other" class="img-fluid" />
+      </div>
+      <div class="row">
+        <div class="col-6 col-lg-3">
+          <a href="#promotionModal" class="card card-promotion-other" data-toggle="modal">
+            <img src="./dist/images/promotion-other-01.png" alt="Promotion" class="card-img-top" />
+            <div class="card-body">
+              <h6 class="card-text">
+                SATURDAY&SUNDAY PROMOTION @VILLA DE BEAR
+              </h6>
+            </div>
+          </a>
+          <div class="modal fade" tabindex="-1" role="dialog" id="promotionModal">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">PROMOTIONS KARAOKE</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="modal-slide">
+                    <div class="promotion-karaoke-slide slider-for">
+                      <div class="promotion-karaoke-slide-item">
+                        <div class="row">
+                          <div class="col-lg-5">
+                            <img src="./dist/images/pro-karaoke-modal-01.jpg" alt="..." class="w-100 mb-3">
+                          </div>
+                          <div class="col-lg-7">
+                            <h4>นัดเพื่อนมาร้องคาราโอเกะกันทั้งทีจะธรรมดาได้ไง
+                              พบกับห้องคาราโอเกะที่ดีที่สุดบนถนนราชพฤกษ์ </h4>
+                            <p>
+                              รับโปรโมชั่นสุดคุ้มจากพี่หมี ต้อนรับเดือนเมษายนนี้ ด้วยโปรโมชั่นห้องคาราโอเกะ ลดสูงถึง 50%
+                              เพียงเพื่อนๆ เข้ามาใช้บริการวันอาทิตย์-พฤหัสบดีและเสาร์อาทิตย์
+                              รอบเช้า 11.00-16.00 น. พิเศษยิ่งกว่านั้น สำหรับเพื่อนๆ มีบัตรสมาชิกลดไปเลย 60% !!
+                              ราคาเริ่มต้นห้องละ 720฿ ร้องกันยาวๆตลอดคืน โปรดีๆ อย่ารอช้า ก็มาดิครับ
+                              <ul class="list-unstyled">
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีคริสตี้ </h6> เหลือเพียง 900 บาท
+                                  จากปกติราคา 1,800 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีทูบี้</h6> เหลือเพียง 1,000 บาท จากปกติราคา
+                                  2,000 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีแซมมี่</h6> เหลือเพียง 1,000 บาท
+                                  จากปกติราคา 2,000 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีคินนี่</h6> เหลือเพียง 1,250 บาท
+                                  จากปกติราคา 2,500 บาท
+                                </li>
+                              </ul>
+
+                              หมดเขตโปรโมชั่นสิ้นเดือนพฤษภาคมนี้
+                            </p>
+                            <h6>
+                              ร้าน VILLA DE BEAR <br>
+                              โทรจองโต๊ะได้ที่เบอร์ 02-403-1515 หรือเบอร์ 098-496-6245 <br>
+                              LINE Official : @villadebear (มี@) <br>
+                              หรือ <a href="http://line.me/ti/p/%40villadebear"
+                                target="_blank">http://line.me/ti/p/%40villadebear</a>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="promotion-karaoke-slide-item">
+                        <div class="row">
+                          <div class="col-lg-5">
+                            <img src="./dist/images/promotion-other-01.png" alt="..." class="w-100 mb-3">
+                          </div>
+                          <div class="col-lg-7">
+                            <h4>นัดเพื่อนมาร้องคาราโอเกะกันทั้งทีจะธรรมดาได้ไง
+                              พบกับห้องคาราโอเกะที่ดีที่สุดบนถนนราชพฤกษ์ </h4>
+                            <p>
+                              รับโปรโมชั่นสุดคุ้มจากพี่หมี ต้อนรับเดือนเมษายนนี้ ด้วยโปรโมชั่นห้องคาราโอเกะ ลดสูงถึง 50%
+                              เพียงเพื่อนๆ เข้ามาใช้บริการวันอาทิตย์-พฤหัสบดีและเสาร์อาทิตย์
+                              รอบเช้า 11.00-16.00 น. พิเศษยิ่งกว่านั้น สำหรับเพื่อนๆ มีบัตรสมาชิกลดไปเลย 60% !!
+                              ราคาเริ่มต้นห้องละ 720฿ ร้องกันยาวๆตลอดคืน โปรดีๆ อย่ารอช้า ก็มาดิครับ
+                              <ul class="list-unstyled">
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีคริสตี้ </h6> เหลือเพียง 900 บาท
+                                  จากปกติราคา 1,800 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีทูบี้</h6> เหลือเพียง 1,000 บาท จากปกติราคา
+                                  2,000 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีแซมมี่</h6> เหลือเพียง 1,000 บาท
+                                  จากปกติราคา 2,000 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีคินนี่</h6> เหลือเพียง 1,250 บาท
+                                  จากปกติราคา 2,500 บาท
+                                </li>
+                              </ul>
+
+                              หมดเขตโปรโมชั่นสิ้นเดือนพฤษภาคมนี้
+                            </p>
+                            <h6>
+                              ร้าน VILLA DE BEAR <br>
+                              โทรจองโต๊ะได้ที่เบอร์ 02-403-1515 หรือเบอร์ 098-496-6245 <br>
+                              LINE Official : @villadebear (มี@) <br>
+                              หรือ <a href="http://line.me/ti/p/%40villadebear"
+                                target="_blank">http://line.me/ti/p/%40villadebear</a>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="promotion-karaoke-slide-item">
+                        <div class="row">
+                          <div class="col-lg-5">
+                            <img src="./dist/images/promotion-other-02.png" alt="..." class="w-100 mb-3">
+                          </div>
+                          <div class="col-lg-7">
+                            <h4>นัดเพื่อนมาร้องคาราโอเกะกันทั้งทีจะธรรมดาได้ไง
+                              พบกับห้องคาราโอเกะที่ดีที่สุดบนถนนราชพฤกษ์ </h4>
+                            <p>
+                              รับโปรโมชั่นสุดคุ้มจากพี่หมี ต้อนรับเดือนเมษายนนี้ ด้วยโปรโมชั่นห้องคาราโอเกะ ลดสูงถึง 50%
+                              เพียงเพื่อนๆ เข้ามาใช้บริการวันอาทิตย์-พฤหัสบดีและเสาร์อาทิตย์
+                              รอบเช้า 11.00-16.00 น. พิเศษยิ่งกว่านั้น สำหรับเพื่อนๆ มีบัตรสมาชิกลดไปเลย 60% !!
+                              ราคาเริ่มต้นห้องละ 720฿ ร้องกันยาวๆตลอดคืน โปรดีๆ อย่ารอช้า ก็มาดิครับ
+                              <ul class="list-unstyled">
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีคริสตี้ </h6> เหลือเพียง 900 บาท
+                                  จากปกติราคา 1,800 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีทูบี้</h6> เหลือเพียง 1,000 บาท จากปกติราคา
+                                  2,000 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีแซมมี่</h6> เหลือเพียง 1,000 บาท
+                                  จากปกติราคา 2,000 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีคินนี่</h6> เหลือเพียง 1,250 บาท
+                                  จากปกติราคา 2,500 บาท
+                                </li>
+                              </ul>
+
+                              หมดเขตโปรโมชั่นสิ้นเดือนพฤษภาคมนี้
+                            </p>
+                            <h6>
+                              ร้าน VILLA DE BEAR <br>
+                              โทรจองโต๊ะได้ที่เบอร์ 02-403-1515 หรือเบอร์ 098-496-6245 <br>
+                              LINE Official : @villadebear (มี@) <br>
+                              หรือ <a href="http://line.me/ti/p/%40villadebear"
+                                target="_blank">http://line.me/ti/p/%40villadebear</a>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="promotion-karaoke-slide-item">
+                        <div class="row">
+                          <div class="col-lg-5">
+                            <img src="./dist/images/promotion-other-03.png" alt="..." class="w-100 mb-3">
+                          </div>
+                          <div class="col-lg-7">
+                            <h4>นัดเพื่อนมาร้องคาราโอเกะกันทั้งทีจะธรรมดาได้ไง
+                              พบกับห้องคาราโอเกะที่ดีที่สุดบนถนนราชพฤกษ์ </h4>
+                            <p>
+                              รับโปรโมชั่นสุดคุ้มจากพี่หมี ต้อนรับเดือนเมษายนนี้ ด้วยโปรโมชั่นห้องคาราโอเกะ ลดสูงถึง 50%
+                              เพียงเพื่อนๆ เข้ามาใช้บริการวันอาทิตย์-พฤหัสบดีและเสาร์อาทิตย์
+                              รอบเช้า 11.00-16.00 น. พิเศษยิ่งกว่านั้น สำหรับเพื่อนๆ มีบัตรสมาชิกลดไปเลย 60% !!
+                              ราคาเริ่มต้นห้องละ 720฿ ร้องกันยาวๆตลอดคืน โปรดีๆ อย่ารอช้า ก็มาดิครับ
+                              <ul class="list-unstyled">
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีคริสตี้ </h6> เหลือเพียง 900 บาท
+                                  จากปกติราคา 1,800 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีทูบี้</h6> เหลือเพียง 1,000 บาท จากปกติราคา
+                                  2,000 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีแซมมี่</h6> เหลือเพียง 1,000 บาท
+                                  จากปกติราคา 2,000 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีคินนี่</h6> เหลือเพียง 1,250 บาท
+                                  จากปกติราคา 2,500 บาท
+                                </li>
+                              </ul>
+
+                              หมดเขตโปรโมชั่นสิ้นเดือนพฤษภาคมนี้
+                            </p>
+                            <h6>
+                              ร้าน VILLA DE BEAR <br>
+                              โทรจองโต๊ะได้ที่เบอร์ 02-403-1515 หรือเบอร์ 098-496-6245 <br>
+                              LINE Official : @villadebear (มี@) <br>
+                              หรือ <a href="http://line.me/ti/p/%40villadebear"
+                                target="_blank">http://line.me/ti/p/%40villadebear</a>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="promotion-karaoke-slide-item">
+                        <div class="row">
+                          <div class="col-lg-5">
+                            <img src="./dist/images/promotion-other-04.png" alt="..." class="w-100 mb-3">
+                          </div>
+                          <div class="col-lg-7">
+                            <h4>นัดเพื่อนมาร้องคาราโอเกะกันทั้งทีจะธรรมดาได้ไง
+                              พบกับห้องคาราโอเกะที่ดีที่สุดบนถนนราชพฤกษ์ </h4>
+                            <p>
+                              รับโปรโมชั่นสุดคุ้มจากพี่หมี ต้อนรับเดือนเมษายนนี้ ด้วยโปรโมชั่นห้องคาราโอเกะ ลดสูงถึง 50%
+                              เพียงเพื่อนๆ เข้ามาใช้บริการวันอาทิตย์-พฤหัสบดีและเสาร์อาทิตย์
+                              รอบเช้า 11.00-16.00 น. พิเศษยิ่งกว่านั้น สำหรับเพื่อนๆ มีบัตรสมาชิกลดไปเลย 60% !!
+                              ราคาเริ่มต้นห้องละ 720฿ ร้องกันยาวๆตลอดคืน โปรดีๆ อย่ารอช้า ก็มาดิครับ
+                              <ul class="list-unstyled">
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีคริสตี้ </h6> เหลือเพียง 900 บาท
+                                  จากปกติราคา 1,800 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีทูบี้</h6> เหลือเพียง 1,000 บาท จากปกติราคา
+                                  2,000 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีแซมมี่</h6> เหลือเพียง 1,000 บาท
+                                  จากปกติราคา 2,000 บาท
+                                </li>
+                                <li>
+                                  <h6 class="d-inline-block">ห้องคาราโอเกะหมีคินนี่</h6> เหลือเพียง 1,250 บาท
+                                  จากปกติราคา 2,500 บาท
+                                </li>
+                              </ul>
+
+                              หมดเขตโปรโมชั่นสิ้นเดือนพฤษภาคมนี้
+                            </p>
+                            <h6>
+                              ร้าน VILLA DE BEAR <br>
+                              โทรจองโต๊ะได้ที่เบอร์ 02-403-1515 หรือเบอร์ 098-496-6245 <br>
+                              LINE Official : @villadebear (มี@) <br>
+                              หรือ <a href="http://line.me/ti/p/%40villadebear"
+                                target="_blank">http://line.me/ti/p/%40villadebear</a>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-nav">
+                    <div class="promotion-karaoke-slide slider-nav">
+                      <div>
+                        <a href="#" class="card card-post">
+                          <img src="./dist/images/pro-karaoke-modal-01.jpg" alt="Post" class="card-img-top">
+                          <div class="card-body">
+                            <h6 class="card-text text-center">
+                              SATURDAY&SUNDAY
+                              PROMOTION
+                              @VILLA DE BEAR
+                            </h6>
+                          </div>
+                        </a>
+                      </div>
+                      <div>
+                        <a href="#" class="card card-post">
+                          <img src="./dist/images/promotion-other-01.png" alt="Post" class="card-img-top">
+                          <div class="card-body">
+                            <h6 class="card-text text-center">
+                              SATURDAY&SUNDAY
+                              PROMOTION
+                              @VILLA DE BEAR
+                            </h6>
+                          </div>
+                        </a>
+                      </div>
+                      <div>
+                        <a href="#" class="card card-post">
+                          <img src="./dist/images/promotion-other-02.png" alt="Post" class="card-img-top">
+                          <div class="card-body">
+                            <h6 class="card-text text-center">
+                              SATURDAY&SUNDAY
+                              PROMOTION
+                              @VILLA DE BEAR
+                            </h6>
+                          </div>
+                        </a>
+                      </div>
+                      <div>
+                        <a href="#" class="card card-post">
+                          <img src="./dist/images/promotion-other-03.png" alt="Post" class="card-img-top">
+                          <div class="card-body">
+                            <h6 class="card-text text-center">
+                              SATURDAY&SUNDAY
+                              PROMOTION
+                              @VILLA DE BEAR
+                            </h6>
+                          </div>
+                        </a>
+                      </div>
+                      <div>
+                        <a href="#" class="card card-post">
+                          <img src="./dist/images/promotion-other-04.png" alt="Post" class="card-img-top">
+                          <div class="card-body">
+                            <h6 class="card-text text-center">
+                              SATURDAY&SUNDAY
+                              PROMOTION
+                              @VILLA DE BEAR
+                            </h6>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <a href="#" class="card card-promotion-other">
+            <img src="./dist/images/promotion-other-02.png" alt="Promotion" class="card-img-top" />
+            <div class="card-body">
+              <h6 class="card-text">
+                สั่ง HOEGAARDEN รสชาติใดก็ได้ 3 แก้วใหญ่ รับฟรี 1
+                แก้วเล็กไปเลย
+              </h6>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <a href="#" class="card card-promotion-other">
+            <img src="./dist/images/promotion-other-03.png" alt="Promotion" class="card-img-top" />
+            <div class="card-body">
+              <h6 class="card-text">
+                สั่ง HOEGAARDEN รสชาติใดก็ได้ 3 แก้วใหญ่ รับฟรี 1
+                แก้วเล็กไปเลย
+              </h6>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <a href="#" class="card card-promotion-other">
+            <img src="./dist/images/promotion-other-04.png" alt="Promotion" class="card-img-top" />
+            <div class="card-body">
+              <h6 class="card-text">
+                สั่ง HOEGAARDEN รสชาติใดก็ได้ 3 แก้วใหญ่ รับฟรี 1
+                แก้วเล็กไปเลย
+              </h6>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer image -->
+      <div class="text-center">
+        <img src="./dist/images/footer/karaoke.png" alt="Footer promotion" class="w-75 mt-5" />
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      COPYRIGHT © 2019 VILLA DE BEAR, ALL RIGHTS RESERVED.
+    </div>
+  </footer>
 </body>
 
 </html>

@@ -1,0 +1,13 @@
+.fc {
+  &-event {
+    background-color: unset !important;
+    text-align: center !important;
+    border-width: 0 !important;
+    &.available {
+      color: $success !important;
+    }
+    &.unavailable {
+      color: $danger !important;
+    }
+  }
+}

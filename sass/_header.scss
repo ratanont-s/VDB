@@ -178,6 +178,10 @@
           border-left: 1px solid $border-color;
           color: $body-color;
 
+          @include media-breakpoint-only(lg) {
+            font-size: .6rem;
+          }
+
           @include hover-focus {
             .nav-link {
               &-icon {

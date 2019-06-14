@@ -185,7 +185,12 @@
     }
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
+    background-position: right bottom 1rem;
+    background-size: auto calc(100% - 2rem);
+  }
+
+  @include media-breakpoint-down(sm) {
     background-position: center bottom 1rem;
     background-size: calc(100% - 2rem) auto;
   }
@@ -265,9 +270,14 @@
       .card-title {
         margin-left: 2rem;
       }
+
+      &:after {
+        background-position: right 2rem bottom 1.5rem;
+        background-size: auto calc(100% - 3rem);
+      }
     }
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       &::before {
         background-position: center bottom 1rem;
         background-size: calc(100% - 2rem) 1rem;
@@ -285,6 +295,10 @@
     background-position: center bottom 1rem;
     background-size: 80% auto;
 
+    @include media-breakpoint-only(md) {
+      background-size: auto calc(100% - 5rem);
+    }
+
     .card-title {
       flex-direction: row;
       align-self: center;
@@ -298,6 +312,10 @@
   &-credit-card {
     background-image: url("../images/bg/pro-credit-card.png");
     background-position: left 1rem center;
+
+    @include media-breakpoint-down(sm) {
+      background-position: left 1rem bottom 1rem;
+    }
 
     .card-title {
       align-self: flex-end;
@@ -315,6 +333,10 @@
   margin-bottom: 1.5rem;
   overflow: hidden;
   @include transition($transition-base);
+
+  @include media-breakpoint-only(md) {
+    height: 250px;
+  }
 
   .card {
     &-img {
